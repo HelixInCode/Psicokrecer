@@ -1,14 +1,24 @@
 {
   "name": "psicokrecer",
   "version": "1.0.0",
-  "description": "",
+  "description": "Blog PsicoKrecer",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Alexx",
   "license": "ISC",
-  "dependencies": {
-    "postcss-cli": "^7.1.2"
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HelixInCode/Psicokrecer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/HelixInCode/Psicokrecer/issues"
+  },
+  "homepage": "https://github.com/HelixInCode/Psicokrecer#readme",
+  "devDependencies": {
+    "postcss-cli": "^7.1.2",
+    "postcss-cssnext": "^3.1.0"
   }
 }
