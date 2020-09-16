@@ -133,6 +133,7 @@ main{
 
 #servicios{
   padding-top: 50px;
+  padding-bottom: 50px;
 }
 #servicios > .general-container{
   display: grid;
@@ -142,7 +143,7 @@ main{
 #servicios > .general-container > .inicial-img > h3{
   font-family: 'Julius Sans One', sans-serif;
   padding-top: 10px;
-  color: #83969e;
+  color: #a850c3;
   font-weight: 900;
 }
 #servicios > .general-container > .especific-container{
@@ -157,6 +158,9 @@ main{
   border-radius: 5px;
   padding: 30px;
   filter: drop-shadow(0 2px 3px rgba(138, 134, 134, 0.7));
+}
+#servicios > .general-container > .especific-container > .servicios-item:hover{
+  filter: drop-shadow(0 10px 10px rgba(110, 167, 221, 0.7));
 }
 #servicios > .general-container > .especific-container > .servicios-item > h4{
   padding-top: 35px;
@@ -173,6 +177,69 @@ main{
 }
 #servicios > .general-container > .especific-container > .servicios-item > .imagen > img{
   width: 100%;
+  border-radius: 3px;
+}
+#equipo{
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+#equipo > .general-container > .inicial-img > h3{
+  font-family: 'Julius Sans One', sans-serif;
+  padding-top: 10px;
+  color: #a850c3;
+  font-weight: 900;
+}
+#equipo > .general-container > .inicial-img, #servicios > .general-container > .inicial-img{
+  text-align: center;
+  padding-bottom: 40px;
+}
+#equipo > .general-container > .inicial-img > img, #servicios > .general-container > .inicial-img > img {
+  width: 100px;
+  filter: drop-shadow(0 2px 3px rgba(179, 169, 169, 0.7));
+}
+#equipo > .general-container > .especific-container > #carouselExampleControls > .carousel-inner{
+  display: grid;
+  grid-template-columns: minmax(280px, 1200px);
+  justify-content: center;
+}
+#equipo > .general-container > .especific-container > #carouselExampleControls > .carousel-inner > .carousel-item{
+  display: grid;
+  grid-template-columns:minmax(250px, 700px);
+  padding:30px;
+  gap: 20px;
+  justify-content: center;
+}
+#equipo > .general-container > .especific-container > #carouselExampleControls > .carousel-inner > .carousel-item > .imagen > img{
+  width: 100%;
+  height: 500px;
+  position: relative;
+  border-radius: 3px;
+  filter: drop-shadow(-7px 6px 7px rgba(41, 39, 39, 0.7));
+}
+#equipo > .general-container > .especific-container > #carouselExampleControls > .carousel-inner > .carousel-item > .imagen > .mensaje-info{
+  width: auto;
+  background-color: #3b9afad0;
+  z-index: 4;
+  text-align: center;
+  padding: 20px;
+  border-radius: 3px;
+}
+#equipo > .general-container > .especific-container > #carouselExampleControls > .carousel-inner > .carousel-item > .imagen > .mensaje-info > p:nth-child(1){
+  color: white;
+  font-family: 'Sacramento', cursive;
+  font-size: 50px;
+}
+#equipo > .general-container > .especific-container > #carouselExampleControls > .carousel-inner > .carousel-item > .imagen > .mensaje-info > p:nth-child(2){
+  color: white;
+  font-family: 'Julius Sans One', sans-serif;
+  font-size: 30px;
+}
+#equipo > .general-container > .especific-container > #carouselExampleControls > .carousel-inner > .carousel-item > .info{
+  font-family: 'Julius Sans One', sans-serif;
+  color: #0d3a68;
+  font-size: 18px;
+  text-align: justify;
+  font-weight: 900;
 }
 @media screen and (min-width: 500px){
   #frase > .general-container > .contenedor-frase > p:nth-child(1){
@@ -191,5 +258,38 @@ main{
   }
   #frase > .general-container > .contenedor-frase > p:nth-child(2){
     font-size: 30px;
+  }
+  #equipo > .general-container > .especific-container > #carouselExampleControls > .carousel-inner > .carousel-item > .imagen > .mensaje-info{
+    bottom: 250px;
+    left:250px;
+  }
+  #equipo > .general-container > .especific-container > #carouselExampleControls > .carousel-inner > .carousel-item > .imagen > .mensaje-info > p:nth-child(1){
+    color: white;
+    font-family: 'Sacramento', cursive;
+    font-size: 50px;
+  }
+  #equipo > .general-container > .especific-container > #carouselExampleControls > .carousel-inner > .carousel-item > .imagen > .mensaje-info > p:nth-child(2){
+    color: white;
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 25px;
+  }
+}
+@media screen and (min-width: 900px){
+  #equipo > .general-container > .especific-container > #carouselExampleControls > .carousel-inner > .carousel-item{
+    grid-template-columns: minmax(250px, 410px) minmax(250px, 700px);
+    justify-content: center;
+  }
+  #equipo > .general-container > .especific-container > #carouselExampleControls > .carousel-inner > .carousel-item > .imagen > .mensaje-info{
+    bottom: 10px;
+    left:32%;
+    position: absolute;
+    z-index: 4;
+  }
+  #equipo > .general-container > .especific-container > #carouselExampleControls > .carousel-inner > .carousel-item > .info{
+    font-family: 'Julius Sans One', sans-serif;
+    color: #0d3a68;
+    font-size: 18px;
+    text-align: justify;
+    font-weight: 900;
   }
 }
