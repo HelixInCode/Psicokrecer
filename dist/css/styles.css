@@ -91,7 +91,10 @@ nav > .brand-logo > span{
       font-size: 70px;
       font-family: 'Julius Sans One', sans-serif;
   }
-  
+
+main{
+  background-color: #f8f8f8;
+}
 
   /*SECCION FRASE*/
 
@@ -120,7 +123,7 @@ nav > .brand-logo > span{
   text-align: center;
 }
 #frase > .general-container > .contenedor-frase > p:nth-child(1){
-  font-size: 70px;
+  font-size: 40px;
   color: white;
   font-family: 'Allura', cursive;
   text-shadow: 3px 3px 3px  #2f80d1;
@@ -128,16 +131,71 @@ nav > .brand-logo > span{
 #frase > .general-container > .contenedor-frase > p:nth-child(2){
   font-family: 'Julius Sans One', sans-serif;
   color: white;
-  font-size: 25px;
+  font-size: 18px;
   font-weight: 600;
 }
 
 #servicios{
   padding-top: 50px;
 }
+#servicios > .general-container{
+  display: grid;
+  grid-template-columns: minmax(300px, 1200px);
+  justify-content: center;
+}
 #servicios > .general-container > .inicial-img > h3{
   font-family: 'Julius Sans One', sans-serif;
   padding-top: 10px;
   color: #83969e;
   font-weight: 900;
+}
+#servicios > .general-container > .especific-container{
+  display: grid;
+  grid-template-columns: minmax(250px, 500px);
+  justify-content: center;
+  gap: 20px;
+}
+#servicios > .general-container > .especific-container > .servicios-item{
+  text-align: center;
+  background-color: white;
+  border-radius: 5px;
+  padding: 30px;
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur in="SourceAlpha" stdDeviation="3" /><feOffset dx="1" dy="3" result="offsetblur" /><feFlood flood-color="rgba(138,134,134,0.7)" /><feComposite in2="offsetblur" operator="in" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter></svg>#filter');
+  -webkit-filter: drop-shadow(0 2px 3px rgba(138, 134, 134, .7));
+          filter: drop-shadow(0 2px 3px rgba(138, 134, 134, .7));
+}
+#servicios > .general-container > .especific-container > .servicios-item > h4{
+  padding-top: 35px;
+  font-family: 'Julius Sans One', sans-serif;
+  color: #83969e;
+  font-weight: 900;
+}
+#servicios > .general-container > .especific-container > .servicios-item > ul{
+  list-style: none;
+  padding-top: 30px;
+  font-family: 'Julius Sans One', sans-serif;
+  color: #154d85;
+  font-weight: 800;
+}
+#servicios > .general-container > .especific-container > .servicios-item > .imagen > img{
+  width: 100%;
+}
+@media screen and (min-width: 500px){
+  #frase > .general-container > .contenedor-frase > p:nth-child(1){
+    font-size: 40px;
+  }
+  #frase > .general-container > .contenedor-frase > p:nth-child(2){
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 800px){
+  #servicios > .general-container > .especific-container{
+    grid-template-columns: repeat(2, minmax(250px, 500px));
+  }
+  #frase > .general-container > .contenedor-frase > p:nth-child(1){
+    font-size: 80px;
+  }
+  #frase > .general-container > .contenedor-frase > p:nth-child(2){
+    font-size: 30px;
+  }
 }
