@@ -254,10 +254,10 @@ main{
     grid-template-columns: repeat(2, minmax(250px, 500px));
   }
   #frase > .general-container > .contenedor-frase > p:nth-child(1){
-    font-size: 80px;
+    font-size: 50px;
   }
   #frase > .general-container > .contenedor-frase > p:nth-child(2){
-    font-size: 30px;
+    font-size: 20px;
   }
   #equipo > .general-container > .especific-container > #carouselExampleControls > .carousel-inner > .carousel-item > .imagen > .mensaje-info{
     bottom: 250px;
