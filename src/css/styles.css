@@ -1,45 +1,5 @@
-*{
-    margin: 0;
-    padding: 0;
-}
-.brand-logo > span > img{
-    width: 250px;
-}
-
-header{
-    position: relative;
-    z-index: 9999;
-    background-color: #fff;
-}
-nav{
-    position: absolute;
-    z-index: 9999;
-    top:0;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: center;
-    min-height: 42px;
-    max-height: 60px;
-    transition: .2s;
-}
-nav > .brand-logo > span{
-    position: absolute;
-    top: -30px;
-    left: 30px;
-}
-.index-carousel{
-    position: relative;
-  }
-  .index-carousel> a{
-    z-index: 10;
-  }
-  .index-carousel> .carousel-inner > .carousel-item{
-    height: 100vh;
-    position: relative;
-    z-index: 6;
-  }
-  .index-carousel> .carousel-inner > .carousel-item > img{
+:root{
+  --imgCover:{
     position: absolute;
     object-fit: cover;
     top: 0;
@@ -47,48 +7,88 @@ nav > .brand-logo > span{
     width: 100%;
     height: 100%;
   }
-  .index-carousel> .carousel-inner > .carousel-item > .overlay-img{
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    font-family: var(--letraEnlaces);
-    background-color: var(--sombra);
-    display: grid;
-    color: #fff;
-    grid-template-columns: minmax(200px, 500px);
-    grid-auto-columns: auto;
-    justify-content: center;
-    justify-items: center;
-    align-content: center;
-  }
-  .index-carousel .overlay-img > p{
-    margin: 0;
-    text-align: center;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+header{
+  position: relative;
+  z-index: 9999;
+  background-color: #fff;
+}
+nav{
+  position: absolute;
+  z-index: 9999;
+  top:0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  min-height: 42px;
+  max-height: 60px;
+  transition: .2s;
+}
+nav > .brand-logo > span{
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+.index-carousel{
+  position: relative;
+}
+.index-carousel> a{
+  z-index: 10;
+}
+.index-carousel> .carousel-inner > .carousel-item{
+  height: 100vh;
+  position: relative;
+  z-index: 6;
+}
+.index-carousel> .carousel-inner > .carousel-item:nth-of-type(2) > img{
+  object-position: bottom;
+}
+.index-carousel> .carousel-inner > .carousel-item > img{
+  @apply --imgCover;
+}
+@custom-selector :--index-carousel-overlay-img .index-carousel > .carousel-inner > .carousel-item > .overlay-img;
+
+:--index-carousel-overlay-img{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  font-family: 'Anton', sans-serif;
+  background-color: rgba(132, 93, 143, 0.5);
+  display: grid;
+  color: #fff;
+  grid-template-columns: minmax(200px, 500px);
+  grid-auto-columns: auto;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+}
+:--index-carousel-overlay-img > p{
+  margin: 0;
+  text-align: center;
+  font-size: 1em;
+  font-family:'Kaushan Script', cursive;
+  
+  @media screen and (min-width: 576px){
     font-size: 2em;
-    font-family:'Kaushan Script', cursive;
   }
-  .index-carousel> .carousel-inner > .carousel-item > .overlay-img {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    font-family: 'Anton', sans-serif;
-    background-color: rgba(132, 93, 143, 0.5);
-    display: grid;
-    color: #fff;
-    grid-template-columns: minmax(200px, 500px);
-    grid-auto-columns: auto;
-    justify-content: center;
-    justify-items: center;
-    align-content: center;
+}
+:--index-carousel-overlay-img > p > span {
+  font-size: 2.6em;
+  font-family: 'Julius Sans One', sans-serif;
+  
+  @media screen and (min-width: 576px){
+    font-size: 2.1875em;
   }
-  .index-carousel> .carousel-inner > .carousel-item > .overlay-img > p > span {
-      font-size: 70px;
-      font-family: 'Julius Sans One', sans-serif;
-  }
+}
 
 main{
   background-color: #f8f8f8;
@@ -110,13 +110,24 @@ main{
   padding-bottom: 40px;
 }
 #frase > .general-container > .inicial-img > img, #servicios > .general-container > .inicial-img > img {
-  width: 100px;
   filter: drop-shadow(0 2px 3px rgba(179, 169, 169, 0.7));
 }
 #frase > .general-container > .contenedor-frase{
   background-color: #3b9cfa;
-  padding: 150px 30px;
+  padding: 50px 10px;
+  height: 520px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   text-align: center;
+  
+  @media screen and (min-width: 768px){
+    padding: 50px 30px;
+    height: 320px;
+  }
+}
+#frase > .general-container > .contenedor-frase + .typed-cursor{
+  display: none;
 }
 #frase > .general-container > .contenedor-frase > p:nth-child(1){
   font-size: 40px;
@@ -156,7 +167,6 @@ main{
   text-align: center;
   background-color: white;
   border-radius: 5px;
-  padding: 30px;
   filter: drop-shadow(0 2px 3px rgba(138, 134, 134, 0.7));
 }
 #servicios > .general-container > .especific-container > .servicios-item:hover{
@@ -197,50 +207,78 @@ main{
   width: 100px;
   filter: drop-shadow(0 2px 3px rgba(179, 169, 169, 0.7));
 }
-#equipo > .general-container > .especific-container > #carouselExampleControls > .carousel-inner{
+@custom-selector :--carousel-inner #equipo > .general-container > .especific-container > #carouselExampleControls > .carousel-inner;
+@custom-selector :--carousel-item .carousel-item > .item-container;
+
+:--carousel-inner{
   display: grid;
   grid-template-columns: minmax(280px, 1200px);
   justify-content: center;
 }
-#equipo > .general-container > .especific-container > #carouselExampleControls > .carousel-inner > .carousel-item{
+:--carousel-inner > :--carousel-item{
+  position: relative;
+  padding-bottom: 20px;
   display: grid;
-  grid-template-columns:minmax(250px, 700px);
-  padding:30px;
+  grid-template-columns: minmax(250px, 700px);
+  grid-template-rows: 500px;
   gap: 20px;
   justify-content: center;
+  
+  @media screen and (min-width: 900px){
+    grid-template-rows: unset;
+    height: 550px;
+    grid-template-columns: minmax(250px, 410px) minmax(250px, 700px);
+    justify-content: center;
+  }
 }
-#equipo > .general-container > .especific-container > #carouselExampleControls > .carousel-inner > .carousel-item > .imagen > img{
-  width: 100%;
-  height: 500px;
+:--carousel-inner > :--carousel-item > .img-container{
   position: relative;
+}
+:--carousel-inner > :--carousel-item > .img-container > img{
+  @apply --imgCover;
   border-radius: 3px;
   filter: drop-shadow(-7px 6px 7px rgba(41, 39, 39, 0.7));
 }
-#equipo > .general-container > .especific-container > #carouselExampleControls > .carousel-inner > .carousel-item > .imagen > .mensaje-info{
-  width: auto;
-  background-color: #3b9afad0;
+:--carousel-inner > :--carousel-item > .mensaje-info{
   z-index: 4;
-  text-align: center;
   padding: 20px;
+  text-align: center;
   border-radius: 3px;
+  background-color: #3b9afad0;
+  grid-row: 2 / 3;
+  
+  @media screen and (min-width: 800px){
+  }
+  @media screen and (min-width: 900px){
+    grid-row: unset;
+    position: absolute;
+    left:32%;
+    bottom: 0px;
+  }
 }
-#equipo > .general-container > .especific-container > #carouselExampleControls > .carousel-inner > .carousel-item > .imagen > .mensaje-info > p:nth-child(1){
+:--carousel-inner > :--carousel-item > .mensaje-info > h4{
   color: white;
   font-family: 'Sacramento', cursive;
   font-size: 50px;
 }
-#equipo > .general-container > .especific-container > #carouselExampleControls > .carousel-inner > .carousel-item > .imagen > .mensaje-info > p:nth-child(2){
+:--carousel-inner > :--carousel-item > .mensaje-info > p{
+  margin: 0;
   color: white;
   font-family: 'Julius Sans One', sans-serif;
-  font-size: 30px;
+  font-size: 25px;
+
+  @media screen and (min-width: 800px){
+    font-size: 30px;
+  }
 }
-#equipo > .general-container > .especific-container > #carouselExampleControls > .carousel-inner > .carousel-item > .info{
+:--carousel-inner > :--carousel-item > .info{
   font-family: 'Julius Sans One', sans-serif;
   color: #0d3a68;
   font-size: 18px;
   text-align: justify;
   font-weight: 900;
 }
+
 @media screen and (min-width: 500px){
   #frase > .general-container > .contenedor-frase > p:nth-child(1){
     font-size: 40px;
@@ -248,6 +286,10 @@ main{
   #frase > .general-container > .contenedor-frase > p:nth-child(2){
     font-size: 20px;
   }
+}
+@media screen and (min-width: 500px){
+}
+@media screen and (min-width: 800px){
 }
 @media screen and (min-width: 800px){
   #servicios > .general-container > .especific-container{
@@ -259,33 +301,10 @@ main{
   #frase > .general-container > .contenedor-frase > p:nth-child(2){
     font-size: 20px;
   }
-  #equipo > .general-container > .especific-container > #carouselExampleControls > .carousel-inner > .carousel-item > .imagen > .mensaje-info{
-    bottom: 250px;
-    left:250px;
-  }
-  #equipo > .general-container > .especific-container > #carouselExampleControls > .carousel-inner > .carousel-item > .imagen > .mensaje-info > p:nth-child(1){
-    color: white;
-    font-family: 'Sacramento', cursive;
-    font-size: 50px;
-  }
-  #equipo > .general-container > .especific-container > #carouselExampleControls > .carousel-inner > .carousel-item > .imagen > .mensaje-info > p:nth-child(2){
-    color: white;
-    font-family: 'Julius Sans One', sans-serif;
-    font-size: 25px;
-  }
 }
+
 @media screen and (min-width: 900px){
-  #equipo > .general-container > .especific-container > #carouselExampleControls > .carousel-inner > .carousel-item{
-    grid-template-columns: minmax(250px, 410px) minmax(250px, 700px);
-    justify-content: center;
-  }
-  #equipo > .general-container > .especific-container > #carouselExampleControls > .carousel-inner > .carousel-item > .imagen > .mensaje-info{
-    bottom: 10px;
-    left:32%;
-    position: absolute;
-    z-index: 4;
-  }
-  #equipo > .general-container > .especific-container > #carouselExampleControls > .carousel-inner > .carousel-item > .info{
+  :--carousel-inner > :--carousel-item > .info{
     font-family: 'Julius Sans One', sans-serif;
     color: #0d3a68;
     font-size: 18px;
