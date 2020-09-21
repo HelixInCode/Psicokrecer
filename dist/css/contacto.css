@@ -19,11 +19,11 @@
     filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur in="SourceAlpha" stdDeviation="3" /><feOffset dx="1" dy="3" result="offsetblur" /><feFlood flood-color="rgba(138,134,134,0.7)" /><feComposite in2="offsetblur" operator="in" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter></svg>#filter');
     -webkit-filter: drop-shadow(0 2px 3px rgba(138, 134, 134, .7));
             filter: drop-shadow(0 2px 3px rgba(138, 134, 134, .7));
-    display: none;
+    visibility: hidden;
   }
   @media screen and (min-width: 880px){
     #contacto > .general-container > .inicial-img > img{
-        display:block;
+        visibility: visible;
     }
 }
   #contacto > .general-container > .inicial-img > h3{

@@ -27,9 +27,9 @@
   }
   #contacto > .general-container > .inicial-img > img{
     filter: drop-shadow(0 2px 3px rgba(138, 134, 134, 0.7));
-    display: none;
+    visibility: hidden;
     @media screen and (min-width: 880px){
-        display:block;
+        visibility: visible;
     }
   }
   #contacto > .general-container > .inicial-img > h3{
