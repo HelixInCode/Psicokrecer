@@ -199,6 +199,7 @@ main{
   background-color: white;
   border-radius: 5px;
   filter: drop-shadow(0 2px 3px rgba(138, 134, 134, 0.7));
+  transition: 1s;
 }
 #servicios > .general-container > .especific-container > .servicios-item:hover{
   filter: drop-shadow(0 10px 10px rgba(110, 167, 221, 0.7));
@@ -215,6 +216,7 @@ main{
   font-family: 'Julius Sans One', sans-serif;
   color: #154d85;
   font-weight: 800;
+  font-size: 20px;
 }
 #servicios > .general-container > .especific-container > .servicios-item > .imagen > img{
   width: 100%;

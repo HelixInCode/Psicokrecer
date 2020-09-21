@@ -211,6 +211,8 @@ main{
   filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur in="SourceAlpha" stdDeviation="3" /><feOffset dx="1" dy="3" result="offsetblur" /><feFlood flood-color="rgba(138,134,134,0.7)" /><feComposite in2="offsetblur" operator="in" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter></svg>#filter');
   -webkit-filter: drop-shadow(0 2px 3px rgba(138, 134, 134, .7));
           filter: drop-shadow(0 2px 3px rgba(138, 134, 134, .7));
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 #servicios > .general-container > .especific-container > .servicios-item:hover{
   filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur in="SourceAlpha" stdDeviation="10" /><feOffset dx="1" dy="11" result="offsetblur" /><feFlood flood-color="rgba(110,167,221,0.7)" /><feComposite in2="offsetblur" operator="in" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter></svg>#filter');
@@ -229,6 +231,7 @@ main{
   font-family: 'Julius Sans One', sans-serif;
   color: #154d85;
   font-weight: 800;
+  font-size: 20px;
 }
 #servicios > .general-container > .especific-container > .servicios-item > .imagen > img{
   width: 100%;
