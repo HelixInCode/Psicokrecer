@@ -34,6 +34,13 @@ nav > .brand-logo > span{
   z-index: 100000;
   top: 0;
   right: 0;
+  display:none;
+}
+@media screen and (min-width: 600px){
+
+  #mySidenav{
+    display:block;
+  }
 }
 #mySidenav > .enlaces {
   padding-bottom: 100px;
@@ -42,6 +49,7 @@ nav > .brand-logo > span{
   grid-template-rows: repeat(4, auto);
   justify-content: center;
   gap: 50px;
+  
 }
 #mySidenav > .enlaces > a{
   -webkit-writing-mode: vertical-lr;

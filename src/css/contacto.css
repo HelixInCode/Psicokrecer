@@ -27,28 +27,49 @@
   }
   #contacto > .general-container > .inicial-img > img{
     filter: drop-shadow(0 2px 3px rgba(138, 134, 134, 0.7));
+    display: none;
+    @media screen and (min-width: 880px){
+        display:block;
+    }
   }
   #contacto > .general-container > .inicial-img > h3{
     font-family: 'Julius Sans One', sans-serif;
-    padding-top: 10px;
+    padding-top: 80px;
     color: #a850c3;
     font-weight: 900;
+    @media screen and (min-width: 800px){
+        padding-top: 30px;
+    }
   }
   #contacto > .general-container > .especific-container {
       display: grid;
       grid-template-columns: minmax(250px, 1000px);
       justify-content: center;
       background-color: white;
-      margin-left: 200px;
-      margin-right: 200px;
+      margin: 20px;
       padding: 50px;
       border-radius: 10px;
       filter: drop-shadow(0 3px 3px #2f80d1b0);
+      @media screen and (min-width: 600px){
+        margin-left: 90px;
+        margin-right: 100px;
+      }
+      @media screen and (min-width: 880px){
+        margin-left: 150px;
+        margin-right: 180px;
+      }
+      @media screen and (min-width: 1000px){
+        margin-left: 200px;
+        margin-right: 200px;
+      }
   }
   #contacto > .general-container > .especific-container > .contenedor-formulario{
       display: grid;
-      grid-template-columns: minmax(250px, 800px) minmax(200px, 350px);
+      grid-template-columns: minmax(250px, 800px);
       justify-content: center;
+      @media screen and (min-width: 880px){
+        grid-template-columns: minmax(250px, 800px) minmax(200px, 350px);
+      }
   }
   .md-form > label{
       font-family: 'Julius Sans One', sans-serif;
