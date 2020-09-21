@@ -59,32 +59,32 @@
                 </div>
                 <div class="especific-container">
                     <div class="contenedor-formulario">
-                        <form id="contact-form" name="contact-form" action="" method="">
+                        <form id="contact-form" action="enviar.php" method="POST">
                             <div class="row">
             
                                 <div class="col-md-6">
                                     <div class="md-form mb-0">
-                                        <input type="text" id="name" name="name" class="form-control">
-                                        <label for="name" class="">Nombre</label>
+                                        <input type="text" id="nombre" name="nombre" class="form-control">
+                                        <label for="nombre" class="">Nombre</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="md-form mb-0">
-                                        <input type="text" id="name" name="name" class="form-control">
-                                        <label for="name" class="">Telefono</label>
+                                        <input type="tel" id="telefono" name="telefono" class="form-control">
+                                        <label for="telefono" class="">Telefono</label>
                                     </div>
                                 </div>
                 
                                 <div class="col-md-6">
                                     <div class="md-form mb-0">
-                                        <input type="text" id="email" name="email" class="form-control">
+                                        <input type="email" id="email" name="email" class="form-control">
                                         <label for="email" class="">Correo</label>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="md-form mb-0">
-                                        <input type="text" id="subject" name="subject" class="form-control">
-                                        <label for="subject" class="">Asunto</label>
+                                        <input type="text" id="asunto" name="asunto" class="form-control">
+                                        <label for="asunto" class="">Asunto</label>
                                     </div>
                                 </div>
             
@@ -96,15 +96,15 @@
                                 <div class="col-md-12">
             
                                     <div class="md-form">
-                                        <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
-                                        <label for="message">Mensaje</label>
+                                        <textarea type="text" id="mensaje" name="mensaje" rows="2" class="form-control md-textarea"></textarea>
+                                        <label for="mensaje">Mensaje</label>
                                     </div>
             
                                 </div>
                             </div>
                             
                             <div class="text-center boton-enviar">
-                                <a class="btn">ENVIAR</a>
+                                <button type="submit" class="btn">ENVIAR</button>
                             </div>
                         </form>
                         
