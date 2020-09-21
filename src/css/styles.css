@@ -56,6 +56,9 @@ nav > .brand-logo > span{
   grid-template-rows: repeat(4, auto);
   justify-content: center;
   gap: 50px;
+  font-family:'Kaushan Script', cursive;
+  font-weight: 400;
+  font-size: 18px;
   
 }
 #mySidenav > .enlaces > a{
@@ -66,6 +69,9 @@ nav > .brand-logo > span{
   text-align: center;
   margin-top: auto;
   margin-bottom: auto;
+}
+#mySidenav > .enlaces > a:hover{
+  background-color: #68217e;
 }
 .index-carousel{
   position: relative;
@@ -259,7 +265,7 @@ main{
   
   @media screen and (min-width: 900px){
     grid-template-rows: unset;
-    height: 550px;
+    height: 350px;
     grid-template-columns: minmax(250px, 410px) minmax(250px, 700px);
     justify-content: center;
   }
@@ -269,7 +275,7 @@ main{
 }
 :--carousel-inner > :--carousel-item > .img-container > img{
   @apply --imgCover;
-  border-radius: 3px;
+  border-radius: 100%;
   filter: drop-shadow(-7px 6px 7px rgba(41, 39, 39, 0.7));
 }
 :--carousel-inner > :--carousel-item > .mensaje-info{
@@ -341,7 +347,8 @@ main{
     font-family: 'Julius Sans One', sans-serif;
     color: #0d3a68;
     font-size: 18px;
-    text-align: justify;
+    text-align: center;
     font-weight: 900;
+    padding-top: 80px;
   }
 }
