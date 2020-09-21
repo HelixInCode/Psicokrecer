@@ -1,0 +1,82 @@
+:root{
+    --imgCover:{
+      position: absolute;
+      object-fit: cover;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+}
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  #contacto{
+      height: 100vh;
+  }
+  #contacto > .general-container{
+    display: grid;
+    grid-template-columns: minmax(250px, 1fr);
+    justify-content: center;
+    padding-top: 50px;
+  }
+  #contacto > .general-container > .inicial-img{
+    text-align: center;
+    padding-bottom: 40px;
+  }
+  #contacto > .general-container > .inicial-img > img{
+    filter: drop-shadow(0 2px 3px rgba(138, 134, 134, 0.7));
+  }
+  #contacto > .general-container > .inicial-img > h3{
+    font-family: 'Julius Sans One', sans-serif;
+    padding-top: 10px;
+    color: #a850c3;
+    font-weight: 900;
+  }
+  #contacto > .general-container > .especific-container {
+      display: grid;
+      grid-template-columns: minmax(250px, 1000px);
+      justify-content: center;
+      background-color: white;
+      margin-left: 200px;
+      margin-right: 200px;
+      padding: 50px;
+      border-radius: 10px;
+      filter: drop-shadow(0 3px 3px #2f80d1b0);
+  }
+  #contacto > .general-container > .especific-container > .contenedor-formulario{
+      display: grid;
+      grid-template-columns: minmax(250px, 800px) minmax(200px, 350px);
+      justify-content: center;
+  }
+  .md-form > label{
+      font-family: 'Julius Sans One', sans-serif;
+      color:  #2f80d1;
+      font-weight: 500;
+      font-size: 20px;
+      padding-left: 20px;
+  }
+  .md-form .input-prefix{
+    color:  #2f80d1;
+  }
+  .md-form > input{
+      padding-bottom: 30px;
+      border-color: #2f80d1;
+      
+  }
+  form > .boton-enviar{
+      margin-left: auto;
+      margin-right: auto;
+      justify-content: center;
+  }
+  form > .boton-enviar > a{
+      background-color: #2f80d1;
+      font-family: 'Julius Sans One', sans-serif;
+      color: white;
+      font-size: 20px;
+      font-weight: 600;
+  }
+  
+
+  

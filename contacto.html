@@ -28,6 +28,7 @@
   <link rel="stylesheet" href="dist/css/mdb.min.css">
   <!-- Your custom styles (optional) -->
   <link rel="stylesheet" href="dist/css/styles.css">
+  <link rel="stylesheet" href="dist/css/contacto.css">
 </head>
 <body>
     <header>
@@ -43,12 +44,78 @@
           <a href="index.html">Home</a>
           <a href="#">Quienes Somos</a>
           <a href="index.html#servicios">Servicios</a>
-          <a href="#">Contacto</a>
+          <a href="contacto.html">Contacto</a>
           <a href="#">Blog</a>
         </div>
+       </div>
     </header>
     
     <main>
+        <section id="contacto">
+            <div class="general-container">
+                <div class="inicial-img">
+                    <img src="./dist/img/Psico-logo.png" alt="">
+                    <h3>CONTÁCTANOS</h3>
+                </div>
+                <div class="especific-container">
+                    <div class="contenedor-formulario">
+                        <form id="contact-form" name="contact-form" action="" method="">
+                            <div class="row">
+            
+                                <div class="col-md-6">
+                                    <div class="md-form mb-0">
+                                        <input type="text" id="name" name="name" class="form-control">
+                                        <label for="name" class="">Nombre</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="md-form mb-0">
+                                        <input type="text" id="name" name="name" class="form-control">
+                                        <label for="name" class="">Telefono</label>
+                                    </div>
+                                </div>
+                
+                                <div class="col-md-6">
+                                    <div class="md-form mb-0">
+                                        <input type="text" id="email" name="email" class="form-control">
+                                        <label for="email" class="">Correo</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="md-form mb-0">
+                                        <input type="text" id="subject" name="subject" class="form-control">
+                                        <label for="subject" class="">Asunto</label>
+                                    </div>
+                                </div>
+            
+                            </div>
+                      
+                            <div class="row">
+            
+                              
+                                <div class="col-md-12">
+            
+                                    <div class="md-form">
+                                        <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+                                        <label for="message">Mensaje</label>
+                                    </div>
+            
+                                </div>
+                            </div>
+                            
+                            <div class="text-center boton-enviar">
+                                <a class="btn">ENVIAR</a>
+                            </div>
+                        </form>
+                        
+                    </div>
+                    
+
+                </div>
+
+            </div>
+
+        </section>
     </main>
     <footer></footer>
     <!-- jQuery -->
