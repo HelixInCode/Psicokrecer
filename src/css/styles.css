@@ -246,15 +246,8 @@ main{
   width: 100px;
   filter: drop-shadow(0 2px 3px rgba(179, 169, 169, 0.7));
 }
-@custom-selector :--carousel-inner #equipo > .general-container > .especific-container > #carouselExampleControls > .carousel-inner;
-@custom-selector :--carousel-item .carousel-item > .item-container;
 
-:--carousel-inner{
-  display: grid;
-  grid-template-columns: minmax(280px, 1200px);
-  justify-content: center;
-}
-:--carousel-inner > :--carousel-item{
+#item-equipo{
   position: relative;
   padding-bottom: 20px;
   display: grid;
@@ -270,15 +263,19 @@ main{
     justify-content: center;
   }
 }
-:--carousel-inner > :--carousel-item > .img-container{
+#item-equipo > .img-container{
   position: relative;
 }
-:--carousel-inner > :--carousel-item > .img-container > img{
+#item-equipo > .img-container > img{
   @apply --imgCover;
+  padding: 30px;
   border-radius: 100%;
   filter: drop-shadow(-7px 6px 7px rgba(41, 39, 39, 0.7));
+  @media screen and (min-width: 800px){
+    padding:0;
+  }
 }
-:--carousel-inner > :--carousel-item > .mensaje-info{
+#item-equipo > .mensaje-info{
   z-index: 4;
   padding: 20px;
   text-align: center;
@@ -295,12 +292,12 @@ main{
     bottom: 0px;
   }
 }
-:--carousel-inner > :--carousel-item > .mensaje-info > h4{
+#item-equipo > .mensaje-info > h4{
   color: white;
   font-family: 'Sacramento', cursive;
   font-size: 50px;
 }
-:--carousel-inner > :--carousel-item > .mensaje-info > p{
+#item-equipo > .mensaje-info > p{
   margin: 0;
   color: white;
   font-family: 'Julius Sans One', sans-serif;
@@ -310,13 +307,19 @@ main{
     font-size: 30px;
   }
 }
-:--carousel-inner > :--carousel-item > .info{
+#item-equipo > .info{
   font-family: 'Julius Sans One', sans-serif;
   color: #0d3a68;
   font-size: 18px;
   text-align: justify;
   font-weight: 900;
-}
+  padding-left: 30px;
+  padding-right: 30px;
+  @media screen and (min-width: 800px){
+    padding-right: 100px;
+  }
+} 
+
 
 @media screen and (min-width: 500px){
   #frase > .general-container > .contenedor-frase > p:nth-child(1){
@@ -342,7 +345,7 @@ main{
   }
 }
 
-@media screen and (min-width: 900px){
+/* @media screen and (min-width: 900px){
   :--carousel-inner > :--carousel-item > .info{
     font-family: 'Julius Sans One', sans-serif;
     color: #0d3a68;
@@ -352,7 +355,7 @@ main{
     padding-top: 80px;
   
   }
-}
+} */
 /*FOOTER*/
 footer {
 }
@@ -470,7 +473,7 @@ footer > .contenedor-general > .pie-footer{
   background-color: #40494e;
   text-align: center;
   font-weight: 600;
-  position: fixed;
+  position: static;
   bottom: 0;
   left: 0;
   right: 0;

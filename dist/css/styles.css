@@ -264,12 +264,7 @@ main{
           filter: drop-shadow(0 2px 3px rgba(179, 169, 169, .7));
 }
 
-#equipo > .general-container > .especific-container > #carouselExampleControls > .carousel-inner{
-  display: grid;
-  grid-template-columns: minmax(280px, 1200px);
-  justify-content: center;
-}
-#equipo > .general-container > .especific-container > #carouselExampleControls > .carousel-inner > .carousel-item > .item-container{
+#item-equipo{
   position: relative;
   padding-bottom: 20px;
   display: grid;
@@ -278,19 +273,20 @@ main{
   gap: 20px;
   justify-content: center;
 }
+
 @media screen and (min-width: 900px){
 
-  #equipo > .general-container > .especific-container > #carouselExampleControls > .carousel-inner > .carousel-item > .item-container{
+  #item-equipo{
     grid-template-rows: unset;
     height: 350px;
     grid-template-columns: minmax(250px, 410px) minmax(250px, 700px);
     justify-content: center;
   }
 }
-#equipo > .general-container > .especific-container > #carouselExampleControls > .carousel-inner > .carousel-item > .item-container > .img-container{
+#item-equipo > .img-container{
   position: relative;
 }
-#equipo > .general-container > .especific-container > #carouselExampleControls > .carousel-inner > .carousel-item > .item-container > .img-container > img{
+#item-equipo > .img-container > img{
   position: absolute;
   -o-object-fit: cover;
      object-fit: cover;
@@ -298,11 +294,18 @@ main{
   left: 0;
   width: 100%;
   height: 100%;
+  padding: 30px;
   border-radius: 100%;
   -webkit-filter: drop-shadow(-7px 6px 7px rgba(41, 39, 39, .7));
           filter: drop-shadow(-7px 6px 7px rgba(41, 39, 39, .7));
 }
-#equipo > .general-container > .especific-container > #carouselExampleControls > .carousel-inner > .carousel-item > .item-container > .mensaje-info{
+@media screen and (min-width: 800px){
+
+  #item-equipo > .img-container > img{
+    padding:0;
+  }
+}
+#item-equipo > .mensaje-info{
   z-index: 4;
   padding: 20px;
   text-align: center;
@@ -312,25 +315,25 @@ main{
 }
 @media screen and (min-width: 800px){
 
-  #equipo > .general-container > .especific-container > #carouselExampleControls > .carousel-inner > .carousel-item > .item-container > .mensaje-info{
+  #item-equipo > .mensaje-info{
 
 }
 }
 @media screen and (min-width: 900px){
 
-  #equipo > .general-container > .especific-container > #carouselExampleControls > .carousel-inner > .carousel-item > .item-container > .mensaje-info{
+  #item-equipo > .mensaje-info{
     grid-row: unset;
     position: absolute;
     left:32%;
     bottom: 0px;
   }
 }
-#equipo > .general-container > .especific-container > #carouselExampleControls > .carousel-inner > .carousel-item > .item-container > .mensaje-info > h4{
+#item-equipo > .mensaje-info > h4{
   color: white;
   font-family: 'Sacramento', cursive;
   font-size: 50px;
 }
-#equipo > .general-container > .especific-container > #carouselExampleControls > .carousel-inner > .carousel-item > .item-container > .mensaje-info > p{
+#item-equipo > .mensaje-info > p{
   margin: 0;
   color: white;
   font-family: 'Julius Sans One', sans-serif;
@@ -338,17 +341,26 @@ main{
 }
 @media screen and (min-width: 800px){
 
-  #equipo > .general-container > .especific-container > #carouselExampleControls > .carousel-inner > .carousel-item > .item-container > .mensaje-info > p{
+  #item-equipo > .mensaje-info > p{
     font-size: 30px;
   }
 }
-#equipo > .general-container > .especific-container > #carouselExampleControls > .carousel-inner > .carousel-item > .item-container > .info{
+#item-equipo > .info{
   font-family: 'Julius Sans One', sans-serif;
   color: #0d3a68;
   font-size: 18px;
   text-align: justify;
   font-weight: 900;
+  padding-left: 30px;
+  padding-right: 30px;
 }
+@media screen and (min-width: 800px){
+
+  #item-equipo > .info{
+    padding-right: 100px;
+  }
+} 
+
 
 @media screen and (min-width: 500px){
   #frase > .general-container > .contenedor-frase > p:nth-child(1){
@@ -374,8 +386,8 @@ main{
   }
 }
 
-@media screen and (min-width: 900px){
-  #equipo > .general-container > .especific-container > #carouselExampleControls > .carousel-inner > .carousel-item > .item-container > .info{
+/* @media screen and (min-width: 900px){
+  :--carousel-inner > :--carousel-item > .info{
     font-family: 'Julius Sans One', sans-serif;
     color: #0d3a68;
     font-size: 18px;
@@ -384,7 +396,7 @@ main{
     padding-top: 80px;
   
   }
-}
+} */
 /*FOOTER*/
 footer {
 }
@@ -521,7 +533,7 @@ footer > .contenedor-general > .pie-footer{
   background-color: #40494e;
   text-align: center;
   font-weight: 600;
-  position: fixed;
+  position: static;
   bottom: 0;
   left: 0;
   right: 0;
