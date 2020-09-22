@@ -354,6 +354,8 @@ main{
   }
 }
 /*FOOTER*/
+footer {
+}
 footer > .contenedor-general {
   display: grid;
   grid-template-columns: 1fr;
@@ -439,7 +441,7 @@ footer > .contenedor-general > .contenedor-especifico > .contenedor-info > .rede
 footer > .contenedor-general > .contenedor-especifico > .contenedor-info > .redes > p{
   color: white;
   font-family: 'Julius Sans One', sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
   @media screen and (min-width: 850px){
     margin-top: auto;

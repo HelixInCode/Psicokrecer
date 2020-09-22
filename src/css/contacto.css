@@ -11,15 +11,25 @@
   *{
     margin: 0;
     padding: 0;
+    
+  }
+  main{
+    background-image: url("../../dist/img/cover/fondo-contacto.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #cf9bdfd8;
   }
   #contacto{
-      height: 100vh;
+      
   }
   #contacto > .img-fondo{
       background-color: rgba(231, 230, 230, 0.699);
       position: absolute;
       width: 100%;
-      height: 100vh;
+      height: 100%;
       z-index: 6;
   }
   #contacto > .general-container{
@@ -27,10 +37,7 @@
     grid-template-columns: minmax(250px, 1fr);
     justify-content: center;
     padding-top: 50px;
-    background-image: url("../../dist/img/cover/fondo-contacto.png");
-    background-repeat: none;
-    background-size: 100% 100%;
-    background-position: var(--imgCover);
+    padding-bottom: 100px;
   }
   #contacto > .general-container > .inicial-img{
     text-align: center;
@@ -47,6 +54,7 @@
     font-family: 'Julius Sans One', sans-serif;
     padding-top: 80px;
     color: #a850c3;
+    filter: drop-shadow(0 2px 3px rgba(255, 255, 255, 0.7));
     font-weight: 900;
     @media screen and (min-width: 800px){
         padding-top: 30px;
@@ -56,7 +64,7 @@
       display: grid;
       grid-template-columns: minmax(250px, 1000px);
       justify-content: center;
-      background-color: rgba(255, 255, 255, 0.774);
+      background-color: rgba(255, 255, 255, 0.74);
       margin: 20px;
       padding: 50px;
       border-radius: 10px;
@@ -79,8 +87,19 @@
       grid-template-columns: minmax(250px, 800px);
       justify-content: center;
       @media screen and (min-width: 880px){
-        grid-template-columns: minmax(250px, 800px) minmax(200px, 350px);
+        grid-template-columns: minmax(250px, 800px) 20px minmax(200px, 350px);
+        gap:20px;
       }
+  }
+  #contacto > .general-container > .especific-container > .contenedor-formulario > .separador{
+    border-left: 4px solid #2f80d181;
+    height: 250px;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: none;
+    @media screen and (min-width: 880px){
+      display:block;
+    }
   }
   .md-form > label{
       font-family: 'Julius Sans One', sans-serif;
@@ -102,13 +121,40 @@
       margin-right: auto;
       justify-content: center;
   }
-  form > .boton-enviar > a{
+  form > .boton-enviar > button{
       background-color: #2f80d1;
       font-family: 'Julius Sans One', sans-serif;
       color: white;
       font-size: 20px;
       font-weight: 600;
+      border-radius: 10px;
   }
-  
+  #contacto > .general-container > .especific-container > .contenedor-formulario > .enlaces{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 3px solid #2f80d181;
+    @media screen and (min-width: 880px){
+      margin-top:0;
+      padding-top: 0;
+      border-top: none;
+    }
+  }
+  #contacto > .general-container > .especific-container > .contenedor-formulario > .enlaces > .item > i{
+    font-size: 50px;
+    color: #2f80d1;
+  }
+  #contacto > .general-container > .especific-container > .contenedor-formulario > .enlaces > .item > p{
+    color: #670c83;
+    font-size: 20px;
+    font-family:'Julius Sans One', sans-serif ;
+    padding-top: 5px;
+    font-weight: 700;
+  }
 
   

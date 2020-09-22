@@ -1,15 +1,25 @@
 *{
     margin: 0;
     padding: 0;
+    
+  }
+  main{
+    background-image: url("../../dist/img/cover/fondo-contacto.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: rgba(207, 155, 223, 0.84706);
   }
   #contacto{
-      height: 100vh;
+      
   }
   #contacto > .img-fondo{
       background-color: rgba(231, 230, 230, .699);
       position: absolute;
       width: 100%;
-      height: 100vh;
+      height: 100%;
       z-index: 6;
   }
   #contacto > .general-container{
@@ -17,10 +27,7 @@
     grid-template-columns: minmax(250px, 1fr);
     justify-content: center;
     padding-top: 50px;
-    background-image: url("../../dist/img/cover/fondo-contacto.png");
-    background-repeat: none;
-    background-size: 100% 100%;
-    background-position: var(--imgCover);
+    padding-bottom: 100px;
   }
   #contacto > .general-container > .inicial-img{
     text-align: center;
@@ -35,24 +42,31 @@
   @media screen and (min-width: 880px){
     #contacto > .general-container > .inicial-img > img{
         visibility: visible;
+    
     }
+    
 }
   #contacto > .general-container > .inicial-img > h3{
     font-family: 'Julius Sans One', sans-serif;
     padding-top: 80px;
     color: #a850c3;
+    filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur in="SourceAlpha" stdDeviation="3" /><feOffset dx="1" dy="3" result="offsetblur" /><feFlood flood-color="rgba(255,255,255,0.7)" /><feComposite in2="offsetblur" operator="in" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter></svg>#filter');
+    -webkit-filter: drop-shadow(0 2px 3px rgba(255, 255, 255, .7));
+            filter: drop-shadow(0 2px 3px rgba(255, 255, 255, .7));
     font-weight: 900;
   }
   @media screen and (min-width: 800px){
     #contacto > .general-container > .inicial-img > h3{
         padding-top: 30px;
+    
     }
+    
 }
   #contacto > .general-container > .especific-container {
       display: grid;
       grid-template-columns: minmax(250px, 1000px);
       justify-content: center;
-      background-color: rgba(255, 255, 255, .774);
+      background-color: rgba(255, 255, 255, .74);
       margin: 20px;
       padding: 50px;
       border-radius: 10px;
@@ -64,19 +78,25 @@
     #contacto > .general-container > .especific-container {
         margin-left: 90px;
         margin-right: 100px;
+    
     }
+    
 }
   @media screen and (min-width: 880px){
     #contacto > .general-container > .especific-container {
         margin-left: 150px;
         margin-right: 180px;
+    
     }
+    
 }
   @media screen and (min-width: 1000px){
     #contacto > .general-container > .especific-container {
         margin-left: 200px;
         margin-right: 200px;
+    
     }
+    
 }
   #contacto > .general-container > .especific-container > .contenedor-formulario{
       display: grid;
@@ -85,8 +105,25 @@
   }
   @media screen and (min-width: 880px){
     #contacto > .general-container > .especific-container > .contenedor-formulario{
-        grid-template-columns: minmax(250px, 800px) minmax(200px, 350px);
+        grid-template-columns: minmax(250px, 800px) 20px minmax(200px, 350px);
+        gap:20px;
+    
     }
+    
+}
+  #contacto > .general-container > .especific-container > .contenedor-formulario > .separador{
+    border-left: 4px solid rgba(47, 128, 209, 0.50588);
+    height: 250px;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: none;
+  }
+  @media screen and (min-width: 880px){
+    #contacto > .general-container > .especific-container > .contenedor-formulario > .separador{
+        display:block;
+    
+    }
+    
 }
   .md-form > label{
       font-family: 'Julius Sans One', sans-serif;
@@ -108,13 +145,44 @@
       margin-right: auto;
       justify-content: center;
   }
-  form > .boton-enviar > a{
+  form > .boton-enviar > button{
       background-color: #2f80d1;
       font-family: 'Julius Sans One', sans-serif;
       color: white;
       font-size: 20px;
       font-weight: 600;
+      border-radius: 10px;
   }
-  
+  #contacto > .general-container > .especific-container > .contenedor-formulario > .enlaces{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 3px solid rgba(47, 128, 209, 0.50588);
+  }
+  @media screen and (min-width: 880px){
+    #contacto > .general-container > .especific-container > .contenedor-formulario > .enlaces{
+        margin-top:0;
+        padding-top: 0;
+        border-top: none;
+    
+    }
+    
+}
+  #contacto > .general-container > .especific-container > .contenedor-formulario > .enlaces > .item > i{
+    font-size: 50px;
+    color: #2f80d1;
+  }
+  #contacto > .general-container > .especific-container > .contenedor-formulario > .enlaces > .item > p{
+    color: #670c83;
+    font-size: 20px;
+    font-family:'Julius Sans One', sans-serif ;
+    padding-top: 5px;
+    font-weight: 700;
+  }
 
   
