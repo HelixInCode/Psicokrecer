@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+#nosotros > .general-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    padding-top: 70px;
+    text-align: center;
+}
+#nosotros > .general-container > .inicial-img > h3{
+    font-family: 'Julius Sans One', sans-serif;
+    font-weight: 700;
+    color:  #a850c3;
+    padding-top: 10px;
+}
+#specific-container > .frase{
+    background-color: #3b9cfa;
+    width: 100%;
+    padding-top: 90px;
+    padding-bottom: 90px;
+    margin-top: 50px;
+}
+#specific-container > .frase > h3{
+    font-size: 50px;
+    color: white;
+    font-family:'Kaushan Script', cursive;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+#specific-container > .enfoque{
+    padding: 60px;
+    font-family: 'Julius Sans One', sans-serif;
+}
+#specific-container > .enfoque > h4{
+    color: #a850c3;
+    font-weight: 700;
+}
+#specific-container > .enfoque > p{
+    color: #0d3a68;
+    font-weight: 700;
+    padding-top: 10px;
+}
+#descripcion > .frase{
+    background-color: #a850c3;
+    width: 100%;
+    padding-top: 90px;
+    padding-bottom: 90px;
+    margin-top: 50px;
+}
+#descripcion > .frase > h3{
+    font-size: 50px;
+    color: white;
+    font-family:'Kaushan Script', cursive;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+#descripcion > .frase > p{
+    color: white;
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 20px;
+}
