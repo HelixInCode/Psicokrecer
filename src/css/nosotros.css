@@ -43,14 +43,15 @@
 }
 #specific-container > .enfoque{
     padding: 60px;
-    font-family: 'Julius Sans One', sans-serif;
+    font-family: 'Varela Round', sans-serif;
 }
 #specific-container > .enfoque > h4{
     color: #a850c3;
     font-weight: 700;
+    font-family: 'Julius Sans One', sans-serif;
 }
 #specific-container > .enfoque > p{
-    color: #0d3a68;
+    color: #0d3b68c9;
     font-weight: 700;
     padding-top: 10px;
 }
@@ -71,5 +72,5 @@
 #descripcion > .frase > p{
     color: white;
     font-family: 'Julius Sans One', sans-serif;
-    font-size: 20px;
+    font-size: 30px;
 }

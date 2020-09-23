@@ -24,7 +24,7 @@ nav{
 nav > .brand-logo > span{
   position: absolute;
   top: 30px;
-  left: 30px;
+  right: 30px;
 }
 #mySidenav{
   height: 100%;
@@ -33,7 +33,7 @@ nav > .brand-logo > span{
   position: fixed;
   z-index: 100000;
   top: 0;
-  right: 0;
+  left: 0;
   display:none;
 }
 @media screen and (min-width: 600px){
@@ -86,8 +86,6 @@ nav > .brand-logo > span{
 }
 .index-carousel> .carousel-inner > .carousel-item > img{
   position: absolute;
-  -o-object-fit: cover;
-     object-fit: cover;
   top: 0;
   left: 0;
   width: 100%;
@@ -137,6 +135,7 @@ main{
   background-color: #f8f8f8;
 }
 
+
   /*SECCION FRASE*/
 
 #frase{
@@ -169,7 +168,7 @@ main{
 @media screen and (min-width: 768px){
 
   #frase > .general-container > .contenedor-frase{
-    padding: 50px 30px;
+    padding: 50px 80px;
     height: 320px;
   }
 }
@@ -185,7 +184,7 @@ main{
 #frase > .general-container > .contenedor-frase > p:nth-child(2){
   font-family: 'Julius Sans One', sans-serif;
   color: white;
-  font-size: 18px;
+  font-size: 25px;
   font-weight: 600;
 }
 
@@ -209,6 +208,13 @@ main{
   grid-template-columns: minmax(250px, 500px);
   justify-content: center;
   gap: 20px;
+  
+}
+@media screen and (min-width: 830px){
+
+  #servicios > .general-container > .especific-container{
+    padding-left: 80px;
+  }
 }
 #servicios > .general-container > .especific-container > .servicios-item{
   text-align: center;
@@ -234,14 +240,15 @@ main{
 #servicios > .general-container > .especific-container > .servicios-item > ul{
   list-style: none;
   padding-top: 30px;
-  font-family: 'Julius Sans One', sans-serif;
-  color: #154d85;
-  font-weight: 800;
-  font-size: 20px;
+  font-family: 'Varela Round', sans-serif;
+  color: rgba(13, 59, 104, 0.66275);
+  font-weight: 600;
+  font-size: 18px;
 }
 #servicios > .general-container > .especific-container > .servicios-item > .imagen > img{
   width: 100%;
   border-radius: 3px;
+  height: 200px;
 }
 #equipo{
   padding-top: 20px;
@@ -262,6 +269,7 @@ main{
   filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur in="SourceAlpha" stdDeviation="3" /><feOffset dx="1" dy="3" result="offsetblur" /><feFlood flood-color="rgba(179,169,169,0.7)" /><feComposite in2="offsetblur" operator="in" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter></svg>#filter');
   -webkit-filter: drop-shadow(0 2px 3px rgba(179, 169, 169, .7));
           filter: drop-shadow(0 2px 3px rgba(179, 169, 169, .7));
+  
 }
 
 #item-equipo{
@@ -281,6 +289,7 @@ main{
     height: 350px;
     grid-template-columns: minmax(250px, 410px) minmax(250px, 700px);
     justify-content: center;
+    padding-left: 40px;
   }
 }
 #item-equipo > .img-container{
@@ -288,14 +297,13 @@ main{
 }
 #item-equipo > .img-container > img{
   position: absolute;
-  -o-object-fit: cover;
-     object-fit: cover;
   top: 0;
   left: 0;
+  right: 0;
   width: 100%;
-  height: 100%;
+  height:100%;
   padding: 30px;
-  border-radius: 100%;
+  border-radius: 30%;
   -webkit-filter: drop-shadow(-7px 6px 7px rgba(41, 39, 39, .7));
           filter: drop-shadow(-7px 6px 7px rgba(41, 39, 39, .7));
 }
@@ -303,6 +311,11 @@ main{
 
   #item-equipo > .img-container > img{
     padding:0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 }
 #item-equipo > .mensaje-info{
@@ -330,7 +343,7 @@ main{
 }
 #item-equipo > .mensaje-info > h4{
   color: white;
-  font-family: 'Sacramento', cursive;
+  font-family: 'Kaushan Script', cursive;
   font-size: 50px;
 }
 #item-equipo > .mensaje-info > p{
@@ -346,8 +359,8 @@ main{
   }
 }
 #item-equipo > .info{
-  font-family: 'Julius Sans One', sans-serif;
-  color: #0d3a68;
+  font-family: 'Varela Round', sans-serif;
+  color: rgba(13, 59, 104, 0.66275);
   font-size: 18px;
   text-align: justify;
   font-weight: 900;
@@ -522,7 +535,7 @@ footer > .contenedor-general > .contenedor-especifico > .contenedor-info > .rede
 }
 footer > .contenedor-general > .contenedor-especifico > .contenedor-info > .redes > .redes-icons{
   display: grid;
-  grid-template-columns: repeat(3, 30px);
+  grid-template-columns: repeat(2, 30px);
   gap: 20px;
   justify-content: center;
 }
