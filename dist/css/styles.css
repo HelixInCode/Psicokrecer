@@ -25,9 +25,15 @@ nav > .brand-logo > span{
   position: absolute;
   top: 30px;
   right: 30px;
-  background-color: rgba(255, 255, 255, .925);
-  border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, .418);
+  
+}
+@media screen and (min-width: 630px){
+
+  nav > .brand-logo > span{
+    background-color: rgba(255, 255, 255, .925);
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, .418);
+  }
 }
 nav > .brand-logo > span > img{
   width: 320px;
@@ -92,6 +98,8 @@ nav > .brand-logo > span > img{
   left: 0;
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .index-carousel > .carousel-inner > .carousel-item > .overlay-img{

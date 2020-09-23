@@ -42,9 +42,12 @@ nav > .brand-logo > span{
   position: absolute;
   top: 30px;
   right: 30px;
-  background-color: rgba(255, 255, 255, 0.925);
-  border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.418);
+  @media screen and (min-width: 630px){
+    background-color: rgba(255, 255, 255, 0.925);
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.418);
+  }
+  
 }
 nav > .brand-logo > span > img{
   width: 320px;
@@ -101,6 +104,7 @@ nav > .brand-logo > span > img{
 }
 .index-carousel> .carousel-inner > .carousel-item > img{
   @apply --imgCover;
+  object-fit: cover;
 }
 @custom-selector :--index-carousel-overlay-img .index-carousel > .carousel-inner > .carousel-item > .overlay-img;
 
