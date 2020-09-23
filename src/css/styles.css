@@ -45,7 +45,7 @@ nav > .brand-logo > span{
 }
 #mySidenav{
   height: 100%;
-  width: 60px;
+  width: 100px;
   background-color: #a850c3b9;
   position: fixed;
   z-index: 100000;
@@ -66,11 +66,9 @@ nav > .brand-logo > span{
   font-family:'Kaushan Script', cursive;
   font-weight: 400;
   font-size: 18px;
-  
+  text-align: center;
 }
 #mySidenav > .enlaces > a{
-  writing-mode: vertical-lr;
-  transform: rotate(0deg);
   color: white;
   display: block;
   text-align: center;
@@ -169,6 +167,7 @@ main{
   @media screen and (min-width: 768px){
     padding: 50px 80px;
     height: 320px;
+    padding-left: 100px;
   }
 }
 #frase > .general-container > .contenedor-frase + .typed-cursor{
@@ -276,7 +275,7 @@ main{
     height: 350px;
     grid-template-columns: minmax(250px, 410px) minmax(250px, 700px);
     justify-content: center;
-    padding-left: 40px;
+    padding-left: 100px;
   }
 }
 #item-equipo > .img-container{
@@ -333,7 +332,7 @@ main{
   padding-left: 30px;
   padding-right: 30px;
   @media screen and (min-width: 800px){
-    padding-right: 100px;
+    padding-right: 50px;
   }
 } 
 
