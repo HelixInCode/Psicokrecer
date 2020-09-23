@@ -42,11 +42,18 @@ nav > .brand-logo > span{
   position: absolute;
   top: 30px;
   right: 30px;
+  background-color: rgba(255, 255, 255, 0.925);
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.418);
+}
+nav > .brand-logo > span > img{
+  width: 320px;
+  height: 160px;
 }
 #mySidenav{
   height: 100%;
   width: 100px;
-  background-color: #a850c3b9;
+  background-color: #3b9afadc;
   position: fixed;
   z-index: 100000;
   top: 0;
@@ -107,7 +114,7 @@ nav > .brand-logo > span{
   background-color: rgba(132, 93, 143, 0.5);
   display: grid;
   color: #fff;
-  grid-template-columns: minmax(200px, 500px);
+  grid-template-columns: minmax(200px, 800px);
   grid-auto-columns: auto;
   justify-content: center;
   justify-items: center;
@@ -128,9 +135,14 @@ nav > .brand-logo > span{
   font-family: 'Julius Sans One', sans-serif;
   
   @media screen and (min-width: 576px){
-    font-size: 2.1875em;
+    font-size: 1.4em;
   }
 }
+/* .index-carousel> .carousel-inner > .carousel-item:nth-child(4) > .overlay-img > p > span{
+  @media screen and (min-width: 576px){
+    font-size: 1.8;
+  }
+} */
 
 main{
   background-color: #f8f8f8;
@@ -156,7 +168,7 @@ main{
   filter: drop-shadow(0 2px 3px rgba(179, 169, 169, 0.7));
 }
 #frase > .general-container > .contenedor-frase{
-  background-color: #3b9cfa;
+  background: radial-gradient(#a337c4b4,#3b9afadc);
   padding: 50px 10px;
   height: 520px;
   display: flex;
@@ -206,7 +218,7 @@ main{
   grid-template-columns: minmax(250px, 500px);
   justify-content: center;
   gap: 20px;
-  @media screen and (min-width: 830px){
+  @media screen and (min-width: 630px){
     padding-left: 80px;
   }
   
@@ -215,16 +227,16 @@ main{
   text-align: center;
   background-color: white;
   border-radius: 5px;
-  filter: drop-shadow(0 2px 3px rgba(138, 134, 134, 0.7));
+  filter: drop-shadow(0 5px 5px #a337c4);
   transition: 1s;
 }
 #servicios > .general-container > .especific-container > .servicios-item:hover{
-  filter: drop-shadow(0 10px 10px rgba(110, 167, 221, 0.7));
+  filter: drop-shadow(0 10px 10px #a337c48c);
 }
 #servicios > .general-container > .especific-container > .servicios-item > h4{
   padding-top: 35px;
   font-family: 'Julius Sans One', sans-serif;
-  color: #83969e;
+  color: #a337c4e5;
   font-weight: 900;
 }
 #servicios > .general-container > .especific-container > .servicios-item > ul{
@@ -269,6 +281,9 @@ main{
   gap: 20px;
   justify-content: center;
   
+  @media screen and (min-width: 630px){
+    padding-left: 80px;
+  }
   
   @media screen and (min-width: 900px){
     grid-template-rows: unset;
@@ -296,7 +311,7 @@ main{
   padding: 20px;
   text-align: center;
   border-radius: 3px;
-  background-color: #3b9afad0;
+  background-color: #a337c4e5;
   grid-row: 2 / 3;
   
   @media screen and (min-width: 800px){

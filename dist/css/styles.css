@@ -25,11 +25,18 @@ nav > .brand-logo > span{
   position: absolute;
   top: 30px;
   right: 30px;
+  background-color: rgba(255, 255, 255, .925);
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, .418);
+}
+nav > .brand-logo > span > img{
+  width: 320px;
+  height: 160px;
 }
 #mySidenav{
   height: 100%;
   width: 100px;
-  background-color: rgba(168, 80, 195, 0.72549);
+  background-color: rgba(59, 154, 250, 0.86275);
   position: fixed;
   z-index: 100000;
   top: 0;
@@ -97,7 +104,7 @@ nav > .brand-logo > span{
   background-color: rgba(132, 93, 143, .5);
   display: grid;
   color: #fff;
-  grid-template-columns: minmax(200px, 500px);
+  grid-template-columns: minmax(200px, 800px);
   grid-auto-columns: auto;
   justify-content: center;
   justify-items: center;
@@ -122,9 +129,14 @@ nav > .brand-logo > span{
 @media screen and (min-width: 576px){
 
   .index-carousel > .carousel-inner > .carousel-item > .overlay-img > p > span {
-    font-size: 2.1875em;
+    font-size: 1.4em;
   }
 }
+/* .index-carousel> .carousel-inner > .carousel-item:nth-child(4) > .overlay-img > p > span{
+  @media screen and (min-width: 576px){
+    font-size: 1.8;
+  }
+} */
 
 main{
   background-color: #f8f8f8;
@@ -152,7 +164,7 @@ main{
           filter: drop-shadow(0 2px 3px rgba(179, 169, 169, .7));
 }
 #frase > .general-container > .contenedor-frase{
-  background-color: #3b9cfa;
+  background: radial-gradient(rgba(163, 55, 196, 0.70588),rgba(59, 154, 250, 0.86275));
   padding: 50px 10px;
   height: 520px;
   display: flex;
@@ -206,7 +218,7 @@ main{
   gap: 20px;
   
 }
-@media screen and (min-width: 830px){
+@media screen and (min-width: 630px){
 
   #servicios > .general-container > .especific-container{
     padding-left: 80px;
@@ -216,21 +228,21 @@ main{
   text-align: center;
   background-color: white;
   border-radius: 5px;
-  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur in="SourceAlpha" stdDeviation="3" /><feOffset dx="1" dy="3" result="offsetblur" /><feFlood flood-color="rgba(138,134,134,0.7)" /><feComposite in2="offsetblur" operator="in" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter></svg>#filter');
-  -webkit-filter: drop-shadow(0 2px 3px rgba(138, 134, 134, .7));
-          filter: drop-shadow(0 2px 3px rgba(138, 134, 134, .7));
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur in="SourceAlpha" stdDeviation="5" /><feOffset dx="1" dy="6" result="offsetblur" /><feFlood flood-color="rgba(163,55,196,1)" /><feComposite in2="offsetblur" operator="in" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter></svg>#filter');
+  -webkit-filter: drop-shadow(0 5px 5px #a337c4);
+          filter: drop-shadow(0 5px 5px #a337c4);
   -webkit-transition: 1s;
   transition: 1s;
 }
 #servicios > .general-container > .especific-container > .servicios-item:hover{
-  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur in="SourceAlpha" stdDeviation="10" /><feOffset dx="1" dy="11" result="offsetblur" /><feFlood flood-color="rgba(110,167,221,0.7)" /><feComposite in2="offsetblur" operator="in" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter></svg>#filter');
-  -webkit-filter: drop-shadow(0 10px 10px rgba(110, 167, 221, .7));
-          filter: drop-shadow(0 10px 10px rgba(110, 167, 221, .7));
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur in="SourceAlpha" stdDeviation="10" /><feOffset dx="1" dy="11" result="offsetblur" /><feFlood flood-color="rgba(163,55,196,0.54902)" /><feComposite in2="offsetblur" operator="in" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter></svg>#filter');
+  -webkit-filter: drop-shadow(0 10px 10px rgba(163, 55, 196, 0.54902));
+          filter: drop-shadow(0 10px 10px rgba(163, 55, 196, 0.54902));
 }
 #servicios > .general-container > .especific-container > .servicios-item > h4{
   padding-top: 35px;
   font-family: 'Julius Sans One', sans-serif;
-  color: #83969e;
+  color: rgba(163, 55, 196, 0.89804);
   font-weight: 900;
 }
 #servicios > .general-container > .especific-container > .servicios-item > ul{
@@ -278,6 +290,13 @@ main{
   justify-content: center;
 }
 
+@media screen and (min-width: 630px){
+
+  #item-equipo{
+    padding-left: 80px;
+  }
+}
+
 @media screen and (min-width: 900px){
 
   #item-equipo{
@@ -319,7 +338,7 @@ main{
   padding: 20px;
   text-align: center;
   border-radius: 3px;
-  background-color: rgba(59, 154, 250, 0.81569);
+  background-color: rgba(163, 55, 196, 0.89804);
   grid-row: 2 / 3;
 }
 @media screen and (min-width: 800px){
