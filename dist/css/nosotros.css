@@ -150,6 +150,12 @@
 }
 #descripcion > .informacion > .botones > .item > i, #descripcion > .informacion > .botones > .item{
     padding-top: 10px;
+    
+}
+#descripcion > .informacion > .botones > .item > p{
+    font-family: 'Julius Sans One', sans-serif;
+    padding-top: 5px;
+    font-weight: 700;
 }
 #descripcion > .informacion > .botones > .item:hover{
     background-color: #a850c3;
@@ -178,6 +184,15 @@
     background-color: white;
     padding: 5px;
     border-radius: 10px;
+}
+@media screen and (min-width: 600px){
+
+    .contenedor-informacion{
+        margin-left:60px;
+        margin-right:5px;
+    
+    }
+    
 }
 .active{
     display:block;
