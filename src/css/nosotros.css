@@ -120,14 +120,40 @@
     grid-template-columns: repeat(3, 1fr);
     justify-content: center;
     align-content: center;
-    
+    border-radius: 10px;
     @media screen and (min-width: 600px){
-        padding-left: 60px;
+        margin-left: 60px;
     }
+}
+#descripcion > .informacion > .botones > .item > i, #descripcion > .informacion > .botones > .item{
+    padding-top: 10px;
+}
+#descripcion > .informacion > .botones > .item:hover{
+    background-color: #a850c3;
+}
+#descripcion > .informacion > .botones > .item:hover > i, #descripcion > .informacion > .botones > .item:hover > p{
+    color: white;  
+}
+#descripcion > .informacion > .botones > .item:nth-child(2){
+    border-left: 2px solid #a850c3;
+    border-right: 2px solid #a850c3;
 }
 #descripcion > .informacion > .botones > .item > i, #descripcion > .informacion > .botones > .item > p {
     font-size: 15px;
+    color: #56086ebe;
     @media screen and (min-width: 600px){
-        padding-left: 30px;
+        font-size: 20px;
     }
+}
+.contenedor-informacion{
+    margin-top: 10px;
+    background-color: white;
+    padding: 5px;
+    border-radius: 10px;
+}
+.active{
+    display:block;
+}
+.non-active{
+    display: none;
 }

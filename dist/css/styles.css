@@ -172,7 +172,7 @@ main{
           filter: drop-shadow(0 2px 3px rgba(179, 169, 169, .7));
 }
 #frase > .general-container > .contenedor-frase{
-  background: radial-gradient(rgba(163, 55, 196, 0.70588),rgba(59, 154, 250, 0.86275));
+  background: radial-gradient(rgba(163, 55, 196, 0.36471),rgba(59, 154, 250, 0.48627));
   padding: 50px 10px;
   height: 520px;
   display: flex;
