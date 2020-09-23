@@ -34,9 +34,9 @@
     padding-bottom: 40px;
   }
   #contacto > .general-container > .inicial-img > img{
-    filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur in="SourceAlpha" stdDeviation="3" /><feOffset dx="1" dy="3" result="offsetblur" /><feFlood flood-color="rgba(138,134,134,0.7)" /><feComposite in2="offsetblur" operator="in" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter></svg>#filter');
-    -webkit-filter: drop-shadow(0 2px 3px rgba(138, 134, 134, .7));
-            filter: drop-shadow(0 2px 3px rgba(138, 134, 134, .7));
+    filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur in="SourceAlpha" stdDeviation="3" /><feOffset dx="1" dy="3" result="offsetblur" /><feFlood flood-color="rgba(240,239,239,0.7)" /><feComposite in2="offsetblur" operator="in" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter></svg>#filter');
+    -webkit-filter: drop-shadow(0 2px 3px rgba(240, 239, 239, .7));
+            filter: drop-shadow(0 2px 3px rgba(240, 239, 239, .7));
     visibility: hidden;
   }
   @media screen and (min-width: 880px){
@@ -49,10 +49,10 @@
   #contacto > .general-container > .inicial-img > h3{
     font-family: 'Julius Sans One', sans-serif;
     padding-top: 80px;
-    color: #a850c3;
-    filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur in="SourceAlpha" stdDeviation="3" /><feOffset dx="1" dy="3" result="offsetblur" /><feFlood flood-color="rgba(255,255,255,0.7)" /><feComposite in2="offsetblur" operator="in" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter></svg>#filter');
-    -webkit-filter: drop-shadow(0 2px 3px rgba(255, 255, 255, .7));
-            filter: drop-shadow(0 2px 3px rgba(255, 255, 255, .7));
+    color: #82249e;
+    filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur in="SourceAlpha" stdDeviation="3" /><feOffset dx="1" dy="3" result="offsetblur" /><feFlood flood-color="rgba(255,255,255,0.897)" /><feComposite in2="offsetblur" operator="in" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter></svg>#filter');
+    -webkit-filter: drop-shadow(0 2px 3px rgba(255, 255, 255, .897));
+            filter: drop-shadow(0 2px 3px rgba(255, 255, 255, .897));
     font-weight: 900;
   }
   @media screen and (min-width: 800px){
@@ -178,11 +178,11 @@
     color: #2f80d1;
   }
   #contacto > .general-container > .especific-container > .contenedor-formulario > .enlaces > .item > p{
-    color: #670c83;
-    font-size: 20px;
-    font-family:'Julius Sans One', sans-serif ;
+    color: rgba(103, 12, 131, 0.56863);
+    font-size: 18px;
+    font-family:'Varela Round', sans-serif ;
     padding-top: 5px;
-    font-weight: 700;
+    font-weight: 600;
   }
 
   
