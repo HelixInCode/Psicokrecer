@@ -92,7 +92,7 @@
       }
   }
   #contacto > .general-container > .especific-container > .contenedor-formulario > .separador{
-    border-left: 4px solid #2f80d181;
+    border-left: 4px solid #68217e;
     height: 250px;
     margin-top: auto;
     margin-bottom: auto;
@@ -103,18 +103,17 @@
   }
   .md-form > label{
       font-family: 'Julius Sans One', sans-serif;
-      color:  #2f80d1;
+      color: #68217e;
       font-weight: 500;
       font-size: 20px;
       padding-left: 20px;
   }
   .md-form .input-prefix{
-    color:  #2f80d1;
+    color: #68217e;
   }
   .md-form > input{
       padding-bottom: 30px;
-      border-color: #2f80d1;
-      
+      border-color: #68217e;
   }
   form > .boton-enviar{
       margin-left: auto;
@@ -122,7 +121,7 @@
       justify-content: center;
   }
   form > .boton-enviar > button{
-      background-color: #2f80d1;
+      background-color: #68217e;
       font-family: 'Julius Sans One', sans-serif;
       color: white;
       font-size: 20px;

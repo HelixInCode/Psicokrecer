@@ -172,7 +172,7 @@ main{
   filter: drop-shadow(0 2px 3px rgba(179, 169, 169, 0.7));
 }
 #frase > .general-container > .contenedor-frase{
-  background: radial-gradient(#a337c45d,#3b9afa7c);
+  background: radial-gradient(#8237be7c, #6a0f81);
   padding: 50px 10px;
   height: 520px;
   display: flex;
@@ -231,7 +231,7 @@ main{
   text-align: center;
   background-color: white;
   border-radius: 5px;
-  filter: drop-shadow(0 5px 5px #a337c4);
+  filter: drop-shadow(0 5px 5px (#482a74);
   transition: 1s;
 }
 #servicios > .general-container > .especific-container > .servicios-item:hover{
@@ -240,7 +240,8 @@ main{
 #servicios > .general-container > .especific-container > .servicios-item > h4{
   padding-top: 35px;
   font-family: 'Julius Sans One', sans-serif;
-  color: #a337c4e5;
+  color:white;
+  background-color: #68217e;
   font-weight: 900;
 }
 #servicios > .general-container > .especific-container > .servicios-item > ul{

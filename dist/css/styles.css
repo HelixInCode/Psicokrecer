@@ -172,7 +172,7 @@ main{
           filter: drop-shadow(0 2px 3px rgba(179, 169, 169, .7));
 }
 #frase > .general-container > .contenedor-frase{
-  background: radial-gradient(rgba(163, 55, 196, 0.36471),rgba(59, 154, 250, 0.48627));
+  background: radial-gradient(rgba(59, 154, 250, 0.48627), #482a74);
   padding: 50px 10px;
   height: 520px;
   display: flex;
@@ -248,9 +248,11 @@ main{
           filter: drop-shadow(0 10px 10px rgba(163, 55, 196, 0.54902));
 }
 #servicios > .general-container > .especific-container > .servicios-item > h4{
-  padding-top: 35px;
+  padding-top: 20px;
+  padding-bottom: 15px;
   font-family: 'Julius Sans One', sans-serif;
-  color: rgba(163, 55, 196, 0.89804);
+  color: white;
+  background-color: #68217e;
   font-weight: 900;
 }
 #servicios > .general-container > .especific-container > .servicios-item > ul{
@@ -346,7 +348,7 @@ main{
   padding: 20px;
   text-align: center;
   border-radius: 3px;
-  background-color: rgba(163, 55, 196, 0.89804);
+  background-color: #68217e;
   grid-row: 2 / 3;
 }
 @media screen and (min-width: 800px){
