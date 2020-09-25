@@ -273,6 +273,23 @@
     margin-top: 80px;
     font-size: 18px;
 }
+.contenedor-informacion >.areas{
+    padding-top: 30px;
+}
+.contenedor-informacion >.areas > h4{
+    font-family:'Julius Sans One', sans-serif ;
+    color: #a850c3;
+    font-weight: 600;
+}
+.contenedor-informacion >.areas > ul{
+    list-style: none;
+}
+.contenedor-informacion >.areas > ul > li{
+    padding: 5px;
+    font-family: 'Varela Round', sans-serif;
+    color: rgba(13, 59, 104, 0.66275);
+    font-weight: 700;
+}
 .img-sec2{
     width: 100%;
     height: 200px;
@@ -280,4 +297,68 @@
     margin-bottom: auto;
     border-radius: 10px;
     filter: drop-shadow(0 5px 5px #482a74);
+}
+
+#equipo{
+    display: grid;
+    grid-template-columns: minmax(260px, 1000px);
+    justify-content: center;
+}
+#equipo >.contenedor-general{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    gap: 5px;
+    margin-left:10px;
+    @media screen and (min-width: 870px){
+        grid-template-columns: repeat(6, minmax(120px, 170px));
+        gap: 5px;
+        margin-left:0;
+    }
+    @media screen and (min-width: 950px){
+        gap: 20px;
+        margin-left:0;
+    }
+    
+}
+#equipo >.contenedor-general > .jugador:nth-child(1){
+    @media screen and (min-width: 870px){
+        grid-column: 1/3;
+    }
+    
+}
+#equipo >.contenedor-general > .jugador > img{
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    border: 5px solid #68217e;
+    @media screen and (min-width: 870px){
+        width: 80%;
+        height: 200px;
+    }
+}
+#equipo >.contenedor-general > .jugador:nth-child(2){
+    @media screen and (min-width: 870px){
+        grid-column: 3/5;
+    }
+}
+#equipo >.contenedor-general > .jugador:nth-child(3){
+    @media screen and (min-width: 870px){
+        grid-column: 5/7;
+    }
+}
+#equipo >.contenedor-general > .jugador:nth-child(4){
+    
+    @media screen and (min-width: 870px){
+        grid-column: 2/4;
+        grid-row: 2/3;
+    }
+   
+}
+#equipo >.contenedor-general > .jugador:nth-child(5){
+    
+    @media screen and (min-width: 870px){
+        grid-column: 4/6;
+        grid-row: 2/3;
+    }
 }
