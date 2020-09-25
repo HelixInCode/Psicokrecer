@@ -403,6 +403,20 @@
     }
     
 }
+#equipo >.contenedor-general > .jugador{
+    border-radius: 30%;
+    padding: 10px;
+}
+#equipo >.contenedor-general > .jugador-info{
+    position: relative;
+}
+#equipo >.contenedor-general > .jugador:hover{
+    background-color: rgba(168, 80, 195, 0.72549);
+    
+    -webkit-transition: 1s;
+    
+    transition: 1s;
+}
 @media screen and (min-width: 870px){
 
     #equipo >.contenedor-general > .jugador:nth-child(1){
@@ -416,6 +430,9 @@
     height: 200px;
     border-radius: 100%;
     border: 5px solid #68217e;
+    filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur in="SourceAlpha" stdDeviation="5" /><feOffset dx="1" dy="6" result="offsetblur" /><feFlood flood-color="rgba(44,86,165,0.88235)" /><feComposite in2="offsetblur" operator="in" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter></svg>#filter');
+    -webkit-filter: drop-shadow(0 5px 5px rgba(44, 86, 165, 0.88235));
+            filter: drop-shadow(0 5px 5px rgba(44, 86, 165, 0.88235));
 }
 @media screen and (min-width: 870px){
 
@@ -425,6 +442,11 @@
     
     }
     
+}
+#equipo >.contenedor-general > .jugador:hover > img{
+    filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur in="SourceAlpha" stdDeviation="5" /><feOffset dx="1" dy="6" result="offsetblur" /><feFlood flood-color="rgba(255,255,255,1)" /><feComposite in2="offsetblur" operator="in" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter></svg>#filter');
+    -webkit-filter: drop-shadow(0 5px 5px white);
+            filter: drop-shadow(0 5px 5px white);
 }
 @media screen and (min-width: 870px){
 
@@ -459,4 +481,20 @@
     
     }
     
+}
+#equipo >.contenedor-general > .jugador > div> h5{
+    font-family: 'Kaushan Script', cursive;
+    color: #68217e;
+    margin-top: 10px;
+}
+#equipo >.contenedor-general > .jugador:hover > div> h5{
+    color: white;
+}
+#equipo >.contenedor-general > .jugador > div> p{
+    font-family: 'Varela Round', sans-serif;
+    color: rgba(13, 59, 104, 0.78824);
+    margin-top: 5px;
+}
+#equipo >.contenedor-general > .jugador:hover > div> p{
+    color: white;
 }
