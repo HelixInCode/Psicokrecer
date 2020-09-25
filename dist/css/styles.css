@@ -172,7 +172,7 @@ main{
           filter: drop-shadow(0 2px 3px rgba(179, 169, 169, .7));
 }
 #frase > .general-container > .contenedor-frase{
-  background: radial-gradient(rgba(59, 154, 250, 0.48627), #482a74);
+  background: radial-gradient(rgba(130, 55, 190, 0.48627), #6a0f81);
   padding: 50px 10px;
   height: 520px;
   display: flex;
@@ -236,9 +236,9 @@ main{
   text-align: center;
   background-color: white;
   border-radius: 5px;
-  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur in="SourceAlpha" stdDeviation="5" /><feOffset dx="1" dy="6" result="offsetblur" /><feFlood flood-color="rgba(163,55,196,1)" /><feComposite in2="offsetblur" operator="in" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter></svg>#filter');
-  -webkit-filter: drop-shadow(0 5px 5px #a337c4);
-          filter: drop-shadow(0 5px 5px #a337c4);
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur in="SourceAlpha" stdDeviation="5" /><feOffset dx="1" dy="6" result="offsetblur" /><feFlood flood-color="rgba(72,42,116,1)" /><feComposite in2="offsetblur" operator="in" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter></svg>#filter');
+  -webkit-filter: drop-shadow(0 5px 5px #482a74);
+          filter: drop-shadow(0 5px 5px #482a74);
   -webkit-transition: 1s;
   transition: 1s;
 }
@@ -248,10 +248,9 @@ main{
           filter: drop-shadow(0 10px 10px rgba(163, 55, 196, 0.54902));
 }
 #servicios > .general-container > .especific-container > .servicios-item > h4{
-  padding-top: 20px;
-  padding-bottom: 15px;
+  padding-top: 35px;
   font-family: 'Julius Sans One', sans-serif;
-  color: white;
+  color:white;
   background-color: #68217e;
   font-weight: 900;
 }
@@ -348,7 +347,7 @@ main{
   padding: 20px;
   text-align: center;
   border-radius: 3px;
-  background-color: #68217e;
+  background-color: rgba(163, 55, 196, 0.89804);
   grid-row: 2 / 3;
 }
 @media screen and (min-width: 800px){

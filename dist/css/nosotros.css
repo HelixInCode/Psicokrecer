@@ -18,7 +18,7 @@
     padding-top: 10px;
 }
 #specific-container > .frase{
-    background-color: #3b9cfa;
+    background-color: #68217e;
     width: 100%;
     padding-top: 90px;
     padding-bottom: 90px;
@@ -71,7 +71,7 @@
     
 }
 #descripcion > .frase{
-    background-color: #a850c3;
+    background-color: #68217e;
     width: 100%;
     padding-top: 90px;
     padding-bottom: 90px;
@@ -114,7 +114,7 @@
 }
 #descripcion > .informacion{
     display: grid;
-    grid-template-columns: minmax(240px, 650px);
+    grid-template-columns: minmax(240px, 1000px);
     justify-content: center;
     margin-left: 20px;
     margin-right: 20px;
@@ -158,7 +158,7 @@
     font-weight: 700;
 }
 #descripcion > .informacion > .botones > .item:hover{
-    background-color: #a850c3;
+    background-color:#68217e;
 }
 #descripcion > .informacion > .botones > .item:hover > i, #descripcion > .informacion > .botones > .item:hover > p{
     color: white;  
@@ -184,6 +184,7 @@
     background-color: white;
     padding: 5px;
     border-radius: 10px;
+    height: 100%;
 }
 @media screen and (min-width: 600px){
 
@@ -196,7 +197,81 @@
 }
 .active{
     display:block;
+    -webkit-transition: 1s;
+    transition: 1s;
 }
 .non-active{
     display: none;
+}
+.contenedor-informacion > .contenedor-general, .contenedor-informacion > .contenedor-general2{
+    padding: 10px;
+}
+.contenedor-informacion > .contenedor-general > img:nth-child(1){
+    position: relative;
+    width: 500px;
+    height: 480px;
+    left: 200px;
+}
+.contenedor-informacion > .contenedor-general > .descripcion {
+    position: absolute;
+    width: 550px;
+    top: 1370px;
+    left: 260px;
+    z-index: 30;
+    background-color: rgba(104, 33, 126, 0.98039);
+    padding: 20px;
+    border-radius: 10px;
+}
+.contenedor-informacion > .contenedor-general > .descripcion > p{
+    color: white;
+    font-size: 18px;
+    font-family: 'Varela Round', sans-serif;
+
+}
+.contenedor-informacion > .contenedor-general > img:nth-child(2){
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: 1430px;
+    left: 800px;
+    border-radius: 10px;
+    filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur in="SourceAlpha" stdDeviation="5" /><feOffset dx="1" dy="6" result="offsetblur" /><feFlood flood-color="rgba(72,42,116,1)" /><feComposite in2="offsetblur" operator="in" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter></svg>#filter');
+    -webkit-filter: drop-shadow(0 5px 5px #482a74);
+            filter: drop-shadow(0 5px 5px #482a74);
+}
+.contenedor-informacion > .contenedor-general2 > img:nth-child(1){
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    left: 300px;
+    top: 1900px;
+    z-index: 40;
+    border-radius: 10px;
+    filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur in="SourceAlpha" stdDeviation="5" /><feOffset dx="1" dy="6" result="offsetblur" /><feFlood flood-color="rgba(72,42,116,1)" /><feComposite in2="offsetblur" operator="in" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter></svg>#filter');
+    -webkit-filter: drop-shadow(0 5px 5px #482a74);
+            filter: drop-shadow(0 5px 5px #482a74);
+}
+.contenedor-informacion > .contenedor-general2 > img:nth-child(2){
+    position: relative;
+    width: 500px;
+    height: 350px;
+    left: 0px;
+    z-index: 20;
+    
+}
+.contenedor-informacion > .contenedor-general2 > .descripcion {
+    position: absolute;
+    width: 400px;
+    top: 1880px;
+    left: 660px;
+    z-index: 70;
+    background-color: rgba(104, 33, 126, 0.98039);
+    padding: 20px;
+    border-radius: 10px;
+}
+.contenedor-informacion > .contenedor-general2 > .descripcion > p{
+    color: white;
+    font-size: 18px;
+    font-family: 'Varela Round', sans-serif;
+
 }
