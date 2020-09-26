@@ -178,6 +178,10 @@
     display:block;
     transition: 1s;
 }
+.active2{
+    background-color: #68217e;
+    color: white;
+}
 .non-active{
     display: none;
 }
@@ -325,9 +329,6 @@
     border-radius: 30%;
     padding: 10px;
 }
-#equipo >.contenedor-general > .jugador-info{
-    position: relative;
-}
 #equipo >.contenedor-general > .jugador:hover{
     background-color: #a850c3b9;
     
@@ -393,4 +394,12 @@
 }
 #equipo >.contenedor-general > .jugador:hover > div> p{
     color: white;
+}
+#equipo >.contenedor-general > .jugador > p, #equipo >.contenedor-general > .jugador > a{
+    color: #0d3b68c9;
+    font-family: 'Varela Round', sans-serif;
+}
+#equipo >.contenedor-general > .jugador:hover > p, #equipo >.contenedor-general > .jugador:hover > a{
+    color: white;
+    font-family: 'Varela Round', sans-serif;
 }
