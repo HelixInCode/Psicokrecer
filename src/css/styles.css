@@ -38,20 +38,36 @@ nav{
   max-height: 60px;
   transition: .2s;
 }
+nav > .brand-logo{
+  display: grid;
+  grid-template-columns: minmax(200px, 400px);
+  justify-content: center;
+}
 nav > .brand-logo > span{
-  position: absolute;
-  top: 30px;
-  right: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(255, 255, 255, 0.589);
+  
+  border-radius: 70%;
   @media screen and (min-width: 630px){
-    background-color: rgba(255, 255, 255, 0.925);
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.911); 
     border-radius: 50%;
+    top: 30px;
+    right: 30px;
     border: 1px solid rgba(255, 255, 255, 0.418);
   }
   
 }
 nav > .brand-logo > span > img{
-  width: 320px;
-  height: 160px;
+  width: 230px;
+  height: 130px;
+  margin-left: auto;
+  margin-right: auto;
+  @media screen and (min-width: 630px){
+    width: 320px;
+    height: 160px;
+  }
 }
 #mySidenav{
   height: 100%;
@@ -238,7 +254,8 @@ main{
   filter: drop-shadow(0 10px 10px #a337c48c);
 }
 #servicios > .general-container > .especific-container > .servicios-item > h4{
-  padding-top: 35px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   font-family: 'Julius Sans One', sans-serif;
   color:white;
   background-color: #68217e;

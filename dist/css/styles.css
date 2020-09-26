@@ -21,23 +21,42 @@ nav{
   -webkit-transition: .2s;
   transition: .2s;
 }
+nav > .brand-logo{
+  display: grid;
+  grid-template-columns: minmax(200px, 400px);
+  justify-content: center;
+}
 nav > .brand-logo > span{
-  position: absolute;
-  top: 30px;
-  right: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(255, 255, 255, .589);
+  
+  border-radius: 70%;
   
 }
 @media screen and (min-width: 630px){
 
   nav > .brand-logo > span{
-    background-color: rgba(255, 255, 255, .925);
+    position: absolute;
+    background-color: rgba(255, 255, 255, .911);
     border-radius: 50%;
+    top: 30px;
+    right: 30px;
     border: 1px solid rgba(255, 255, 255, .418);
   }
 }
 nav > .brand-logo > span > img{
-  width: 320px;
-  height: 160px;
+  width: 230px;
+  height: 130px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (min-width: 630px){
+
+  nav > .brand-logo > span > img{
+    width: 320px;
+    height: 160px;
+  }
 }
 #mySidenav{
   height: 100%;
@@ -248,7 +267,8 @@ main{
           filter: drop-shadow(0 10px 10px rgba(163, 55, 196, 0.54902));
 }
 #servicios > .general-container > .especific-container > .servicios-item > h4{
-  padding-top: 35px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   font-family: 'Julius Sans One', sans-serif;
   color:white;
   background-color: #68217e;
