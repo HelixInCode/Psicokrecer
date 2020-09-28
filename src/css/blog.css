@@ -247,11 +247,12 @@ form > a > i:hover{
     border-radius: 10px;
     margin-left: 80px;
     margin-right: 80px;
+    margin-bottom: 100px;
 }
 #blog > .general-container > .antiguas > .por-categorias > .entradas-categorias > a{
     font-family: 'Kaushan Script', cursive;
     color: #702886;
-    padding: 5px;
+    padding: 10px;
 }
 
 /*Entradas*/
@@ -324,6 +325,7 @@ form > a > i:hover{
 }
 #articulo >.contenedor-principal > .regreso{
     padding-bottom: 30px;
+    
 }
 #articulo >.contenedor-principal > .regreso > a{
     background-color: #68217e;
@@ -337,4 +339,42 @@ form > a > i:hover{
     background-color: rgb(83, 187, 247);
     transition: 0.8s;
 
+}#articulo >.contenedor-principal > .coments{
+    display: grid;
+    grid-template-columns: minmax(270px, 350px) minmax(270px, 650px);
+    justify-content: center;
+}
+#articulo >.contenedor-principal > .coments > .comentarios{
+    display: grid;
+    grid-template-columns: minmax(270px, 300px);
+    justify-content: center;
+    padding: 20px;
+    
+}
+#articulo >.contenedor-principal > .coments > .comentarios > form{
+    display: grid;
+    grid-template-columns: minmax(270px, 550px);
+    justify-content: center;
+}
+#articulo >.contenedor-principal > .coments >.comentarios > form > textarea{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 150px;
+    border-radius: 10px;
+    border: 1px solid #702886;
+    padding: 10px;
+}
+#articulo >.contenedor-principal > .coments >.comentarios > form > #boton{
+    background-color: #68217e;
+    color: white;
+    font-family: 'Kaushan Script', cursive;
+}
+#articulo >.contenedor-principal > .coments >.lista-comentarios{
+    display: grid;
+    grid-template-columns: minmax(270px, 600px);
+    justify-content: center;
+    padding: 20px;
+}
+#articulo >.contenedor-principal > .coments >.lista-comentarios > h5{
+    font-family: 'Varela Round', sans-serif ;
 }

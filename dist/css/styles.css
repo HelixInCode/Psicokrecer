@@ -54,7 +54,7 @@ nav > .brand-logo > span > img{
 @media screen and (min-width: 630px){
 
   nav > .brand-logo > span > img{
-    width: 320px;
+    width: 220px;
     height: 160px;
   }
 }
