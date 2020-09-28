@@ -58,6 +58,71 @@ nav > .brand-logo > span > img{
     height: 160px;
   }
 }
+
+.menu-overlay{
+  position: fixed;
+  background-color: rgba(159, 11, 189, .397);
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 13000;
+}
+
+@media screen and (min-width: 600px){
+
+  .menu-overlay{
+    display: none;
+  }
+}
+
+#hamburger{
+  z-index: 15000;
+  position: fixed;
+  right: 10px;
+  bottom: 30px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  background-color:#2f80d1;
+  justify-content: center;
+  align-items: center;
+  -webkit-transition: .3s;
+  transition: .3s;
+  outline: none;
+}
+
+@media screen and (min-width: 600px){
+
+  #hamburger{
+    visibility:hidden;
+  }
+}
+#hamburger:active{
+  background-color: white;
+  color: #2f80d1;
+}
+.menu-overlay > .enlaces{
+  background-color: #2f80d1;
+  position: fixed;
+  z-index: 14000;
+  bottom: 30px;
+  right: 70px;
+  font-family:'Kaushan Script', cursive;
+  padding: 10px;
+  padding-bottom: 30px;
+  text-align: center;
+  border-radius: 15px;
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feGaussianBlur in="SourceAlpha" stdDeviation="3" /><feOffset dx="1" dy="3" result="offsetblur" /><feFlood flood-color="rgba(89,89,90,0.86275)" /><feComposite in2="offsetblur" operator="in" /><feMerge><feMergeNode /><feMergeNode in="SourceGraphic" /></feMerge></filter></svg>#filter');
+  -webkit-filter: drop-shadow(0 2px 3px  rgba(89, 89, 90, 0.86275));
+          filter: drop-shadow(0 2px 3px  rgba(89, 89, 90, 0.86275));
+}
+.menu-overlay > .enlaces > a{
+  color: white;
+  font-size: 17px;
+}
 #mySidenav{
   height: 100%;
   width: 100px;

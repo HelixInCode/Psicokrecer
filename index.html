@@ -39,7 +39,7 @@
           </span>
         </a>
       </nav>
-      <div id="mySidenav" class="sidenav">
+      <div id="mySidenav" class="sidenav hide">
         <div class="enlaces">
           
           <a href="index.html">
@@ -55,9 +55,29 @@
             <br>Blog</a>
           <a href="contacto.html"><i class="fas fa-mail-bulk"></i>
             <br>Contacto</a>
-        </div>
-        
+        </div>          
       </div>
+      <div class="menu-overlay hide d-none">
+        <div class="enlaces">
+          
+          <a href="index.html">
+            <br>Inicio</a>
+          <a href="nosotros.html">
+            <br>Quienes Somos</a>
+          <a href="index.html#servicios">
+            <br>Servicios</a>
+          <a href="blog.html">
+            <br>Blog</a>
+          <a href="contacto.html">
+            <br>Contacto</a>
+        </div> 
+      </div>
+      <div id="hamburger" class="hamburger-btn waves-effect waves-light d-flex">
+        <i id="ham-icon" class="fas fa-bars fa-1-3x"></i>
+      </div>
+
+      
+
         <section id="carouselExampleFade" class="carousel slide index-carousel carousel-fade" data-ride="carousel">
           <div class="carousel-inner">
     
@@ -358,5 +378,6 @@
     <!-- Your custom scripts (optional) -->
     <!-- <script type="text/javascript" src="src/js/navBar.js"></script> -->
     <script type="text/javascript" src="src/js/tipeo.js"></script>
+    <script type="text/javascript" src="src/js/hamburger.js"></script>
 </body>
 </html>
