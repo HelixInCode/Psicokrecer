@@ -199,6 +199,10 @@
     }
     
 }
+#descripcion > .informacion > .botones > .item > p {
+    padding-left: 10px;
+    padding-right: 10px;
+}
 .contenedor-informacion{
     margin-top: 10px;
     background-color: white;
