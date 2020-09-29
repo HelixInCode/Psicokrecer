@@ -23,5 +23,6 @@ $menuOverlay.addEventListener('click', ()=>{
   }
 }) */
 $hamburger.addEventListener('click', ()=>{
-    $menuOverlay.classList.toggle('d-none');
+    $menuOverlay.classList.toggle('hide');
+    $menuItems.classList.toggle('hide');
 })

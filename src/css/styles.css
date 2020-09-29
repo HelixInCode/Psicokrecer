@@ -1,6 +1,7 @@
 :root{
   --imgCover:{
     position: absolute;
+    object-fit: cover;
     top: 0;
     left: 0;
     width: 100%;
@@ -8,6 +9,7 @@
   }
   --imgCover2:{
     position: absolute;
+    object-fit: cover;
     top: 0;
     left: 0;
     right: 0;
@@ -60,27 +62,28 @@ nav > .brand-logo > span{
   
 }
 nav > .brand-logo > span > img{
-  width: 230px;
   height: 130px;
   margin-left: auto;
   margin-right: auto;
+  
   @media screen and (min-width: 630px){
     width: 220px;
-    height: 160px;
+    height: unset;
   }
 }
 
 .menu-overlay{
+  z-index: 13000;
   position: fixed;
-  background-color: rgba(159, 11, 189, 0.397);
   top: 0;
   right: 0;
   left: 0;
   bottom: 0;
-  z-index: 13000;
-  @media screen and (min-width: 600px){
-    display: none;
-  }
+  background-color: rgba(159, 11, 189, 0.397);
+  transition: .3s;
+}
+.menu-overlay.hide{
+  transform: translateX(-100%);
 }
 
 #hamburger{
@@ -98,65 +101,69 @@ nav > .brand-logo > span > img{
   align-items: center;
   transition: .3s;
   outline: none;
-  @media screen and (min-width: 600px){
-    visibility:hidden;
-  }
 }
 #hamburger:active{
   background-color: white;
   color: #2f80d1;
 }
-.menu-overlay > .enlaces{
-  background-color: #2f80d1;
-  position: fixed;
-  z-index: 14000;
-  bottom: 30px;
-  right: 70px;
-  font-family:'Kaushan Script', cursive;
-  padding: 10px;
-  padding-bottom: 30px;
-  text-align: center;
-  border-radius: 15px;
-  filter: drop-shadow(0 2px 3px  #59595adc);
-}
-.menu-overlay > .enlaces > a{
-  color: white;
-  font-size: 17px;
-}
+
 #mySidenav{
   height: 100%;
-  width: 100px;
   background-color: #3b9afadc;
   position: fixed;
   z-index: 100000;
   top: 0;
   left: 0;
-  display:none;
-  @media screen and (min-width: 600px){
-    display:block;
+  
+  @media screen and (min-width: 768px){
+    width: 100px;
   }
 }
-#mySidenav > .enlaces {
-  padding-bottom: 100px;
-  padding-top: 100px;
+#mySidenav > .enlaces{
+  padding: 10px;
+  z-index: 14000;
+  position: fixed;
+  right: 70px;
+  bottom: 30px;
+  background-color: #2f80d1;
   display: grid;
   grid-template-rows: repeat(4, auto);
   justify-content: center;
-  gap: 50px;
+  gap: 10px;
   font-family:'Kaushan Script', cursive;
   font-weight: 400;
   font-size: 18px;
   text-align: center;
+  border-radius: 15px;
+  transition: .3s;
+  
+  @media screen and (min-width: 768px){
+    position: unset;
+    height: 100vh;
+    border-radius: 0;
+    align-content: center;
+    gap: 50px;
+    filter: drop-shadow(0 2px 3px  #59595adc);
+  }
+}
+#mySidenav > .enlaces.hide{
+  right: -100%;
 }
 #mySidenav > .enlaces > a{
   color: white;
-  display: block;
   text-align: center;
   margin-top: auto;
   margin-bottom: auto;
 }
 #mySidenav > .enlaces > a:hover{
   background-color: #68217e;
+}
+#mySidenav > .enlaces > a > i{
+  display: none;
+
+  @media screen and (min-width: 768px){
+    display: block;
+  }
 }
 .index-carousel{
   position: relative;
@@ -377,6 +384,7 @@ main{
   padding: 30px;
   border-radius: 30%;
   filter: drop-shadow(-7px 6px 7px rgba(41, 39, 39, 0.7));
+
   @media screen and (min-width: 800px){
     padding:0;
     @apply --imgCover;
