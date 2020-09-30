@@ -94,6 +94,11 @@ body{
     -webkit-filter: drop-shadow(0 2px 3px rgba(179, 169, 169, .7));
             filter: drop-shadow(0 2px 3px rgba(179, 169, 169, .7));
 }
+#panel > .contenedor-principal > .contenedor-secundario > .contenedor-seccion > .seccion-item:nth-child(2){
+    font-family:'Julius Sans One', sans-serif ;
+    color:#68217e;
+    padding-top: 30px;
+}
 #form-cat{
     display: grid;
     grid-template-columns: minmax(270px, 900px);
@@ -147,6 +152,7 @@ body{
     border-radius: 5px;
     -webkit-transition: 1s;
     transition: 1s;
+    font-family: 'Kaushan Script', cursive;
 }
 #form-cat > .nuevo-disp > input:hover{
     background-color: #9f3dbd;
@@ -160,13 +166,86 @@ body{
     font-size: 16px;
     margin-top: 30px;
 }
+#form-exist > .cat-existentes > select{
+    margin: auto;
+    border-radius: 10px;
+    padding: 10px;
+    color: #68217e;
+    border: 2px solid #68217e;
+}
 #form-exist > .cat-existentes{
     display: grid;
-    grid-template-columns: minmax(270px, 600px) 270px;
+    grid-template-columns: minmax(270px, 300px) 270px;
     justify-content: center;
-    
+    padding: 10px;
 }
-
+#form-exist > .cat-existentes > .acciones{
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+#form-exist > .cat-existentes > .acciones > input{
+    background-color: #68217e;
+    color: white;
+    font-family:'Kaushan Script', cursive ;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    -webkit-transition: 1s;
+    transition: 1s;
+}
+#form-exist > .cat-existentes > .acciones > input:hover{
+    background-color: #2276ca;
+    -webkit-transition: 1s;
+    transition: 1s;
+}
+.seccion-nuevo-articulo{
+    display: grid;
+    grid-template-columns: minmax(270px, 800px);
+    justify-content: center;
+}
+#formulario-articulo-nuevo{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(270px, 400px));
+    justify-content: center;
+    text-align: center;
+    padding: auto;
+    gap: 20px;
+    font-family: 'Varela Round', sans-serif;
+}
+#formulario-articulo-nuevo > .imagenes{
+    text-align: center;
+    width: 100%;
+}
+#formulario-articulo-nuevo > .imagenes > div{
+    background-color: #68217e;
+    color: white;
+}
+#formulario-articulo-nuevo > .imagenes > div > input{
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    background-color: aliceblue;
+    color: #68217e;
+}
+#formulario-articulo-nuevo > .acciones{
+    grid-column: 1/3;
+    text-align: center;
+    margin: 20px;
+}
+#formulario-articulo-nuevo > .acciones > input{
+    margin: 10px;
+    background-color: #68217e;
+    color: white;
+    font-family:'Kaushan Script', cursive ;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+}
+#formulario-articulo-nuevo > .acciones > input:hover{
+    background-color: #2276ca;
+}
 
 
 
