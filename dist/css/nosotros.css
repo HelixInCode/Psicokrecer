@@ -188,7 +188,7 @@
     border-right: 2px solid #a850c3;
 }
 #descripcion > .informacion > .botones > .item > i, #descripcion > .informacion > .botones > .item > p {
-    font-size: 15px;
+    font-size: 11px;
     color: rgba(86, 8, 110, 0.7451);
 }
 @media screen and (min-width: 600px){
