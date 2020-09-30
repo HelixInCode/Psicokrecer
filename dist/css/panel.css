@@ -99,6 +99,11 @@ body{
     color:#68217e;
     padding-top: 30px;
 }
+#panel > .contenedor-principal > .contenedor-secundario > .contenedor-seccion > .seccion-item:nth-child(3){
+    font-family:'Julius Sans One', sans-serif ;
+    color:#68217e;
+    padding-top: 30px;
+}
 #form-cat{
     display: grid;
     grid-template-columns: minmax(270px, 900px);
@@ -246,7 +251,46 @@ body{
 #formulario-articulo-nuevo > .acciones > input:hover{
     background-color: #2276ca;
 }
-
+.contenedor-general-items{
+    display: grid;
+    grid-template-columns: minmax(270px, 700px);
+    justify-content: center;
+}
+.contenedor-general-items > .item{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 250px minmax(270px, 350px) 200px ;
+    justify-content: center;
+    padding-bottom: 30px;
+    border-bottom: 2px solid rgba(103, 49, 119, 0.60392);
+}
+.contenedor-general-items > .item > img{
+    width: 100%;
+}
+.contenedor-general-items > .item > .titulo{
+    font-family: 'Varela Round', sans-serif;
+    text-align: justify;
+    padding-left: 20px;
+}
+.contenedor-general-items > .item > .acciones{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+}
+.contenedor-general-items > .item > .acciones > button{
+    margin: 10px 20px;
+    padding: 10px;
+    background-color: #68217e;
+    color: white;
+    font-family: 'Kaushan Script', cursive;
+    border: none;
+    border-radius: 10px;
+}
+.contenedor-general-items > .item > .acciones > button:hover{
+    background-color: #2276ca;
+    -webkit-transition: 1s;
+    transition: 1s;
+}
 
 
 
