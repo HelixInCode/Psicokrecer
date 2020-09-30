@@ -1,0 +1,190 @@
+:root{
+    --imgCover:{
+      position: absolute;
+      object-fit: cover;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+}
+  
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+.active{
+    display:block;
+    transition: 1s;
+    
+}
+.panel-item.active{
+    background-color: #68217e;
+    color: white;
+}
+.active2{
+    background-color: #68217e;
+    color: white;
+}
+.non-active{
+    display: none;
+}
+nav{
+    background-color: #2276ca;
+    text-align: center;
+}
+#menu{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(100px, 120px));
+    justify-content: center;
+    font-family:'Kaushan Script', cursive;
+    font-size: 18px;
+    
+}
+body{
+    background-color: rgba(235, 235, 235, 0.904);
+}
+#panel > .contenedor-principal{
+    text-align: center;
+    margin-top: 30px;
+}
+#panel > .contenedor-principal > div > img{
+    width: 80px;
+}
+#panel > .contenedor-principal > div > h3{
+    font-family: 'Julius Sans One', sans-serif;
+    color: #68217e;
+    font-weight: 500;
+}
+#panel > .contenedor-principal > .contenedor-secundario > .botones {
+    display: grid;
+    grid-template-columns: minmax(270px, 900px);
+    justify-content: center;
+}
+#panel > .contenedor-principal > .contenedor-secundario > .botones > ul{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(180px, 280px ));
+    justify-content: center;
+    list-style: none;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-family: 'Julius Sans One', sans-serif;
+    color: #68217e;
+    font-weight: 600;
+    filter: drop-shadow(0 2px 3px rgba(179, 169, 169, 0.7));
+    border-radius: 10px;
+    padding: 10px;
+    background-color: white;
+}
+#panel > .contenedor-principal > .contenedor-secundario > .botones > ul > li{
+    padding: 10px;
+}
+#panel > .contenedor-principal > .contenedor-secundario > .botones > ul > li:active, #panel > .contenedor-principal > .contenedor-secundario > .botones > ul > li:hover{
+   background-color: #9f3dbd;
+   color: white;    
+}
+#panel > .contenedor-principal > .contenedor-secundario > .botones > ul > li:nth-child(2){
+    border-right: 2px solid #9f3dbd;
+    border-left: 2px solid #68217e;
+}
+#panel > .contenedor-principal > .contenedor-secundario > .contenedor-seccion{
+    margin-left: 50px;
+    margin-right: 50px;
+    border-radius: 10px;
+    padding: 10px;
+}
+#panel > .contenedor-principal > .contenedor-secundario > .contenedor-seccion > .seccion-item{
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    filter: drop-shadow(0 2px 3px rgba(179, 169, 169, 0.7));
+}
+#form-cat{
+    display: grid;
+    grid-template-columns: minmax(270px, 900px);
+    justify-content: center;
+    font-family: 'Varela Round', sans-serif;
+    color: #68217e;
+}
+#form-cat > a{
+    width: 200px;
+    height: 50px;
+    background-color: #68217e;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    transition: 1s;
+}
+#form-cat > a:hover{
+    background-color: #2276ca;
+    transition: 1s;
+}
+#form-cat > .nuevo-disp {
+    display: grid;
+    grid-template-columns: minmax(270px, 500px) minmax(270px, 300px);
+    justify-content: center;
+    border: 2px solid #68217e;
+    border-radius: 10px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+#form-cat > .nuevo-disp.non-active{
+    display: none;
+}
+#form-cat > .nuevo-disp > .nueva{
+    margin-bottom: 50px;
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #68217e;
+}
+#form-cat > .nuevo-disp > input{
+    width: 150px;
+    height: 30px;
+    margin: auto;
+    background-color: #68217e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: 1s;
+}
+#form-cat > .nuevo-disp > input:hover{
+    background-color: #9f3dbd;
+    transition: 1s;
+}
+#form-exist{
+    font-family: 'Varela Round', sans-serif;
+    color: #68217e;
+    font-weight: 500;
+    font-size: 16px;
+    margin-top: 30px;
+}
+#form-exist > .cat-existentes{
+    display: grid;
+    grid-template-columns: minmax(270px, 600px) 270px;
+    justify-content: center;
+    
+}
+
+
+
+
+
+footer{
+    margin-top: 50px;
+    
+}
+footer > .contenedor-general{
+    background-color: rgb(105, 104, 104);
+    color: white;
+    height: 25px;
+    font-family: 'Julius Sans One', sans-serif;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
