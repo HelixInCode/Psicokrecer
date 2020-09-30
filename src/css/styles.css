@@ -7,15 +7,6 @@
     width: 100%;
     height: 100%;
   }
-  --imgCover2:{
-    position: absolute;
-    object-fit: cover;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height:100%;
-  }
 }
 
 *{
@@ -70,41 +61,6 @@ nav > .brand-logo > span > img{
     width: 220px;
     height: unset;
   }
-}
-
-.menu-overlay{
-  z-index: 13000;
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  background-color: rgba(159, 11, 189, 0.397);
-  transition: .3s;
-}
-.menu-overlay.hide{
-  transform: translateX(-100%);
-}
-
-#hamburger{
-  z-index: 15000;
-  position: fixed;
-  right: 10px;
-  bottom: 30px;
-  width: 50px;
-  height: 50px;
-  border: none;
-  border-radius: 50%;
-  color: #fff;
-  background-color:#2f80d1;
-  justify-content: center;
-  align-items: center;
-  transition: .3s;
-  outline: none;
-}
-#hamburger:active{
-  background-color: white;
-  color: #2f80d1;
 }
 
 #mySidenav{
@@ -165,6 +121,42 @@ nav > .brand-logo > span > img{
     display: block;
   }
 }
+
+.menu-overlay{
+  z-index: 13000;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(159, 11, 189, 0.397);
+  transition: .3s;
+}
+.menu-overlay.hide{
+  transform: translateX(-100%);
+}
+
+#hamburger{
+  z-index: 15000;
+  position: fixed;
+  right: 10px;
+  bottom: 30px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  background-color:#2f80d1;
+  justify-content: center;
+  align-items: center;
+  transition: .3s;
+  outline: none;
+}
+#hamburger:active{
+  background-color: white;
+  color: #2f80d1;
+}
+
 .index-carousel{
   position: relative;
 }
@@ -330,10 +322,13 @@ main{
   font-weight: 600;
   font-size: 18px;
 }
-#servicios > .general-container > .especific-container > .servicios-item > .imagen > img{
-  width: 100%;
-  border-radius: 3px;
+#servicios > .general-container > .especific-container > .servicios-item > .imagen{
   height: 200px;
+  position: relative;
+}
+#servicios > .general-container > .especific-container > .servicios-item > .imagen > img{
+  @apply --imgCover;
+  border-radius: 3px;
 }
 #equipo{
   padding-top: 20px;
@@ -380,14 +375,14 @@ main{
   position: relative;
 }
 #item-equipo > .img-container > img{
-  @apply --imgCover2;
+  @apply --imgCover;
+  object-position: top;
   padding: 30px;
   border-radius: 30%;
   filter: drop-shadow(-7px 6px 7px rgba(41, 39, 39, 0.7));
 
   @media screen and (min-width: 800px){
     padding:0;
-    @apply --imgCover;
   }
 }
 #item-equipo > .mensaje-info{

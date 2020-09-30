@@ -320,9 +320,18 @@
     padding-bottom: 20px;
     color: #68217e;
 }
-#articulo >.contenedor-principal > img{
-    width: 100%;
-    height: 300px;
+#articulo >.contenedor-principal > .img-container{
+    position: relative;
+    height: 400px;
+}
+#articulo >.contenedor-principal > .img-container > img{
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
     padding: 20px;
 }
 #articulo >.contenedor-principal > p{

@@ -58,44 +58,6 @@ nav > .brand-logo > span > img{
   }
 }
 
-.menu-overlay{
-  z-index: 13000;
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  background-color: rgba(159, 11, 189, .397);
-  -webkit-transition: .3s;
-  transition: .3s;
-}
-.menu-overlay.hide{
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
-}
-
-#hamburger{
-  z-index: 15000;
-  position: fixed;
-  right: 10px;
-  bottom: 30px;
-  width: 50px;
-  height: 50px;
-  border: none;
-  border-radius: 50%;
-  color: #fff;
-  background-color:#2f80d1;
-  justify-content: center;
-  align-items: center;
-  -webkit-transition: .3s;
-  transition: .3s;
-  outline: none;
-}
-#hamburger:active{
-  background-color: white;
-  color: #2f80d1;
-}
-
 #mySidenav{
   height: 100%;
   background-color: rgba(59, 154, 250, 0.86275);
@@ -164,6 +126,45 @@ nav > .brand-logo > span > img{
     display: block;
   }
 }
+
+.menu-overlay{
+  z-index: 13000;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(159, 11, 189, .397);
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+.menu-overlay.hide{
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+#hamburger{
+  z-index: 15000;
+  position: fixed;
+  right: 10px;
+  bottom: 30px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  background-color:#2f80d1;
+  justify-content: center;
+  align-items: center;
+  -webkit-transition: .3s;
+  transition: .3s;
+  outline: none;
+}
+#hamburger:active{
+  background-color: white;
+  color: #2f80d1;
+}
+
 .index-carousel{
   position: relative;
 }
@@ -351,10 +352,19 @@ main{
   font-weight: 600;
   font-size: 18px;
 }
-#servicios > .general-container > .especific-container > .servicios-item > .imagen > img{
-  width: 100%;
-  border-radius: 3px;
+#servicios > .general-container > .especific-container > .servicios-item > .imagen{
   height: 200px;
+  position: relative;
+}
+#servicios > .general-container > .especific-container > .servicios-item > .imagen > img{
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
 }
 #equipo{
   padding-top: 20px;
@@ -414,9 +424,10 @@ main{
      object-fit: cover;
   top: 0;
   left: 0;
-  right: 0;
   width: 100%;
-  height:100%;
+  height: 100%;
+  -o-object-position: top;
+     object-position: top;
   padding: 30px;
   border-radius: 30%;
   -webkit-filter: drop-shadow(-7px 6px 7px rgba(41, 39, 39, .7));
@@ -426,13 +437,6 @@ main{
 
   #item-equipo > .img-container > img{
     padding:0;
-    position: absolute;
-    -o-object-fit: cover;
-       object-fit: cover;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
   }
 }
 #item-equipo > .mensaje-info{

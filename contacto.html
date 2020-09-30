@@ -31,189 +31,196 @@
   <link rel="stylesheet" href="dist/css/contacto.css">
 </head>
 <body>
-    <header>
-      <nav class="px-2 px-md-5">
-        <a href="index.html" class="brand-logo">
-          <span>
-            <img src="dist/img/psicokrecer-logo-blanco-sin-fondo.png" alt="">
-          </span>
-        </a>
-      </nav>
+  <header>
+    <nav class="px-2 px-md-5">
+
+      <a href="index.html" class="brand-logo">
+        <span>
+          <img src="dist/img/psicokrecer-logo-blanco-sin-fondo.png" alt="">
+        </span>
+      </a>
+
       <div id="mySidenav" class="sidenav">
-        <div class="enlaces">
-          <a href="index.html">
-            <i class="fas fa-home"></i>
-            <br>Inicio</a>
-          <a href="nosotros.html">
-            <i class="fas fa-users"></i>
-            <br>Quienes Somos</a>
-          <a href="index.html#servicios">
-            <i class="far fa-handshake"></i>
-            <br>Servicios</a>
-          <a href="#"><i class="fas fa-blog"></i>
-            <br>Blog</a>
-          <a href="contacto.html"><i class="fas fa-mail-bulk"></i>
-            <br>Contacto</a>
-        </div>
-       </div>
-       <div class="menu-overlay hide d-none">
-        <div class="enlaces">
+        <div class="enlaces hide">
           
           <a href="index.html">
-            <br>Inicio</a>
+            <i class="fas fa-home"></i>
+            Inicio
+          </a>
+
           <a href="nosotros.html">
-            <br>Quienes Somos</a>
+            <i class="fas fa-users"></i>
+            Quienes Somos
+          </a>
+
           <a href="index.html#servicios">
-            <br>Servicios</a>
+            <i class="far fa-handshake"></i>
+            Servicios
+          </a>
+
           <a href="blog.html">
-            <br>Blog</a>
+            <i class="fas fa-blog"></i>
+            Blog
+          </a>
+
           <a href="contacto.html">
-            <br>Contacto</a>
-        </div> 
+            <i class="fas fa-mail-bulk"></i>
+            Contacto
+          </a>
+
+        </div>          
       </div>
-      <div id="hamburger" class="hamburger-btn waves-effect waves-light d-flex">
+
+      <div class="menu-overlay hide">
+      </div>
+
+      <div id="hamburger" class="hamburger-btn d-md-none waves-effect waves-light d-flex">
         <i id="ham-icon" class="fas fa-bars fa-1-3x"></i>
       </div>
-    </header>
+
+    </nav>
+  </header>
     
-    <main>
-        <section id="contacto">
-            <!-- <div class="img-fondo">
-                
-            </div> -->
-            <div class="general-container">
-                <div class="inicial-img">
-                    <img src="./dist/img/Psico-logo.png" alt="">
-                    <h3>CONTÁCTANOS</h3>
-                </div>
-                <div class="especific-container">
-                    <div class="contenedor-formulario">
-                        <form id="contact-form" action="enviar.php" method="POST">
-                            <div class="row">
-            
-                                <div class="col-md-6">
-                                    <div class="md-form mb-0">
-                                        <input type="text" id="nombre" name="nombre" class="form-control">
-                                        <label for="nombre" class="">Nombre</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="md-form mb-0">
-                                        <input type="tel" id="telefono" name="telefono" class="form-control">
-                                        <label for="telefono" class="">Telefono</label>
-                                    </div>
-                                </div>
-                
-                                <div class="col-md-6">
-                                    <div class="md-form mb-0">
-                                        <input type="email" id="email" name="email" class="form-control">
-                                        <label for="email" class="">Correo</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="md-form mb-0">
-                                        <input type="text" id="asunto" name="asunto" class="form-control">
-                                        <label for="asunto" class="">Asunto</label>
-                                    </div>
-                                </div>
-            
-                            </div>
-                      
-                            <div class="row">
-            
-                              
-                                <div class="col-md-12">
-            
-                                    <div class="md-form">
-                                        <textarea type="text" id="mensaje" name="mensaje" rows="2" class="form-control md-textarea"></textarea>
-                                        <label for="mensaje">Mensaje</label>
-                                    </div>
-            
-                                </div>
-                            </div>
-                            
-                            <div class="text-center boton-enviar">
-                                <button type="submit" class="btn">ENVIAR</button>
-                            </div>
-                        </form>
-                        <div class="separador">
-
-                        </div>
-                        <div class="enlaces">
-                            <div class="item">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <p>Chile, Santiago.</p>
-                            </div>
-                            <a class="item">
-                                <i class="fab fa-whatsapp"></i>
-                                <p>+56 9 8271 0107</p>
-                            </a>
-                            <a class="item">
-                                <i class="far fa-envelope"></i>
-                                <p>info@psicokrecer.com</p>
-                            </a>
-
-
-                        </div>
-                        
-                    </div>
-                    
-
-                </div>
-
-            </div>
-
-        </section>
-    </main>
-    <footer>
-      <div class="contenedor-general">
-        <div class="contenedor-especifico">
-          <div class="contenedor-imagen">
-            <img src="./dist/img/psicokrecer-logo-oscuro-sin-fondo respaldo.png" alt="">
-          </div>
-          <div class="contenedor-info">
-            <div class="links">
-              <a href="#">Inicio</a>
-              <a href="#">Quienes Somos</a>
-              <a href="#">Servicios</a>
-              <a href="#">Blog</a>
-              <a href="#">Contacto</a>
-            </div>
-            <div class="separador">
-
-            </div>
-            <div class="redes">
-              <p>Visita nuestro <a href="#">Blog</a> y síguenos en nuestras redes sociales.</p>
-              <div class="redes-icons">
-                <a href="#"><img src="./dist/img/instagram-logo.png" alt=""></a>
-                <a href="#"><img src="./dist/img/whatsapp.png" alt=""></a>
+  <main>
+      <section id="contacto">
+          <!-- <div class="img-fondo">
+              
+          </div> -->
+          <div class="general-container">
+              <div class="inicial-img">
+                  <img src="./dist/img/Psico-logo.png" alt="">
+                  <h3>CONTÁCTANOS</h3>
               </div>
-            </div>
+              <div class="especific-container">
+                  <div class="contenedor-formulario">
+                      <form id="contact-form" action="enviar.php" method="POST">
+                          <div class="row">
+          
+                              <div class="col-md-6">
+                                  <div class="md-form mb-0">
+                                      <input type="text" id="nombre" name="nombre" class="form-control">
+                                      <label for="nombre" class="">Nombre</label>
+                                  </div>
+                              </div>
+                              <div class="col-md-6">
+                                  <div class="md-form mb-0">
+                                      <input type="tel" id="telefono" name="telefono" class="form-control">
+                                      <label for="telefono" class="">Telefono</label>
+                                  </div>
+                              </div>
+              
+                              <div class="col-md-6">
+                                  <div class="md-form mb-0">
+                                      <input type="email" id="email" name="email" class="form-control">
+                                      <label for="email" class="">Correo</label>
+                                  </div>
+                              </div>
+                              <div class="col-md-6">
+                                  <div class="md-form mb-0">
+                                      <input type="text" id="asunto" name="asunto" class="form-control">
+                                      <label for="asunto" class="">Asunto</label>
+                                  </div>
+                              </div>
+          
+                          </div>
+                    
+                          <div class="row">
+          
+                            
+                              <div class="col-md-12">
+          
+                                  <div class="md-form">
+                                      <textarea type="text" id="mensaje" name="mensaje" rows="2" class="form-control md-textarea"></textarea>
+                                      <label for="mensaje">Mensaje</label>
+                                  </div>
+          
+                              </div>
+                          </div>
+                          
+                          <div class="text-center boton-enviar">
+                              <button type="submit" class="btn">ENVIAR</button>
+                          </div>
+                      </form>
+                      <div class="separador">
+
+                      </div>
+                      <div class="enlaces">
+                          <div class="item">
+                              <i class="fas fa-map-marker-alt"></i>
+                              <p>Chile, Santiago.</p>
+                          </div>
+                          <a class="item">
+                              <i class="fab fa-whatsapp"></i>
+                              <p>+56 9 8271 0107</p>
+                          </a>
+                          <a class="item">
+                              <i class="far fa-envelope"></i>
+                              <p>info@psicokrecer.com</p>
+                          </a>
+
+
+                      </div>
+                      
+                  </div>
+                  
+
+              </div>
+
           </div>
 
+      </section>
+  </main>
+  
+  <footer>
+    <div class="contenedor-general">
+      <div class="contenedor-especifico">
+        <div class="contenedor-imagen">
+          <img src="./dist/img/psicokrecer-logo-oscuro-sin-fondo respaldo.png" alt="">
         </div>
-        <div class="pie-footer">
-          <p>© 2020 Copyright: <a>psicokrecer.com</a></p>
+        <div class="contenedor-info">
+          <div class="links">
+            <a href="#">Inicio</a>
+            <a href="#">Quienes Somos</a>
+            <a href="#">Servicios</a>
+            <a href="#">Blog</a>
+            <a href="#">Contacto</a>
+          </div>
+          <div class="separador">
+
+          </div>
+          <div class="redes">
+            <p>Visita nuestro <a href="#">Blog</a> y síguenos en nuestras redes sociales.</p>
+            <div class="redes-icons">
+              <a href="#"><img src="./dist/img/instagram-logo.png" alt=""></a>
+              <a href="#"><img src="./dist/img/whatsapp.png" alt=""></a>
+            </div>
+          </div>
         </div>
+
       </div>
-    </footer>
-    <!-- jQuery -->
-    <script type="text/javascript" src="dist/js/jquery.min.js"></script>
-    <!-- Bootstrap tooltips -->
-    <script type="text/javascript" src="dist/js/popper.min.js"></script>
-    <!-- Bootstrap core JavaScript -->
-    <script type="text/javascript" src="dist/js/bootstrap.min.js"></script>
-    <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="dist/js/mdb.min.js"></script>
-    <!--Typing Script-->
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-    <!-- Particles - js -->
-    <!-- <script type="text/javascript" src="src/particles/js/particles.js"></script>
-    <script type="text/javascript" src="src/particles/js/lib/stats.js"></script>
-    <script type="text/javascript" src="src/particles/js/app.js"></script> -->
-    <!-- Your custom scripts (optional) -->
-    <!-- <script type="text/javascript" src="src/js/navBar.js"></script> -->
-    <script type="text/javascript" src="src/js/tipeo.js"></script>
-    <script type="text/javascript" src="src/js/hamburger.js"></script>
+      <div class="pie-footer">
+        <p>© 2020 Copyright: <a>psicokrecer.com</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="dist/js/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="dist/js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="dist/js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="dist/js/mdb.min.js"></script>
+  <!--Typing Script-->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+  <!-- Particles - js -->
+  <!-- <script type="text/javascript" src="src/particles/js/particles.js"></script>
+  <script type="text/javascript" src="src/particles/js/lib/stats.js"></script>
+  <script type="text/javascript" src="src/particles/js/app.js"></script> -->
+  <!-- Your custom scripts (optional) -->
+  <!-- <script type="text/javascript" src="src/js/navBar.js"></script> -->
+  <script type="text/javascript" src="src/js/tipeo.js"></script>
+  <script type="text/javascript" src="src/js/hamburger.js"></script>
 </body>
 </html>

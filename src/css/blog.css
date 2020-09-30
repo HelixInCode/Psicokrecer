@@ -1,18 +1,11 @@
 :root{
     --imgCover:{
       position: absolute;
+      object-fit: cover;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-    }
-    --imgCover2:{
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      width: 100%;
-      height:100%;
     }
 }
   
@@ -302,9 +295,12 @@
     padding-bottom: 20px;
     color: #68217e;
 }
-#articulo >.contenedor-principal > img{
-    width: 100%;
-    height: 300px;
+#articulo >.contenedor-principal > .img-container{
+    position: relative;
+    height: 400px;
+}
+#articulo >.contenedor-principal > .img-container > img{
+    @apply --imgCover;
     padding: 20px;
 }
 #articulo >.contenedor-principal > p{
