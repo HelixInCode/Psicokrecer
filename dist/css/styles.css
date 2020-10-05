@@ -275,6 +275,14 @@ nav > .brand-logo > span > img{
   color: #68217e;
   font-size: 100px;
 }
+#correo-enviado{
+  color: #68217e;
+  font-family: 'Anton', sans-serif;
+}
+#correo-enviado > i{
+  font-size: 100px;
+}
+
 
 .index-carousel{
   position: relative;
