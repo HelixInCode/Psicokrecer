@@ -265,6 +265,7 @@
 }
 
 /*Entradas*/
+/*Articulo con 3im-3p*/
 
 #articulo > .contenedor-principal{
     display: grid;
@@ -369,98 +370,46 @@
     -webkit-transition: 0.8s;
     transition: 0.8s;
 
-}#articulo >.contenedor-principal > .coments{
-    display: grid;
-    grid-template-columns: minmax(270px, 500px);
-    justify-content: center;
-}@media screen and (min-width: 890px){
-    #articulo >.contenedor-principal > .coments{
-        grid-template-columns: minmax(270px, 350px) minmax(270px, 650px);
-    }
 }
-#articulo >.contenedor-principal > .coments > .comentarios{
+
+/*Comentarios*/
+#comentarios{
     display: grid;
-    grid-template-columns: minmax(270px, 300px);
-    justify-content: center;
-    padding: 20px;
-    height: 250px;
-    margin-top: 30px;
-}
-#articulo >.contenedor-principal > .coments > .comentarios >form{
-    display: grid;
-    grid-template-columns: minmax(270px, 550px);
+    grid-template-columns: minmax(270px, 900px);
     justify-content: center;
 }
-@media screen and (min-width: 600px){
-    #articulo >.contenedor-principal > .coments > .comentarios >form{
-        padding-left:-80px;
-    }
-}
-#articulo >.contenedor-principal > .coments >.comentarios > form > input{
+#comentarios > .contenedor-general > .enlace {
+    display: grid;
+    grid-template-columns: auto 20px;
+    justify-content: center;
+    gap: 5px;
+}  
+#comentarios > .contenedor-general >.nuevo-comentario{
+    display: grid;
+    grid-template-columns: minmax(270px, 800px);
+    justify-content: center;
+    align-content: center;
+    margin-right: 100px;
+    margin-left: 100px;
+    padding: 15px;
+    background-color: #82259e;
     border-radius: 10px;
-    border: 1px solid #68217e;
-    padding: 6px;
-}
-#articulo >.contenedor-principal > .coments >.comentarios > form > textarea{
-    margin-top: 10px;
-    margin-bottom: 10px;
-    height: 150px;
-    border-radius: 10px;
-    border: 1px solid #702886;
-    padding: 10px;
-    
-}
-#articulo >.contenedor-principal > .coments >.comentarios > form > #boton{
-    background-color: #68217e;
     color: white;
-    font-family: 'Kaushan Script', cursive;
-    
-}
-#articulo >.contenedor-principal > .coments >.lista-comentarios{
-    display: grid;
-    grid-template-columns: minmax(270px, 600px);
-    /* justify-content: center; */
-    padding: 20px;
-    margin-top: 20px;
-}
-#articulo >.contenedor-principal > .coments >.lista-comentarios > h5{
     font-family: 'Varela Round', sans-serif ;
-    color: #702886;
 }
-#articulo >.contenedor-principal > .coments >.lista-comentarios > ul{
-    display: grid;
-    grid-template-columns: 1fr;
-    list-style: none;
-    border-radius: 10px;
-    padding: 20px;
-    background-color: rgba(202, 117, 228, 0.30196);
-    border: 1px solid #68217e;
-}
-@media screen and (min-width: 600px){
-    #articulo >.contenedor-principal > .coments >.lista-comentarios > ul{
-        margin-left: 50px;
-        margin-right: 50px;
-    }
-}
-#articulo >.contenedor-principal > .coments >.lista-comentarios > ul > li{
-    margin-bottom: 20px;
-    border-bottom: 1px solid rgba(104, 33, 126, 0.53333);
-}
-#articulo >.contenedor-principal > .coments >.lista-comentarios > ul > li > div{
-    display: grid;
-    grid-template-columns: minmax(250px, 500px);
-    justify-content: center;
-}
-#articulo >.contenedor-principal > .coments >.lista-comentarios > ul > li > div > p:nth-child(1){
-    font-size: 10px;
-    color: #68217e;
-    font-family:'Varela Round', sans-serif ;
-    text-align: start;
-}
-#articulo >.contenedor-principal > .coments >.lista-comentarios > ul > li > div > p:nth-child(2){
-    font-size: 15px;
-    color: #68217e;
-    font-family:'Varela Round', sans-serif ;
-    text-align: start;
+#comentarios > .contenedor-general >.nuevo-comentario > label{
     text-align: justify;
+    padding-left: 10px;
+}
+#comentarios > .contenedor-general >.nuevo-comentario > textarea{
+    border: 10px;
+    padding: 10px;
+}
+#comentarios > .contenedor-general >.nuevo-comentario > button{
+    width: 180px;
+    margin: auto;
+    margin-top: 10px;
+    background-color: rgb(49, 135, 233);
+    color:white;
+    font-family: 'Kaushan Script', cursive;
 }

@@ -582,7 +582,7 @@ main{
 
   #item-equipo{
     grid-template-rows: unset;
-    height: 350px;
+    height: 400px;
     grid-template-columns: minmax(250px, 410px) minmax(250px, 700px);
     justify-content: center;
     padding-left: 100px;
