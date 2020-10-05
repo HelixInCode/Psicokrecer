@@ -108,42 +108,42 @@
                         <div class="seccion-item non-active">
                             <h4>Nuevo Artículo</h4>
                             <div class="seccion-nuevo-articulo">
-                                <form id="formulario-articulo-nuevo" class="md-form" action="">
+                                <form id="formulario-articulo-nuevo" class="md-form" action="savearticulo.php" method="POST" enctype="multipart/form-data">
                                     <div class="imagenes file-field">
                                         <h5>Imágenes</h5>
                                         <div class="btn">
 
                                             <span>Imagen Destacada</span>
-                                            <input type="file">
+                                            <input name="imagen1" type="file" accept="image/*" required>
                                         </div>
                                         <div class="btn">
                                             <span>Imagen 2</span>
-                                            <input type="file">
+                                            <input name="imagen2" type="file" accept="image/*" required>
                                         </div>
                                         <div class="btn">
                                             <span>Imagen 3</span>
-                                            <input type="file">
+                                            <input name="imagen3" type="file" accept="image/*" required>
                                         </div>
 
                                     </div>
                                     <div class="escritos">
                                         <h5>Párrafos</h5>
                                         <div class="md-form">
-                                            <textarea id="form7" class="md-textarea form-control" rows="7"></textarea>
+                                            <textarea name="titulo" id="form7" class="md-textarea form-control" rows="7"></textarea>
                                             <label for="form7">Primer Escrito</label>
                                         </div>
                                         <div class="md-form">
-                                            <textarea id="form8" class="md-textarea form-control" rows="7"></textarea>
+                                            <textarea name="subtitulo" id="form8" class="md-textarea form-control" rows="7"></textarea>
                                             <label for="form8">Segundo Escrito</label>
                                         </div>
                                         <div class="md-form">
-                                            <textarea id="form9" class="md-textarea form-control" rows="7"></textarea>
+                                            <textarea name="texto" id="form9" class="md-textarea form-control" rows="7"></textarea>
                                             <label for="form9">Tercer Escrito</label>
                                         </div>
     
                                     </div>
                                     <div class="acciones">
-                                        <input type="submit" value="Precargar">
+                                        <input type="submit" name="Enviar" value="Precargar">
                                         <input type="submit" value="Cancelar">
                                     </div>
                                 </form>
