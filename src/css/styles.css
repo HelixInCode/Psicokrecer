@@ -85,7 +85,7 @@ nav > .brand-logo > span > img{
   display: grid;
   grid-template-rows: repeat(4, auto);
   justify-content: center;
-  gap: 10px;
+  gap: 5px;
   font-family:'Kaushan Script', cursive;
   font-weight: 400;
   font-size: 18px;
@@ -119,6 +119,36 @@ nav > .brand-logo > span > img{
 
   @media screen and (min-width: 768px){
     display: block;
+  }
+}
+#login-btn{
+  display: none;
+  background-color: rgb(142, 4, 184);
+  color: white;
+  position: fixed;
+  z-index: 1500000;
+  font-size: 15px;
+  bottom: 30px;
+  right: 30px;
+  border-radius: 150px;
+  padding: 10px;
+  text-align: center;
+  font-family:'Kaushan Script', cursive;
+  filter: drop-shadow(0 5px 5px #482a74);
+  @media screen and (min-width: 770px){
+    display: block;
+    transition: 1s;
+  }
+}
+#login-btn:hover{
+  background-color: rgb(83, 8, 105);
+  transform: scale(1.1);
+  transition: 1s;
+}
+#login-respon{
+  display: block;
+  @media screen and (min-width: 770px){
+    display: none;
   }
 }
 
@@ -178,13 +208,26 @@ nav > .brand-logo > span > img{
   grid-template-columns: minmax(300px, 450px);
   background-color: #fff;
   border-radius: 10px;
+  
 }
 .modal > .login > .title-container{
   color: #fff;
-  background-color: #004489;
+  background-color: rgb(160, 37, 160);
   display: grid;
   grid-template-columns: auto 1fr;
   align-self: center;
+  border-radius: 10px;
+  font-family: 'Julius Sans One', sans-serif;
+}
+.modal > .login > .main-container > .input-container > label{
+  font-family: 'Anton', sans-serif;
+  color:rgba(10, 49, 94, 0.829);
+  font-weight: 700;
+}
+.modal > .login > .main-container > .input-container > input{
+  border-radius: 10px;
+  padding: 5px;
+  border: 1px solid rgba(109, 62, 141, 0.61);
 }
 .modal > .login > .title-container h5{
   margin: 0;
@@ -712,4 +755,56 @@ footer > .contenedor-general > .pie-footer > p{
 }
 footer > .contenedor-general > .pie-footer > p > a{
   color: white;
+}
+
+
+#modal-login > .login > .main-container > .input-container{
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  font-family: 'Varela Round', sans-serif;
+}
+#modal-login > .login > .main-container > .input-container:nth-of-type(3){
+  grid-template-columns: auto 1fr;
+  gap: 10px;
+}
+#modal-login > .login > .main-container > .input-container:nth-of-type(3) input{
+  width: 15px;
+  height: 15px;
+}
+#modal-login > .login > .main-container > .input-container:nth-of-type(3) label{
+  margin: 0;
+}
+#modal-login > .login > .main-container > .input-container input{
+  width: 100%;
+}
+#modal-login > .login > .main-container > .login-container{
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+#modal-login > .login > .main-container > .login-container button{
+  background-color: rgba(35, 115, 180, 0.979);
+  font-family: 'Kaushan Script', cursive ;
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: #fff;
+  border: none;
+}
+#modal-login > .login > .main-container > .login-container button:hover{
+  background-color: rgba(8, 75, 129, 0.979);
+  transition: 1s;
+}
+#modal-login > .login > .main-container > .login-container button:disabled{
+  background-color: var(--sombra);
+}
+
+.enlace-accion{
+  font-family: 'Anton', sans-serif;
+  color:rgba(10, 49, 94, 0.829);
+  font-weight: 700;
+}
+.enlace-accion:hover{
+  color:rgb(182, 27, 182);
 }
