@@ -83,6 +83,21 @@
   </header>
   
   <main>
+      <section id="modal-message-sent" class="modal hide">
+        <div class="login">
+          <div class="title-container p-3">
+            <!-- <h5>Mensaje Enviado</h5> -->
+            <i id="close-sent" class="fa fa-times"></i>
+          </div>
+          <form id="enviamelo" class="main-container message p-3 pb-4">
+            <p class="text-center">Para enviarte el regalo digital, necesitamos que llenes el siguiente dato: </p>
+            <input type="text" placeholder="Dirección de email"/>
+            <button id="bt-enviar-regalo" class="btn" type="submit">Envíamelo</button>
+            <p class="text-center">Gracias por Apoyarnos</p>
+            <i id="carita" class="far fa-smile-beam"></i>
+          </form>
+        </div>
+      </section>
       <section id="nosotros">
           <div class="general-container">
               <div class="inicial-img">
@@ -263,9 +278,20 @@
                         </div>
                           
                       </div>
+                      <div class="contenedor-regalo non-active">
+                        <div id="regalo">
+                          <img src="./dist/img/manos-sembrar.png" alt="">
+                          <div class="info-regalo">
+                            <p>¡Felicidades! <br> Por interesarte en nosotras, y como motivo de agradecimiento <br> ¡Te has ganado un premio digital!</p>
+                            <button id="boton-regalo" class="btn">Reclamar Premio</button>
+                          </div>
+  
+                        </div>
+                      </div>
+                      
 
                   </div>
-              </div>
+                </div>
               
 
           </div>
@@ -325,5 +351,6 @@
   <script type="text/javascript" src="src/js/tipeo.js"></script>
   <script type="text/javascript" src="src/js/panel-nosotros.js"></script>
   <script type="text/javascript" src="src/js/hamburger.js"></script>
+  <script type="text/javascript" src="src/js/hideShowModals.js"></script>
 </body>
 </html>
