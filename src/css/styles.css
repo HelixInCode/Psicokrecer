@@ -516,13 +516,14 @@ main{
   gap: 20px;
   justify-content: center;
   
+  
   @media screen and (min-width: 630px){
     padding-left: 80px;
   }
   
   @media screen and (min-width: 900px){
     grid-template-rows: unset;
-    height: 400px;
+    height: 500px;
     grid-template-columns: minmax(250px, 410px) minmax(250px, 700px);
     justify-content: center;
     padding-left: 100px;
@@ -535,11 +536,11 @@ main{
   @apply --imgCover;
   object-position: top;
   padding: 30px;
-  border-radius: 30%;
   filter: drop-shadow(-7px 6px 7px rgba(41, 39, 39, 0.7));
 
   @media screen and (min-width: 800px){
     padding:0;
+    height:90%;
   }
 }
 #item-equipo > .mensaje-info{
