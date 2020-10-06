@@ -108,45 +108,83 @@
                         <div class="seccion-item non-active">
                             <h4>Nuevo Artículo</h4>
                             <div class="seccion-nuevo-articulo">
-                                <form id="formulario-articulo-nuevo" class="md-form" action="savearticulo.php" method="POST" enctype="multipart/form-data">
-                                    <div class="imagenes file-field">
-                                        <h5>Imágenes</h5>
-                                        <div class="btn">
-
-                                            <span>Imagen Destacada</span>
-                                            <input name="imagen1" type="file" accept="image/*" required>
-                                        </div>
-                                        <div class="btn">
-                                            <span>Imagen 2</span>
-                                            <input name="imagen2" type="file" accept="image/*" required>
-                                        </div>
-                                        <div class="btn">
-                                            <span>Imagen 3</span>
-                                            <input name="imagen3" type="file" accept="image/*" required>
-                                        </div>
-
+                                <div class="diseño">
+                                    <div class="imagenes">
+                                        <label for="">Selecciona el diseño que tendrá el artículo</label>
+                                        <select name="diseno" id="diseno" onchange="showSelect()">
+                                            <option value="">Diseño...</option>
+                                            <option value="1">Opción 1</option>
+                                            <option value="2">Opción 2</option>
+                                            <option value="3">Opción 3</option>
+                                        </select>
                                     </div>
-                                    <div class="escritos">
-                                        <h5>Párrafos</h5>
-                                        <div class="md-form">
-                                            <textarea name="titulo" id="form7" class="md-textarea form-control" rows="7"></textarea>
-                                            <label for="form7">Primer Escrito</label>
+                                </div>
+                                <div class="formularios-item d-none">
+                                    <form id="formulario-3im-3p" class="md-form" action="savearticulo.php" method="POST" enctype="multipart/form-data">
+                                        <div class="identificacion">
+                                            <input type="text" placeholder="Título del artículo">
+                                            <select name="categoria" id="categoria">
+                                                <option value="">Categoría del Artículo</option>
+                                                <option value="familia">Familia</option>
+                                                <option value="parejas">Parejas</option>
+                                            </select>
                                         </div>
-                                        <div class="md-form">
-                                            <textarea name="subtitulo" id="form8" class="md-textarea form-control" rows="7"></textarea>
-                                            <label for="form8">Segundo Escrito</label>
-                                        </div>
-                                        <div class="md-form">
-                                            <textarea name="texto" id="form9" class="md-textarea form-control" rows="7"></textarea>
-                                            <label for="form9">Tercer Escrito</label>
-                                        </div>
+                                        
+                                        <div class="imagenes file-field">
+                                            <div class="imagen-muestra">
+                                                <img src="./dist/img/disenos/3im-3p.png" alt="">
     
-                                    </div>
-                                    <div class="acciones">
-                                        <input type="submit" name="Enviar" value="Precargar">
-                                        <input type="submit" value="Cancelar">
-                                    </div>
-                                </form>
+                                            </div>
+                                            <h5>Imágenes</h5>
+                                            <div class="btn">
+    
+                                                <span>Imagen Destacada</span>
+                                                <input name="imagen1" type="file" accept="image/*" required>
+                                            </div>
+                                            <div class="btn">
+                                                <span>Imagen 2</span>
+                                                <input name="imagen2" type="file" accept="image/*" required>
+                                            </div>
+                                            <div class="btn">
+                                                <span>Imagen 3</span>
+                                                <input name="imagen3" type="file" accept="image/*" required>
+                                            </div>
+    
+                                        </div>
+                                        <div class="escritos">
+                                            <h5>Párrafo Introductorio</h5>
+                                            <div class="md-form">
+                                                <textarea name="introduccion" id="form6" class="md-textarea form-control" rows="7" style=" padding: 6px; background-color: white;"></textarea>
+                                                <label for="form7">Introducción</label>
+                                            </div>
+                                            <h5>Párrafos</h5>
+                                            <div class="md-form">
+                                                <textarea name="titulo" id="form7" class="md-textarea form-control" rows="7" style=" padding: 6px; background-color: white;"></textarea>
+                                                <label for="form7">Primer Escrito</label>
+                                            </div>
+                                            <div class="md-form">
+                                                <textarea name="texto2" id="form8" class="md-textarea form-control" rows="7" style=" padding: 6px; background-color: white;"></textarea>
+                                                <label for="form8">Segundo Escrito</label>
+                                            </div>
+                                            <div class="md-form">
+                                                <textarea name="texto3" id="form9" class="md-textarea form-control" rows="7" style=" padding: 6px; background-color: white;"></textarea>
+                                                <label for="form9">Tercer Escrito</label>
+                                            </div>
+        
+                                        </div>
+                                        <div class="acciones">
+                                            <input type="submit" name="Enviar" value="Precargar">
+                                            <input type="submit" value="Cancelar">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="formularios-item d-none">
+                                    diseno slide
+                                </div>
+                                <div class="formularios-item d-none">
+                                    diseno grid
+                                </div>
+                                
                                 
                             </div>
 
@@ -213,5 +251,6 @@
       <!-- <script type="text/javascript" src="src/js/navBar.js"></script> -->
       <script type="text/javascript" src="src/js/panel-panel.js"></script>
       <script type="text/javascript" src="src/js/hamburger.js"></script>
+      <script type="text/javascript" src="src/js/mostrar-diseno.js"></script>
     </body>
 </html>

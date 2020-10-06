@@ -108,7 +108,7 @@ body{
     }
 }
 #panel > .contenedor-principal > .contenedor-secundario > .contenedor-seccion > .seccion-item{
-    background-color: white;
+    background-color: rgba(230, 172, 248, 0.329);
     border-radius: 10px;
     padding: 10px;
     filter: drop-shadow(0 2px 3px rgba(179, 169, 169, 0.7));
@@ -232,8 +232,24 @@ body{
     display: grid;
     grid-template-columns: minmax(270px, 800px);
     justify-content: center;
+    
 }
-#formulario-articulo-nuevo{
+.seccion-nuevo-articulo > .diseño{
+    display: grid;
+    grid-template-columns:minmax(270px, 400px);
+    justify-content: center;
+    background-color: #5a9fd8;
+    border-radius: 5px;
+    color: white;
+    padding: 10px;
+}
+.seccion-nuevo-articulo > .diseño > div > label{
+    font-family: 'Varela Round', sans-serif;
+}
+.formularios-item{
+    margin-top: 50px;
+}
+#formulario-3im-3p{
     display: grid;
     grid-template-columns: minmax(270px, 400px);
     justify-content: center;
@@ -242,39 +258,52 @@ body{
     gap: 20px;
     font-family: 'Varela Round', sans-serif;
     @media screen and (min-width: 600px){
-        grid-template-columns: repeat(2, minmax(270px, 400px));
+        grid-template-columns: repeat(2, minmax(270px, 500px));
     }
 }
-#formulario-articulo-nuevo > div{
+#formulario-3im-3p > .identificacion{
+    grid-column: 1/3;
+}
+#formulario-3im-3p > .identificacion > input, #formulario-3im-3p > .identificacion > select{
+    background-color: white;
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid rgb(205, 127, 241);
+}
+#formulario-3im-3p > div{
     margin: auto;
 }
-#formulario-articulo-nuevo > .imagenes{
+#formulario-3im-3p > div > .imagen-muestra > img{
+    width: 100%;
+}
+#formulario-3im-3p > .imagenes{
     text-align: center;
     width: 100%;
 }
-#formulario-articulo-nuevo > .imagenes > div{
+#formulario-3im-3p > .imagenes > div{
     background-color: #68217e;
     color: white;
+    margin-bottom: 50px;
 }
-#formulario-articulo-nuevo > .imagenes > div > input{
+#formulario-3im-3p > .imagenes > div > input{
     width: 100%;
     border-radius: 10px;
     border: none;
     background-color: aliceblue;
     color: #68217e;
 }
-#formulario-articulo-nuevo > .escritos{
+#formulario-3im-3p > .escritos{
     grid-column: 1/2;
     @media screen and (min-width: 600px){
         grid-column:2/3;
     }
 }
-#formulario-articulo-nuevo > .acciones{
+#formulario-3im-3p > .acciones{
     grid-column: 1/3;
     text-align: center;
     margin: 20px;
 }
-#formulario-articulo-nuevo > .acciones > input{
+#formulario-3im-3p > .acciones > input{
     margin: 10px;
     background-color: #68217e;
     color: white;
@@ -283,7 +312,7 @@ body{
     border: none;
     border-radius: 10px;
 }
-#formulario-articulo-nuevo > .acciones > input:hover{
+#formulario-3im-3p > .acciones > input:hover{
     background-color: #2276ca;
 }
 .contenedor-general-items{
@@ -332,7 +361,6 @@ body{
     background-color: #2276ca;
     transition: 1s;
 }
-
 
 
 footer{
