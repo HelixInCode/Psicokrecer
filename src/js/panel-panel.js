@@ -3,11 +3,6 @@ let panels = document.querySelectorAll(".seccion-item");
 let boton = document.querySelector("#nueva-cat");
 let seccion = document.querySelector(".nuevo-disp");
 
-boton.addEventListener('click', (e)=>{
-    e.preventDefault();
-    seccion.classList.remove('non-active');
-    seccion.classList.add('active');
-})
 
 for(let i=0; i<tabs.length ; i++){
     tabs[i].addEventListener('click', function(event){
