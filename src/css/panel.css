@@ -112,6 +112,8 @@ body{
     border-radius: 10px;
     padding: 10px;
     filter: drop-shadow(0 2px 3px rgba(179, 169, 169, 0.7));
+    font-family:'Julius Sans One', sans-serif ;
+    color:#68217e;
 }
 #panel > .contenedor-principal > .contenedor-secundario > .contenedor-seccion > .seccion-item:nth-child(2){
     font-family:'Julius Sans One', sans-serif ;
@@ -315,6 +317,16 @@ body{
 #formulario-3im-3p > .acciones > input:hover{
     background-color: #2276ca;
 }
+#formulario-3im-3p > .acciones > button{
+    background-color: #68217e;
+    color: white;
+    font-family:'Kaushan Script', cursive ;
+    transition: 0.7s;
+}
+#formulario-3im-3p > .acciones > button:hover{
+    background-color: #9b3cb8;
+    transition: 0.7s;
+}
 .contenedor-general-items{
     display: grid;
     grid-template-columns: minmax(270px, 700px);
@@ -361,7 +373,160 @@ body{
     background-color: #2276ca;
     transition: 1s;
 }
-
+/*Slide*/
+#formulario-slide{
+    display: grid;
+    grid-template-columns: minmax(270px, 400px);
+    justify-content: center;
+    text-align: center;
+    padding: auto;
+    gap: 20px;
+    font-family: 'Varela Round', sans-serif;
+    @media screen and (min-width: 600px){
+        grid-template-columns: repeat(2, minmax(270px, 500px));
+    }
+}
+#formulario-slide > .identificacion{
+    grid-column: 1/3;
+}
+#formulario-slide > .identificacion > input, #formulario-slide > .identificacion > select{
+    background-color: white;
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid rgb(205, 127, 241);
+}
+#formulario-slide > div{
+    margin: auto;
+}
+#formulario-slide > div > .imagen-muestra > img{
+    width: 100%;
+}
+#formulario-slide > .imagenes{
+    text-align: center;
+    width: 100%;
+}
+#formulario-slide > .imagenes > div{
+    background-color: #68217e;
+    color: white;
+    margin-bottom: 50px;
+}
+#formulario-slide > .imagenes > div > input{
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    background-color: aliceblue;
+    color: #68217e;
+}
+#formulario-slide > .escritos{
+    grid-column: 1/2;
+    @media screen and (min-width: 600px){
+        grid-column:2/3;
+    }
+}
+#formulario-slide > .acciones{
+    grid-column: 1/3;
+    text-align: center;
+    margin: 20px;
+}
+#formulario-slide > .acciones > input{
+    margin: 10px;
+    background-color: #68217e;
+    color: white;
+    font-family:'Kaushan Script', cursive ;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+}
+#formulario-slide > .acciones > input:hover{
+    background-color: #2276ca;
+}
+#formulario-slide > .acciones > button{
+    background-color: #68217e;
+    color: white;
+    font-family:'Kaushan Script', cursive ;
+    transition: 0.7s;
+}
+#formulario-slide > .acciones > button:hover{
+    background-color: #9b3cb8;
+    transition: 0.7s;
+}
+/*Grid*/
+#formulario-grid{
+    display: grid;
+    grid-template-columns: minmax(270px, 400px);
+    justify-content: center;
+    text-align: center;
+    padding: auto;
+    gap: 20px;
+    font-family: 'Varela Round', sans-serif;
+    @media screen and (min-width: 600px){
+        grid-template-columns: repeat(2, minmax(270px, 500px));
+    }
+}
+#formulario-grid > .identificacion{
+    grid-column: 1/3;
+}
+#formulario-grid > .identificacion > input, #formulario-grid > .identificacion > select{
+    background-color: white;
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid rgb(205, 127, 241);
+}
+#formulario-grid > div{
+    margin: auto;
+}
+#formulario-grid > div > .imagen-muestra > img{
+    width: 100%;
+}
+#formulario-grid > .imagenes{
+    text-align: center;
+    width: 100%;
+}
+#formulario-grid > .imagenes > div{
+    background-color: #68217e;
+    color: white;
+    margin-bottom: 50px;
+}
+#formulario-grid > .imagenes > div > input{
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    background-color: aliceblue;
+    color: #68217e;
+}
+#formulario-grid > .escritos{
+    grid-column: 1/2;
+    @media screen and (min-width: 600px){
+        grid-column:2/3;
+    }
+}
+#formulario-grid > .acciones{
+    grid-column: 1/3;
+    text-align: center;
+    margin: 20px;
+}
+#formulario-grid > .acciones > input{
+    margin: 10px;
+    background-color: #68217e;
+    color: white;
+    font-family:'Kaushan Script', cursive ;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+}
+#formulario-grid > .acciones > input:hover{
+    background-color: #2276ca;
+}
+#formulario-grid > .acciones > button{
+    background-color: #68217e;
+    color: white;
+    font-family:'Kaushan Script', cursive ;
+    transition: 0.7s;
+}
+#formulario-grid > .acciones > button:hover{
+    background-color: #9b3cb8;
+    transition: 0.7s;
+}
 
 footer{
     margin-top: 50px;
