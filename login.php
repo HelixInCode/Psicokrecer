@@ -29,15 +29,15 @@ include ('conexion.php');
             $clave = crypt($clave,"pass");
 
             // comprobamos que los datos ingresados en el formulario coincidan con los de la BD
-            $sql = mysqli_query($conexion,"SELECT id, correo, clave FROM administrador WHERE correo='$usuario' AND clave='$clave'") or die(mysqli_error($conexion));
+            $sql = mysqli_query($conexion,"SELECT id_user, email, clave FROM userblog WHERE email='$usuario' AND clave='$clave'") or die(mysqli_error($conexion));
             $resultado=mysqli_num_rows($sql);//cuento el número de coincidencias
             $row = mysqli_fetch_array($sql);
             //echo "todavia no entro en el if";
                 
 
                 if($resultado==1) {
-                    $_SESSION['id'] = $row['id']; // creamos la sesion "usuario_id" y le asignamos como valor el campo usuario_id
-                    $_SESSION['nombre'] = $row["nombre"]; // creamos la sesion "usuario_nombre" y le asignamos como valor el campo 
+                    $_SESSION['id_user'] = $row['id_user']; // creamos la sesion "id_user" y le asignamos como valor el campo usuario_id
+                    $_SESSION['nombreUser'] = $row["nombreUser"]; // creamos la sesion "nombre" y le asignamos como valor el campo 
                     header("Location: index.html");
                 }else {
                 
