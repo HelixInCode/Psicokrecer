@@ -584,8 +584,62 @@
     
 }
 .contenedor-clientes > h4{
+    display: none;
     padding-top: 10px;
     font-family: 'Julius Sans One', sans-serif;
     color: #a850c3;
     font-weight: 700;
+}
+@media screen and (min-width: 700px){
+
+    .contenedor-clientes > h4{
+        display: block;
+    
+    }
+    
+}
+.iconos1{
+    background-color: white;
+    display: none;
+    height: 170px;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 30px;
+    padding: 10px;
+}
+@media screen and (min-width: 700px){
+
+    .iconos1{
+        display: grid;
+        grid-template-columns: repeat(5, minmax(100px, 150px));
+    
+    }
+    
+}
+.iconos1 > img{
+    width: 150px;
+    height: 150px;
+}
+.iconos2{
+    background-color: white;
+    display: none;
+    grid-template-columns: repeat(4, minmax(50px, 80px));
+    justify-content: center;
+    height: 170px;
+    gap: 10px;
+    margin-bottom: 30px;
+    padding: 10px;
+}
+@media screen and (min-width: 700px){
+
+    .iconos2{
+        display: grid;
+        grid-template-columns: repeat(5, minmax(100px, 150px));
+    
+    }
+    
+}
+.iconos2 > img{
+    width: 150px;
+    height: 150px;
 }
