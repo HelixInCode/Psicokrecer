@@ -570,3 +570,22 @@
     -webkit-transition: 1s;
     transition: 1s;
 }
+.contenedor-clientes{
+    display: grid;
+    grid-template-columns: minmax(270px, 900px);
+    justify-content: center;
+}
+@media screen and (min-width: 600px){
+
+    .contenedor-clientes{
+        padding-left:50px;
+    
+    }
+    
+}
+.contenedor-clientes > h4{
+    padding-top: 10px;
+    font-family: 'Julius Sans One', sans-serif;
+    color: #a850c3;
+    font-weight: 700;
+}

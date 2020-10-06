@@ -421,7 +421,7 @@ body{
     grid-template-columns: minmax(270px, 400px);
     justify-content: center;
     text-align: center;
-    padding: auto;
+    padding: 10px;
     gap: 20px;
     font-family: 'Varela Round', sans-serif;
 }
@@ -508,7 +508,7 @@ body{
     grid-template-columns: minmax(270px, 400px);
     justify-content: center;
     text-align: center;
-    padding: auto;
+    padding: 10px;
     gap: 20px;
     font-family: 'Varela Round', sans-serif;
 }

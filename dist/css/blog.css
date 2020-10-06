@@ -503,3 +503,19 @@
     -webkit-transition: 1s;
     transition: 1s;
 }
+
+/*ARTICULOS SLIDE Y GRID*/
+.contenedor-imagen{
+    display: grid;
+    grid-template-columns:minmax(270px, 400px);
+    justify-content: center;
+    gap: 10px;
+}
+@media screen and (min-width: 760px){
+    .contenedor-imagen{
+        grid-template-columns: repeat(3, minmax(270px, 400px));
+    }
+}
+.contenedor-imagen > img{
+    width: 100%;
+}
