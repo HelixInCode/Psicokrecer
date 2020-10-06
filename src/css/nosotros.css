@@ -480,7 +480,7 @@
     padding: 10px;
     @media screen and (min-width: 700px){
         display: grid;
-        grid-template-columns: repeat(5, minmax(100px, 150px));
+        grid-template-columns: repeat(5, minmax(100px, 200px));
     }
 }
 .iconos1 > img{
@@ -498,7 +498,7 @@
     padding: 10px;
     @media screen and (min-width: 700px){
         display: grid;
-        grid-template-columns: repeat(5, minmax(100px, 150px));
+        grid-template-columns: repeat(4, minmax(100px, 200px));
     }
 }
 .iconos2 > img{
