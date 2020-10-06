@@ -383,8 +383,14 @@
     grid-template-columns: auto 20px;
     justify-content: center;
     gap: 5px;
+    padding: 10px;
+    color: rgba(91, 16, 114, 0.8549);
 }  
-#comentarios > .contenedor-general >.nuevo-comentario{
+#comentarios > .contenedor-general > .enlace > a{
+    font-family: 'Kaushan Script', cursive ;
+    color: rgba(91, 16, 114, 0.8549);
+}
+#comentarios > .contenedor-general > .contenedor-nuevo-comentario >.nuevo-comentario{
     display: grid;
     grid-template-columns: minmax(270px, 800px);
     justify-content: center;
@@ -393,23 +399,107 @@
     margin-left: 100px;
     padding: 15px;
     background-color: #82259e;
-    border-radius: 10px;
+    border-radius: 3px;
     color: white;
     font-family: 'Varela Round', sans-serif ;
 }
-#comentarios > .contenedor-general >.nuevo-comentario > label{
+#comentarios > .contenedor-general > .contenedor-nuevo-comentario>.nuevo-comentario > .dato{
+    display: grid;
+    grid-template-columns: 50px auto;
+    padding: 10px;
+    align-content: center;
+}
+#comentarios > .contenedor-general > .contenedor-nuevo-comentario>.nuevo-comentario > .dato > img{
+    width: 100%;
+    height: 50px;
+}
+#comentarios > .contenedor-general > .contenedor-nuevo-comentario>.nuevo-comentario > .dato > label{
     text-align: justify;
     padding-left: 10px;
 }
-#comentarios > .contenedor-general >.nuevo-comentario > textarea{
-    border: 10px;
+#comentarios > .contenedor-general > .contenedor-nuevo-comentario>.nuevo-comentario > textarea{
+    border-radius: 10px;
     padding: 10px;
+    height: 100px;
 }
-#comentarios > .contenedor-general >.nuevo-comentario > button{
+#comentarios > .contenedor-general > .contenedor-nuevo-comentario>.nuevo-comentario > button{
     width: 180px;
     margin: auto;
     margin-top: 10px;
     background-color: rgb(49, 135, 233);
     color:white;
     font-family: 'Kaushan Script', cursive;
+}
+#comentarios > .contenedor-general > .contenedor-nuevo-comentario>.nuevo-comentario > button:hover{
+    background-color: rgb(25, 92, 168);
+    -webkit-transition: 1s;
+    transition: 1s;
+}
+#comentarios > h4{
+    margin-top: 50px;
+    font-family: 'Julius Sans One', sans-serif;
+    font-weight: 700;
+    color:  #a850c3;
+    margin-left: auto;
+    margin-right: auto;
+}
+#comentarios > .lista-comentarios{
+    display: grid;
+    grid-template-columns: minmax(270px, 700px);
+    justify-content: center;
+}
+#comentarios >.lista-comentarios > .item{
+    border-bottom: 2px solid rgba(89, 60, 102, .644);
+    background-color: rgba(188, 188, 189, 0.23137);
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+#comentarios >.lista-comentarios > .item > .dato{
+    display: grid;
+    grid-template-columns: 50px auto;
+    padding: 10px;
+    align-content: center;
+    gap: 10px;
+}
+#comentarios >.lista-comentarios > .item > .dato > img{
+    width: 100%;
+    height: 50px;
+}
+#comentarios >.lista-comentarios > .item > .dato > p{
+    font-family: 'Varela Round', sans-serif ;
+    text-align: justify;
+    color: #444444;
+}
+#comentarios >.lista-comentarios > .item > .escrito{
+    display: grid;
+    grid-template-columns: minmax(270px, 650px) 50px;
+    justify-content: center;
+    align-content: center;
+}
+#comentarios >.lista-comentarios > .item > .escrito > p{
+    text-align: justify;
+    padding: 10px;
+    font-family: 'Varela Round', sans-serif ;
+}
+#comentarios >.lista-comentarios > .item > .escrito > a > i {
+    color: #68217e;
+    -webkit-transition: 1s;
+    transition: 1s;
+}
+#comentarios >.lista-comentarios > .item > .escrito > a > i:hover{
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    -webkit-transition: 1s;
+    transition: 1s;
+}
+.oculto{
+    display: none;
+    -webkit-transition: 1s;
+    transition: 1s;
+}
+.voltear{
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    -webkit-transition: 1s;
+    transition: 1s;
 }
