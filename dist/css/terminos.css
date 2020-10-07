@@ -113,8 +113,53 @@
     #terminos > .general-container > .general-especific > .tabs-terminos > .item > p{
         font-size: 18px;}}
 #contenedor-secciones{
-    background-color: #ffffff;
+    
     margin-top: 20px;border-radius: 5px;
     padding: 10px;
-    margin-left: 60px;
 }
+@media screen and (min-width: 760px){
+
+    #contenedor-secciones{
+        margin-left: 60px;}}
+#contenedor-secciones > .secciones{
+    background-color: #ffffff;
+    padding: 10px;
+}
+#contenedor-secciones > .secciones > h4{
+    font-family: 'Julius Sans One', sans-serif;
+    color: #7c3492;
+    font-weight: 500;
+    margin-bottom: 20px;
+    
+}
+#contenedor-secciones > .secciones > p{
+    font-family: 'Varela Round', sans-serif;
+    color: #7c3492;
+    font-size: 14px;
+    text-align: justify;
+}
+@media screen and (min-width: 600px){
+
+    #contenedor-secciones > .secciones > p{
+        font-size:18px;}}
+
+#contenedor-secciones > .secciones > ul, #contenedor-secciones > .secciones:nth-child(2) > p{
+    color: #7c3492;
+    text-align: justify;
+    display: grid;
+    grid-template-columns: minmax(270px, 600px);
+    justify-content: center;
+    padding: 10px;
+    
+}
+#contenedor-secciones > .secciones > ul > li{
+    padding-bottom: 10px;
+    font-size: 15px;
+    text-align: justify;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+@media screen and (min-width: 600px){
+
+    #contenedor-secciones > .secciones > ul > li{
+        font-size:18px;}}
