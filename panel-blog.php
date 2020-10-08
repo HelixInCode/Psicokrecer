@@ -123,7 +123,8 @@
                                 <div class="formularios-item d-none">
                                     <form id="formulario-3im-3p" class="md-form" action="savearticulo.php" method="POST" enctype="multipart/form-data">
                                         <div class="identificacion">
-                                            <input type="text" placeholder="Título del artículo">
+                                            <input type="hidden" name="diseño" value="diseño-1">
+                                            <input type="text" name="titulo" placeholder="Título del artículo">
                                             <select name="categoria" id="categoria">
                                                 <option value="">Categoría del Artículo</option>
                                                 <option value="familia">Familia</option>
@@ -155,12 +156,12 @@
                                         <div class="escritos">
                                             <h5>Párrafo Introductorio</h5>
                                             <div class="md-form">
-                                                <textarea name="introduccion" id="form6" class="md-textarea form-control" rows="7" style=" padding: 6px; background-color: white;"></textarea>
+                                                <textarea name="subtitulo" id="form6" class="md-textarea form-control" rows="7" style=" padding: 6px; background-color: white;"></textarea>
                                                 <label for="form7">Introducción</label>
                                             </div>
                                             <h5>Párrafos</h5>
                                             <div class="md-form">
-                                                <textarea name="titulo" id="form7" class="md-textarea form-control" rows="7" style=" padding: 6px; background-color: white;"></textarea>
+                                                <textarea name="texto" id="form7" class="md-textarea form-control" rows="7" style=" padding: 6px; background-color: white;"></textarea>
                                                 <label for="form7">Primer Escrito</label>
                                             </div>
                                             <div class="md-form">
@@ -174,8 +175,7 @@
 
                                         </div>
                                         <div class="acciones text-center">
-                                            <button class="btn">Cancelar</button>
-                                            <button type="submit" class="btn">Crear</button>
+                                            <button type="submit" name="Crear" class="btn">Crear</button>
 
                                         </div>
                                     </form>
@@ -185,7 +185,8 @@
                             <div class="formularios-item d-none">
                                 <form id="formulario-slide" class="md-form" action="savearticulo.php" method="POST" enctype="multipart/form-data">
                                     <div class="identificacion">
-                                        <input type="text" placeholder="Título del artículo">
+                                        <input type="hidden" name="diseño" value="diseño-2">
+                                        <input type="text" name="titulo" placeholder="Título del artículo">
                                         <select name="categoria" id="categoria">
                                             <option value="">Categoría del Artículo</option>
                                             <option value="familia">Familia</option>
@@ -217,12 +218,12 @@
                                     <div class="escritos">
                                         <h5>Párrafo Introductorio</h5>
                                         <div class="md-form">
-                                            <textarea name="introduccion" id="form6" class="md-textarea form-control" rows="7" style=" padding: 6px; background-color: white;"></textarea>
+                                            <textarea name="subtitulo" id="form6" class="md-textarea form-control" rows="7" style=" padding: 6px; background-color: white;"></textarea>
                                             <label for="form7">Introducción</label>
                                         </div>
                                         <h5>Párrafos</h5>
                                         <div class="md-form">
-                                            <textarea name="titulo" id="form7" class="md-textarea form-control" rows="7" style=" padding: 6px; background-color: white;"></textarea>
+                                            <textarea name="texto" id="form7" class="md-textarea form-control" rows="7" style=" padding: 6px; background-color: white;"></textarea>
                                             <label for="form7">Primer Escrito</label>
                                         </div>
                                         <div class="md-form">
@@ -235,8 +236,8 @@
                                         </div>
                                     </div>
                                     <div class="acciones text-center">
-                                        <button class="btn">Cancelar</button>
-                                        <button type="submit" class="btn">Crear</button>
+                                        
+                                        <button type="submit" name="Crear" class="btn">Crear</button>
 
                                     </div>
                                 </form>
@@ -244,7 +245,8 @@
                             <div class="formularios-item d-none">
                                 <form id="formulario-grid" class="md-form" action="savearticulo.php" method="POST" enctype="multipart/form-data">
                                     <div class="identificacion">
-                                        <input type="text" placeholder="Título del artículo">
+                                        <input type="hidden" name="diseño" value="diseño-3">
+                                        <input type="text" name="titulo" placeholder="Título del artículo">
                                         <select name="categoria" id="categoria">
                                             <option value="">Categoría del Artículo</option>
                                             <option value="familia">Familia</option>
@@ -276,12 +278,12 @@
                                     <div class="escritos">
                                         <h5>Párrafo Introductorio</h5>
                                         <div class="md-form">
-                                            <textarea name="introduccion" id="form6" class="md-textarea form-control" rows="7" style=" padding: 6px; background-color: white;"></textarea>
+                                            <textarea name="subtitulo" id="form6" class="md-textarea form-control" rows="7" style=" padding: 6px; background-color: white;"></textarea>
                                             <label for="form7">Introducción</label>
                                         </div>
                                         <h5>Párrafos</h5>
                                         <div class="md-form">
-                                            <textarea name="titulo" id="form7" class="md-textarea form-control" rows="7" style=" padding: 6px; background-color: white;"></textarea>
+                                            <textarea name="texto" id="form7" class="md-textarea form-control" rows="7" style=" padding: 6px; background-color: white;"></textarea>
                                             <label for="form7">Primer Escrito</label>
                                         </div>
                                         <div class="md-form">
@@ -294,8 +296,8 @@
                                         </div>
                                     </div>
                                     <div class="acciones text-center">
-                                        <button class="btn">Cancelar</button>
-                                        <button type="submit" class="btn">Crear</button>
+                                        
+                                        <button type="submit" name="Crear" class="btn">Crear</button>
 
                                     </div>
                                 </form>

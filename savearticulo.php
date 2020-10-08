@@ -28,10 +28,15 @@ include ('conexion.php');
 </head>
 <body>
   <?php
-  if (isset($_POST['Enviar'])) {
+  if (isset($_POST['Crear'])) {
+      $admin=$_SESSION['Nombre'];
+      $diseño=mysqli_real_escape_string($conexion,$_POST['diseño']);
+      $categoria=mysqli_real_escape_string($conexion,$_POST['categoria']);
       $titulo = mysqli_real_escape_string($conexion, $_POST['titulo']);
       $subtitulo = mysqli_real_escape_string($conexion, $_POST['subtitulo']);
       $texto = mysqli_real_escape_string($conexion, $_POST['texto']);
+      $texto2=mysqli_real_escape_string($conexion, $_POST['texto2']);
+      $texto3=mysqli_real_escape_string($conexion, $_POST['texto3']);
       $img1= addslashes(file_get_contents($_FILES['imagen1']['tmp_name']));
       $img2= addslashes(file_get_contents($_FILES['imagen2']['tmp_name']));
       $img3= addslashes(file_get_contents($_FILES['imagen3']['tmp_name']));
@@ -60,14 +65,14 @@ include ('conexion.php');
 
             if($_FILES['imagen1']['size']<= $limite_kb * 1024 && $_FILES['imagen2']['size']<= $limite_kb * 1024 && $_FILES['imagen3']['size']<= $limite_kb * 1024){
 
-      $guardar = mysqli_query($conexion, "INSERT INTO publicaciones (titulo, subtitulo, texto, imagen1, imagen2, imagen3) VALUES ('$titulo','$subtitulo','$texto','$ruta1','$ruta2','$ruta3')") or die(mysqli_error($conexion));
+      $guardar = mysqli_query($conexion, "INSERT INTO publicaciones (categoria, diseño, titulo, subtitulo, parrafo1, parrafo2, parrafo3, imagen1, imagen2, imagen3,adminis) VALUES ('$categoria','$diseño','$titulo','$subtitulo','$texto','$texto2','$texto3','$ruta1','$ruta2','$ruta3','$admin')") or die(mysqli_error($conexion));
 
       
-      if ($guardar){
-           $move= move_uploaded_file($_FILES['imagen1']['tmp_name'], "../dist/images/".$ruta1);
-           $move2= move_uploaded_file($_FILES['imagen2']['tmp_name'], "../dist/images/".$ruta2);
-           $move3= move_uploaded_file($_FILES['imagen3']['tmp_name'], "../dist/images/".$ruta3);
-           header("location: panel-blog.html");
+        if ($guardar){
+           $move= move_uploaded_file($_FILES['imagen1']['tmp_name'], "dist/images/".$ruta1);
+           $move2= move_uploaded_file($_FILES['imagen2']['tmp_name'], "dist/images/".$ruta2);
+           $move3= move_uploaded_file($_FILES['imagen3']['tmp_name'], "dist/images/".$ruta3);
+           header("location: panel-blog.php");
                echo '<div class="alert alert-success" role="alert">Articulo creado correctamente</div>';
              } else { echo "error al guardar los datos"; }
           } else { echo "El tamaño de las imagenes son demaciado grande"; }
@@ -76,8 +81,8 @@ include ('conexion.php');
           echo "La extensión de la imagen no es de las permitidas";
         }
 
-      }
-  }
+      }else{ echo "Error con las imagenes null";}
+    }else{ echo "Error en el post";}
   ?>
   <div class="contenedor-inferior">
     © 2020 Copyright:
