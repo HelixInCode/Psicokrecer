@@ -219,6 +219,16 @@ nav > .brand-logo > span > img{
   border-radius: 10px;
   font-family: 'Julius Sans One', sans-serif;
 }
+.modal > .login > .main-container > button{
+  background-color: #2f80d1;
+  color: white;
+  font-family: 'Kaushan Script', cursive;
+  transition: 1s;
+}
+.modal > .login > .main-container > button:hover{
+  background-color: #236eb9;
+  transition: 1s;
+}
 .modal > .login > .main-container > .input-container > label{
   font-family: 'Anton', sans-serif;
   color:rgba(10, 49, 94, 0.829);
