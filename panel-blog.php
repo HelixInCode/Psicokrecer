@@ -1,3 +1,6 @@
+<?php
+include ('conexion.php');
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -31,6 +34,12 @@
   <link rel="stylesheet" href="dist/css/panel.css">
 </head>
 <body>
+<?php 
+$publi=mysqli_query($conexion, "SELECT * FROM publicaciones");
+
+
+?>
+
     <header>
         <nav class="navbar navbar-dark">
             <a class="navbar-brand" href="#" style="font-family:'Kaushan Script', cursive; color: #f1f1f1;">
@@ -76,10 +85,15 @@
                         <div class="seccion-item non-active">
                             <h4>Lista de Artículos Publicados</h4>
                             <div class="contenedor-general-items">
+                            <?php 
+                            
+                            while($pub=mysqli_fetch_array($publi)){  
+                            ?>
                                 <div class="item">
-                                    <img src="./dist/img/equipo.png" alt="">
+                                    <img src="dist/images/<?php echo $pub['imagen1']; ?>" alt="">
                                     <div class="titulo">
-                                        <p>Titulo</p>
+                                    <?php $idPublic=$pub['id']; ?>
+                                        <p><?php echo $pub['titulo']; ?></p>
                                         <p>fecha de publicacion</p>
                                     </div>
                                     <div class="acciones">
@@ -88,6 +102,7 @@
                                     </div>
 
                                 </div>
+                            <?php } ?>
                                 <div class="item">
                                     <img src="./dist/img/equipo.png" alt="">
                                     <div class="titulo">
