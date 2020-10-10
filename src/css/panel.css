@@ -543,3 +543,19 @@ footer > .contenedor-general{
     left: 0;
     right: 0;
 }
+
+
+#formulario-slide > .escritos > .md-form > textarea, #formulario-grid > .escritos > .md-form > textarea, #formulario-3im-3p > .escritos > .md-form > textarea {
+    width: 250px;
+    margin: auto;
+    overflow-y: scroll;
+    @media screen and (min-width: 760px){
+        width: 300px;
+    }
+    @media screen and (min-width: 900px){
+        width: 400px;
+    }
+    @media screen and (min-width: 1200px){
+        width: 540px;
+    }
+}
