@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 18-09-2020 a las 23:31:28
--- Versión del servidor: 10.1.38-MariaDB
--- Versión de PHP: 7.3.2
+-- Tiempo de generación: 12-10-2020 a las 19:16:47
+-- Versión del servidor: 10.4.14-MariaDB
+-- Versión de PHP: 7.2.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -25,16 +24,23 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `admin`
+-- Estructura de tabla para la tabla `administrador`
 --
 
-CREATE TABLE `admin` (
+CREATE TABLE `administrador` (
   `id` int(50) NOT NULL,
   `nombre` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
-  `correo` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
-  `contraseña` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
+  `email` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
+  `clave` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
   `foto` longblob NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `administrador`
+--
+
+INSERT INTO `administrador` (`id`, `nombre`, `email`, `clave`, `foto`) VALUES
+(1, 'Cinthia', 'cinthiaesidan_94@hotmail.com', 'paagWgB/nq8gk', '');
 
 -- --------------------------------------------------------
 
@@ -45,20 +51,34 @@ CREATE TABLE `admin` (
 CREATE TABLE `publicaciones` (
   `id` int(50) NOT NULL,
   `titulo` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
-  `subtitulo` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
-  `texto` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
-  `foto` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
-  `admin` varchar(100) COLLATE utf8_spanish_ci NOT NULL
+  `subtitulo` varchar(250) COLLATE utf8_spanish_ci NOT NULL,
+  `parrafo1` varchar(500) COLLATE utf8_spanish_ci NOT NULL,
+  `imagen1` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
+  `admin` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
+  `categoria` varchar(200) COLLATE utf8_spanish_ci NOT NULL,
+  `diseño` varchar(25) COLLATE utf8_spanish_ci NOT NULL,
+  `imagen2` varchar(300) COLLATE utf8_spanish_ci NOT NULL,
+  `imagen3` varchar(300) COLLATE utf8_spanish_ci NOT NULL,
+  `adminis` varchar(80) COLLATE utf8_spanish_ci NOT NULL,
+  `parrafo2` varchar(500) COLLATE utf8_spanish_ci NOT NULL,
+  `parrafo3` varchar(500) COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `publicaciones`
+--
+
+INSERT INTO `publicaciones` (`id`, `titulo`, `subtitulo`, `parrafo1`, `imagen1`, `admin`, `categoria`, `diseño`, `imagen2`, `imagen3`, `adminis`, `parrafo2`, `parrafo3`) VALUES
+(1, 'Articulo de Prueba', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy ', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop p', '75120412eowyn vs nazgul.png', '', 'familia', 'diseño-1', '75120412eowyn vs nazgul.png', '75120412eowyn vs nazgul.png', '', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop p', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop p');
 
 --
 -- Índices para tablas volcadas
 --
 
 --
--- Indices de la tabla `admin`
+-- Indices de la tabla `administrador`
 --
-ALTER TABLE `admin`
+ALTER TABLE `administrador`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -72,16 +92,16 @@ ALTER TABLE `publicaciones`
 --
 
 --
--- AUTO_INCREMENT de la tabla `admin`
+-- AUTO_INCREMENT de la tabla `administrador`
 --
-ALTER TABLE `admin`
-  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `administrador`
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `publicaciones`
 --
 ALTER TABLE `publicaciones`
-  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
