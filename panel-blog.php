@@ -1,5 +1,7 @@
 <?php
+session_start();
 include ('conexion.php');
+    if(isset($_SESSION['id'])){
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -52,7 +54,7 @@ $publi=mysqli_query($conexion, "SELECT * FROM publicaciones");
                         <a href="" class="nav-link">Hola! Admin</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Cerrar sesión</a>
+                        <a href="close.php" class="nav-link">Cerrar sesión</a>
                     </li>
                 </ul>
 
@@ -92,12 +94,20 @@ $publi=mysqli_query($conexion, "SELECT * FROM publicaciones");
                                 <div class="item">
                                     <img src="dist/images/<?php echo $pub['imagen1']; ?>" alt="">
                                     <div class="titulo">
-                                    <?php $idPublic=$pub['id']; ?>
+                                    <?php $Public=$pub['id']; ?>
                                         <p><?php echo $pub['titulo']; ?></p>
                                         <p>fecha de publicacion</p>
                                     </div>
                                     <div class="acciones">
-                                        <button class="btn">Modificar</button>
+                                    <?php 
+                                    $type=$pub['diseño'];
+                                    if($type == "diseño-1"){  ?>
+                                        <a class="btn" href='<?php echo "articulo-modificar-3im-3p.php?public=$Public" ?>'>Modificar</a>
+                                    <?php } elseif( $type == "diseño-2") {  ?>
+                                        <a class="btn" href='<?php echo "articulo-modificar-slide.php?public=$Public" ?>'>Modificar</a>
+                                    <?php} else {  ?> 
+                                        <a class="btn" href='<?php echo "articulo-modificar-grid.php?public=$Public" ?>'>Modificar</a>
+                                    <?php } ?>   
                                         <button class="btn">Eliminar</button>
                                     </div>
 
@@ -355,3 +365,8 @@ $publi=mysqli_query($conexion, "SELECT * FROM publicaciones");
       <script type="text/javascript" src="src/js/mostrar-diseno.js"></script>
     </body>
 </html>
+<?php
+    }  else {
+        header ("Location: lgn.php");
+    }
+?>

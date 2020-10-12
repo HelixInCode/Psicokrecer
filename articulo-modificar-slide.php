@@ -1,3 +1,11 @@
+<?php
+session_start();
+include ('conexion.php');
+    if(isset($_SESSION['id'])){
+
+    $ad=$_SESSION['id'];
+
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -33,6 +41,18 @@
   <link rel="stylesheet" href="dist/css/panel.css">
 </head>
 <body>
+<?php 
+$selector=$_GET['public'];
+
+$admin=mysqli_query($conexion, "SELECT * FROM administrador WHERE id='$ad'");
+$adm=mysqli_fetch_array($admin);
+
+$precarga2=mysqli_query($conexion, "SELECT * FROM publicaciones WHERE id='$selector'");
+$posteo=mysqli_fetch_array($precarga2);
+
+
+?>
+
   <header>
     <nav class="navbar navbar-dark">
       <a class="navbar-brand" href="panel-blog.html" style="font-family:'Kaushan Script', cursive; color: #f1f1f1;">
@@ -55,37 +75,55 @@
     
   <main>
     <section id="articulo">
-      <div class="contenedor-principal">
+      <div class="contenedor-principal" style="padding-left: 0;">
         <div class="inicial-img">
             <img src="./dist/img/Psico-logo.png" alt="">
             <h3>Artículo</h3>
         </div>
 
-        <h3>Titulo entrada</h3>
-        
-        <div class="img-container">
-          <img src="./dist/img/empresas.png" alt="">
-        </div>
+        <h3><?php echo $posteo['titulo']; ?></h3>
         <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio error praesentium aliquid aperiam similique rerum laudantium delectus eum ad at vero explicabo ullam pariatur, provident fuga sint dolorem consequuntur vel?
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab itaque, tempora incidunt iusto maxime accusamus nam a ex tenetur, eligendi deserunt quasi ad debitis assumenda consectetur quisquam illum, nesciunt minus!
+        <?php echo $posteo['subtitulo']; ?>
         </p>
 
-        <div class="img-container">
-          <img src="./dist/img/equipo.png" alt="">
+        <div class="" id="my-slide">
+          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="d-block w-100" src="./dist/images/<?php echo $posteo['imagen1']; ?>"
+                  alt="First slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="./dist/images/<?php echo $posteo['imagen2']; ?>"
+                  alt="Second slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="./dist/images/<?php echo $posteo['imagen3']; ?>"
+                  alt="Third slide">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
         </div>
-        <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque voluptatem amet consequuntur nobis nemo cupiditate qui reprehenderit laudantium, error nostrum voluptas obcaecati dolor iste sit dolorum ea natus molestiae nisi?
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam autem repellendus consectetur non fuga odio veritatis tempore officia assumenda. Maiores asperiores architecto dolorem explicabo omnis sint, modi est quod ad.
+
+        <p id="first-p">
+        <?php echo $posteo['parrafo1']; ?>
         </p>
 
-        <div class="img-container">
-          <img src="./dist/img/equipo.png" alt="">
-        </div>
-        <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque voluptatem amet consequuntur nobis nemo cupiditate qui reprehenderit laudantium, error nostrum voluptas obcaecati dolor iste sit dolorum ea natus molestiae nisi?
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam autem repellendus consectetur non fuga odio veritatis tempore officia assumenda. Maiores asperiores architecto dolorem explicabo omnis sint, modi est quod ad.
-        </p>
+      <p>
+      <?php echo $posteo['parrafo2']; ?>  
+      </p>
+
+      <p>
+      <?php echo $posteo['parrafo3']; ?>
+      </p>
 
 
         <div class="datos-clave">
@@ -154,3 +192,8 @@
   <script type="text/javascript" src="src/js/hamburger.js"></script>
 </body>
 </html>
+<?php
+    }  else {
+        header ("Location: lgn.php");
+    }
+?>
