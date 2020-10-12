@@ -73,7 +73,8 @@ $posteo=mysqli_fetch_array($precarga1);
       </div>
   </nav>
   </header>
-    
+
+  <form action="modificar.php" method="POST">    
   <main>
     <section id="articulo">
       <div class="contenedor-principal">
@@ -81,6 +82,7 @@ $posteo=mysqli_fetch_array($precarga1);
             <img src="./dist/img/Psico-logo.png" alt="">
             <h3>Artículo</h3>
         </div>
+       
 
         <input type="text" style="font-family: 'Julius Sans One', sans-serif; color:#68217e ;background-color: #fff0; border: #665b5b00; text-align: center; font-size: 20px;" name="titulo" value="<?php echo $posteo['titulo']; ?>">
 
@@ -108,19 +110,22 @@ $posteo=mysqli_fetch_array($precarga1);
         <?php echo $posteo['parrafo3']; ?>
         </textarea>
 
+        <input type=hidden name=id value="<?php echo $selector; ?>">
 
         <div class="datos-clave">
             <p>01/03/2020</p>
             <p>Categoría</p>
         </div>
         <div class="regreso">
-            <a href="blog.html">Volver a lista de artículos</a>
+            <a href="panel-blog.php">Volver a lista de artículos</a>
+            <a href="modificar.php"><button name="modificar" style="background: #fff0; color: white; border: #fff0;">Modificar</button></a>
         </div>
 
-
+    
       </div>
     </section>
   </main>
+  </form>
 
   <footer>
     <div class="contenedor-general">

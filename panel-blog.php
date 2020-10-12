@@ -40,6 +40,7 @@ include ('conexion.php');
 $publi=mysqli_query($conexion, "SELECT * FROM publicaciones");
 
 
+
 ?>
 
     <header>
@@ -101,16 +102,15 @@ $publi=mysqli_query($conexion, "SELECT * FROM publicaciones");
                                     <div class="acciones">
                                     <?php 
                                     $type=$pub['diseño'];
-                                    echo $type;
                                     if($type == 1){  ?>
                                         <a class="btn" href='<?php echo "articulo-modificar-3im-3p.php?public=$Public"; ?>'>Modificar</a>
                                     <?php }
-                                    else{   
-                                        if($type == 2 ) {  ?>
+                                    elseif($type == 2 ) {   
+                                          ?>
                                         <a class="btn" href='<?php echo "articulo-modificar-slide.php?public=$Public"; ?>'>Modificar</a>
-                                    <?php} else {  ?> 
+                                    <?php } else {  ?> 
                                         <a class="btn" href='<?php echo "articulo-modificar-grid.php?public=$Public"; ?>'>Modificar</a>
-                                    <?php } }?>   
+                                    <?php } ?>   
                                         <a class="btn" href='<?php echo "eliminar.php?public=$Public"; ?>'>Eliminar</a>
                                     </div>
 
