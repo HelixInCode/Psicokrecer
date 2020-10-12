@@ -11,7 +11,7 @@ include ('conexion.php');
        }
        else{
          echo "Error al borrar publicacion";
-       }
+      }
 ?>
 <?php
     } else {
