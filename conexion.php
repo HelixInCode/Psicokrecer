@@ -3,7 +3,7 @@
 $host = "localhost";
 $user = "root";
 $pass = "";
-$db = "psicokcrecer";
+$db = "psicokrecer";
 
 function conectar()
     {global $host, $user, $pass, $db; 
