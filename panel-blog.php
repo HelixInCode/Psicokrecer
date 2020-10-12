@@ -101,14 +101,17 @@ $publi=mysqli_query($conexion, "SELECT * FROM publicaciones");
                                     <div class="acciones">
                                     <?php 
                                     $type=$pub['diseño'];
-                                    if($type == "diseño-1"){  ?>
-                                        <a class="btn" href='<?php echo "articulo-modificar-3im-3p.php?public=$Public" ?>'>Modificar</a>
-                                    <?php } elseif( $type == "diseño-2") {  ?>
-                                        <a class="btn" href='<?php echo "articulo-modificar-slide.php?public=$Public" ?>'>Modificar</a>
+                                    echo $type;
+                                    if($type == 1){  ?>
+                                        <a class="btn" href='<?php echo "articulo-modificar-3im-3p.php?public=$Public"; ?>'>Modificar</a>
+                                    <?php }
+                                    else{   
+                                        if($type == 2 ) {  ?>
+                                        <a class="btn" href='<?php echo "articulo-modificar-slide.php?public=$Public"; ?>'>Modificar</a>
                                     <?php} else {  ?> 
-                                        <a class="btn" href='<?php echo "articulo-modificar-grid.php?public=$Public" ?>'>Modificar</a>
-                                    <?php } ?>   
-                                        <a class="btn" href='<?php echo "eliminar.php?public=$Public" ?>'>Eliminar</a>
+                                        <a class="btn" href='<?php echo "articulo-modificar-grid.php?public=$Public"; ?>'>Modificar</a>
+                                    <?php } }?>   
+                                        <a class="btn" href='<?php echo "eliminar.php?public=$Public"; ?>'>Eliminar</a>
                                     </div>
 
                                 </div>
@@ -148,7 +151,7 @@ $publi=mysqli_query($conexion, "SELECT * FROM publicaciones");
                                 <div class="formularios-item d-none">
                                     <form id="formulario-3im-3p" class="md-form" action="savearticulo.php" method="POST" enctype="multipart/form-data">
                                         <div class="identificacion">
-                                            <input type="hidden" name="diseño" value="diseño-1">
+                                            <input type="hidden" name="diseño" value="1">
                                             <input type="text" name="titulo" placeholder="Título del artículo">
                                             <select name="categoria" id="categoria">
                                                 <option value="">Categoría del Artículo</option>
@@ -210,7 +213,7 @@ $publi=mysqli_query($conexion, "SELECT * FROM publicaciones");
                             <div class="formularios-item d-none">
                                 <form id="formulario-slide" class="md-form" action="savearticulo.php" method="POST" enctype="multipart/form-data">
                                     <div class="identificacion">
-                                        <input type="hidden" name="diseño" value="diseño-2">
+                                        <input type="hidden" name="diseño" value="2">
                                         <input type="text" name="titulo" placeholder="Título del artículo">
                                         <select name="categoria" id="categoria">
                                             <option value="">Categoría del Artículo</option>
@@ -270,7 +273,7 @@ $publi=mysqli_query($conexion, "SELECT * FROM publicaciones");
                             <div class="formularios-item d-none">
                                 <form id="formulario-grid" class="md-form" action="savearticulo.php" method="POST" enctype="multipart/form-data">
                                     <div class="identificacion">
-                                        <input type="hidden" name="diseño" value="diseño-3">
+                                        <input type="hidden" name="diseño" value="3">
                                         <input type="text" name="titulo" placeholder="Título del artículo">
                                         <select name="categoria" id="categoria">
                                             <option value="">Categoría del Artículo</option>
