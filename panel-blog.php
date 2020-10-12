@@ -108,7 +108,7 @@ $publi=mysqli_query($conexion, "SELECT * FROM publicaciones");
                                     <?php} else {  ?> 
                                         <a class="btn" href='<?php echo "articulo-modificar-grid.php?public=$Public" ?>'>Modificar</a>
                                     <?php } ?>   
-                                        <button class="btn">Eliminar</button>
+                                        <a class="btn" href='<?php echo "eliminar.php?public=$Public" ?>'>Eliminar</a>
                                     </div>
 
                                 </div>
