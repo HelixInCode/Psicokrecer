@@ -81,10 +81,10 @@ $posteo=mysqli_fetch_array($precarga2);
             <h3>Artículo</h3>
         </div>
 
-        <h3><?php echo $posteo['titulo']; ?></h3>
-        <p>
+        <input type="text" style="font-family: 'Julius Sans One', sans-serif; color:#68217e ;background-color: #fff0; border: #665b5b00; text-align: center; font-size: 20px;" name="titulo" value="<?php echo $posteo['titulo']; ?>">
+        <textarea name="subtitulo"  style=" color:#68217e ; font-family: 'Varela Round', sans-serif; background-color: #fff0; border: #665b5b00;" >
         <?php echo $posteo['subtitulo']; ?>
-        </p>
+    </textarea>
 
         <div class="" id="my-slide">
           <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -113,17 +113,17 @@ $posteo=mysqli_fetch_array($precarga2);
           </div>
         </div>
 
-        <p id="first-p">
+        <textarea name="subtitulo"  style=" color:#68217e ; font-family: 'Varela Round', sans-serif; background-color: #fff0; border: #665b5b00;"  id="first-p">
         <?php echo $posteo['parrafo1']; ?>
-        </p>
+    </textarea>
 
-      <p>
+      <textarea name="subtitulo"  style=" color:#68217e ; font-family: 'Varela Round', sans-serif; background-color: #fff0; border: #665b5b00;" >
       <?php echo $posteo['parrafo2']; ?>  
-      </p>
+    </textarea>
 
-      <p>
+      <textarea name="subtitulo"  style=" color:#68217e ; font-family: 'Varela Round', sans-serif; background-color: #fff0; border: #665b5b00;" >
       <?php echo $posteo['parrafo3']; ?>
-      </p>
+    </textarea>
 
 
         <div class="datos-clave">
