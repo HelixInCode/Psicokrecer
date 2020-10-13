@@ -337,6 +337,19 @@
     transition: 0.8s;
 
 }
+#articulo >.contenedor-principal > .space1{
+    display: grid;
+    grid-template-columns: auto 30px;
+    justify-content: center;
+}
+#articulo >.contenedor-principal > .space1 > textarea{
+    height: 200px;
+}
+#articulo >.contenedor-principal > .space2{
+    display: grid;
+    grid-template-columns: minmax(270px, auto) 30px;
+    justify-content: center;
+}
 
 /*Comentarios*/
 #comentarios{
@@ -475,4 +488,8 @@
 }
 .contenedor-imagen > img{
     width: 100%;
+}
+
+#icono-editar{
+    color: #68217e;
 }

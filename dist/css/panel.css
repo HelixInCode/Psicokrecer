@@ -401,16 +401,17 @@ body{
     grid-template-columns: 1fr;
     justify-content: center;
 }
-.contenedor-general-items > .item > .acciones > button{
+.contenedor-general-items > .item > .acciones > a, .contenedor-general-items > .item > .acciones > button{
     margin: 10px 20px;
     padding: 10px;
     background-color: #68217e;
     color: white;
+    height: 40px;
     font-family: 'Kaushan Script', cursive;
     border: none;
     border-radius: 10px;
 }
-.contenedor-general-items > .item > .acciones > button:hover{
+.contenedor-general-items > .item > .acciones > a:hover, .contenedor-general-items > .item > .acciones > button:hover{
     background-color: #2276ca;
     -webkit-transition: 1s;
     transition: 1s;

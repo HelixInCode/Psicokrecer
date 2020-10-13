@@ -1,3 +1,8 @@
+<?php
+session_start();
+include ('conexion.php');
+    if(isset($_SESSION['id'])){
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -31,6 +36,13 @@
   <link rel="stylesheet" href="dist/css/panel.css">
 </head>
 <body>
+<?php 
+$publi=mysqli_query($conexion, "SELECT * FROM publicaciones");
+
+
+
+?>
+
     <header>
         <nav class="navbar navbar-dark">
             <a class="navbar-brand" href="#" style="font-family:'Kaushan Script', cursive; color: #f1f1f1;">
@@ -43,7 +55,7 @@
                         <a href="" class="nav-link">Hola! Admin</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Cerrar sesión</a>
+                        <a href="close.php" class="nav-link">Cerrar sesión</a>
                     </li>
                 </ul>
 
@@ -76,18 +88,34 @@
                         <div class="seccion-item non-active">
                             <h4>Lista de Artículos Publicados</h4>
                             <div class="contenedor-general-items">
+                            <?php 
+                            
+                            while($pub=mysqli_fetch_array($publi)){  
+                            ?>
                                 <div class="item">
-                                    <img src="./dist/img/equipo.png" alt="">
+                                    <img src="dist/images/<?php echo $pub['imagen1']; ?>" alt="">
                                     <div class="titulo">
-                                        <p>Titulo</p>
+                                    <?php $Public=$pub['id']; ?>
+                                        <p><?php echo $pub['titulo']; ?></p>
                                         <p>fecha de publicacion</p>
                                     </div>
                                     <div class="acciones">
-                                        <button class="btn">Modificar</button>
-                                        <button class="btn">Eliminar</button>
+                                    <?php 
+                                    $type=$pub['diseño'];
+                                    if($type == 1){  ?>
+                                        <a class="btn" href='<?php echo "articulo-modificar-3im-3p.php?public=$Public"; ?>'>Modificar</a>
+                                    <?php }
+                                    elseif($type == 2 ) {   
+                                          ?>
+                                        <a class="btn" href='<?php echo "articulo-modificar-slide.php?public=$Public"; ?>'>Modificar</a>
+                                    <?php } else {  ?> 
+                                        <a class="btn" href='<?php echo "articulo-modificar-grid.php?public=$Public"; ?>'>Modificar</a>
+                                    <?php } ?>   
+                                        <a class="btn" href='<?php echo "eliminar.php?public=$Public"; ?>'>Eliminar</a>
                                     </div>
 
                                 </div>
+                            <?php } ?>
                                 <div class="item">
                                     <img src="./dist/img/equipo.png" alt="">
                                     <div class="titulo">
@@ -123,7 +151,7 @@
                                 <div class="formularios-item d-none">
                                     <form id="formulario-3im-3p" class="md-form" action="savearticulo.php" method="POST" enctype="multipart/form-data">
                                         <div class="identificacion">
-                                            <input type="hidden" name="diseño" value="diseño-1">
+                                            <input type="hidden" name="diseño" value="1">
                                             <input type="text" name="titulo" placeholder="Título del artículo">
                                             <select name="categoria" id="categoria">
                                                 <option value="">Categoría del Artículo</option>
@@ -185,7 +213,7 @@
                             <div class="formularios-item d-none">
                                 <form id="formulario-slide" class="md-form" action="savearticulo.php" method="POST" enctype="multipart/form-data">
                                     <div class="identificacion">
-                                        <input type="hidden" name="diseño" value="diseño-2">
+                                        <input type="hidden" name="diseño" value="2">
                                         <input type="text" name="titulo" placeholder="Título del artículo">
                                         <select name="categoria" id="categoria">
                                             <option value="">Categoría del Artículo</option>
@@ -245,7 +273,7 @@
                             <div class="formularios-item d-none">
                                 <form id="formulario-grid" class="md-form" action="savearticulo.php" method="POST" enctype="multipart/form-data">
                                     <div class="identificacion">
-                                        <input type="hidden" name="diseño" value="diseño-3">
+                                        <input type="hidden" name="diseño" value="3">
                                         <input type="text" name="titulo" placeholder="Título del artículo">
                                         <select name="categoria" id="categoria">
                                             <option value="">Categoría del Artículo</option>
@@ -340,3 +368,8 @@
       <script type="text/javascript" src="src/js/mostrar-diseno.js"></script>
     </body>
 </html>
+<?php
+    }  else {
+        header ("Location: lgn.php");
+    }
+?>
