@@ -490,7 +490,6 @@
 .iconos2{
     background-color: white;
     display: none;
-    grid-template-columns: repeat(4, minmax(50px, 80px));
     justify-content: center;
     height: 170px;
     gap: 10px;
@@ -498,7 +497,7 @@
     padding: 10px;
     @media screen and (min-width: 700px){
         display: grid;
-        grid-template-columns: repeat(4, minmax(100px, 200px));
+        grid-template-columns: repeat(5, minmax(100px, 200px));
     }
 }
 .iconos2 > img{

@@ -623,7 +623,6 @@
 .iconos2{
     background-color: white;
     display: none;
-    grid-template-columns: repeat(4, minmax(50px, 80px));
     justify-content: center;
     height: 170px;
     gap: 10px;
@@ -634,7 +633,7 @@
 
     .iconos2{
         display: grid;
-        grid-template-columns: repeat(4, minmax(100px, 200px));
+        grid-template-columns: repeat(5, minmax(100px, 200px));
     
     }
     
