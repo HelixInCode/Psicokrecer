@@ -156,7 +156,38 @@ $publi=mysqli_query($conexion, "SELECT * FROM publicaciones");
                                             <select name="categoria" id="categoria">
                                                 <option value="">Categoría del Artículo</option>
                                                 <option value="familia">Familia</option>
+                                                <option value="mujeres">Mujeres</option>
                                                 <option value="parejas">Parejas</option>
+                                                <option value="infanto-juvenil">Infanto-Juvenil</option>
+                                                <option value="empresas">Empresas</option>
+                                                <option value="cursos">Cursos</option>
+                                                <option value="talleres">Talleres</option>
+                                                <option value="emprendimiento">Emprendimiento</option>
+                                                <option value="sexo">Sexo</option>
+                                                <option value="test">Test</option>
+                                                <option value="comportamiento">Comportamiento</option>
+                                                <option value="felicidad">Felicidad</option>
+                                                <option value="salud mental">Salud Mental</option>
+                                                <option value="orientacion">Orientacion</option>
+                                                <option value="consultas">Consultas</option>
+                                                <option value="ayuda">Ayuda</option>
+                                                <option value="apoyo">Apoyo</option>
+                                                <option value="exito">Exito</option>
+                                                <option value="acompañamiento">Acompañamiento</option>
+                                                <option value="dinero">Dinero</option>
+                                                <option value="economia">Economia</option>
+                                                <option value="aprendizaje">Aprendizaje</option>
+                                                <option value="coaching">Coaching</option>
+                                                <option value="Riesgos Psicosociales">Riesgos Psicosociales</option>
+                                                <option value="herramientas">Herramientas</option>
+                                                <option value="educacion">Educacion</option>
+                                                <option value="espiritualidad">Espiritualidad</option>
+                                                <option value="comunicacion">Comunicacion</option>
+                                                <option value="padres">Padres</option>
+                                                <option value="adultos mayores">Adultos Mayores</option>
+                                                <option value="hombres">Hombres</option>
+                                                <option value="amor">Amor</option>
+                                                
                                             </select>
                                         </div>
                                         
@@ -217,8 +248,40 @@ $publi=mysqli_query($conexion, "SELECT * FROM publicaciones");
                                         <input type="text" name="titulo" placeholder="Título del artículo">
                                         <select name="categoria" id="categoria">
                                             <option value="">Categoría del Artículo</option>
-                                            <option value="familia">Familia</option>
-                                            <option value="parejas">Parejas</option>
+                                            <option value="">Categoría del Artículo</option>
+                                                <option value="familia">Familia</option>
+                                                <option value="mujeres">Mujeres</option>
+                                                <option value="parejas">Parejas</option>
+                                                <option value="infanto-juvenil">Infanto-Juvenil</option>
+                                                <option value="empresas">Empresas</option>
+                                                <option value="cursos">Cursos</option>
+                                                <option value="talleres">Talleres</option>
+                                                <option value="emprendimiento">Emprendimiento</option>
+                                                <option value="sexo">Sexo</option>
+                                                <option value="test">Test</option>
+                                                <option value="comportamiento">Comportamiento</option>
+                                                <option value="felicidad">Felicidad</option>
+                                                <option value="salud mental">Salud Mental</option>
+                                                <option value="orientacion">Orientacion</option>
+                                                <option value="consultas">Consultas</option>
+                                                <option value="ayuda">Ayuda</option>
+                                                <option value="apoyo">Apoyo</option>
+                                                <option value="exito">Exito</option>
+                                                <option value="acompañamiento">Acompañamiento</option>
+                                                <option value="dinero">Dinero</option>
+                                                <option value="economia">Economia</option>
+                                                <option value="aprendizaje">Aprendizaje</option>
+                                                <option value="coaching">Coaching</option>
+                                                <option value="Riesgos Psicosociales">Riesgos Psicosociales</option>
+                                                <option value="herramientas">Herramientas</option>
+                                                <option value="educacion">Educacion</option>
+                                                <option value="espiritualidad">Espiritualidad</option>
+                                                <option value="comunicacion">Comunicacion</option>
+                                                <option value="padres">Padres</option>
+                                                <option value="adultos mayores">Adultos Mayores</option>
+                                                <option value="hombres">Hombres</option>
+                                                <option value="amor">Amor</option>
+                                                
                                         </select>
                                     </div>
                                     
@@ -277,8 +340,40 @@ $publi=mysqli_query($conexion, "SELECT * FROM publicaciones");
                                         <input type="text" name="titulo" placeholder="Título del artículo">
                                         <select name="categoria" id="categoria">
                                             <option value="">Categoría del Artículo</option>
-                                            <option value="familia">Familia</option>
-                                            <option value="parejas">Parejas</option>
+                                            <option value="">Categoría del Artículo</option>
+                                                <option value="familia">Familia</option>
+                                                <option value="mujeres">Mujeres</option>
+                                                <option value="parejas">Parejas</option>
+                                                <option value="infanto-juvenil">Infanto-Juvenil</option>
+                                                <option value="empresas">Empresas</option>
+                                                <option value="cursos">Cursos</option>
+                                                <option value="talleres">Talleres</option>
+                                                <option value="emprendimiento">Emprendimiento</option>
+                                                <option value="sexo">Sexo</option>
+                                                <option value="test">Test</option>
+                                                <option value="comportamiento">Comportamiento</option>
+                                                <option value="felicidad">Felicidad</option>
+                                                <option value="salud mental">Salud Mental</option>
+                                                <option value="orientacion">Orientacion</option>
+                                                <option value="consultas">Consultas</option>
+                                                <option value="ayuda">Ayuda</option>
+                                                <option value="apoyo">Apoyo</option>
+                                                <option value="exito">Exito</option>
+                                                <option value="acompañamiento">Acompañamiento</option>
+                                                <option value="dinero">Dinero</option>
+                                                <option value="economia">Economia</option>
+                                                <option value="aprendizaje">Aprendizaje</option>
+                                                <option value="coaching">Coaching</option>
+                                                <option value="Riesgos Psicosociales">Riesgos Psicosociales</option>
+                                                <option value="herramientas">Herramientas</option>
+                                                <option value="educacion">Educacion</option>
+                                                <option value="espiritualidad">Espiritualidad</option>
+                                                <option value="comunicacion">Comunicacion</option>
+                                                <option value="padres">Padres</option>
+                                                <option value="adultos mayores">Adultos Mayores</option>
+                                                <option value="hombres">Hombres</option>
+                                                <option value="amor">Amor</option>
+                                                
                                         </select>
                                     </div>
                                     

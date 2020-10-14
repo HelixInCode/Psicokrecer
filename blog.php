@@ -1,3 +1,6 @@
+<?php
+include ('conexion.php');
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -32,6 +35,21 @@
   <link rel="stylesheet" href="dist/css/blog.css">
 </head>
 <body>
+
+<?php
+$ul=mysqli_query($conexion, "SELECT MAX(id) AS id FROM publicaciones");
+$ult=mysqli_fetch_array($ul);
+$ulti=$ult['id'];
+
+$last=mysqli_query($conexion, "SELECT * FROM publicaciones WHERE id='$ulti'");
+$lastP=mysqli_fetch_array($last);
+
+
+
+
+
+?>
+
     <header>
       <nav class="px-2 px-md-5">
         <a href="index.html" class="brand-logo">
@@ -135,36 +153,46 @@
                     <div class="carousel-inner" role="listbox">
                     <div class="carousel-item active">
                         <div class="view">
-                        <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg"
+                        <img class="d-block w-100" src="dist/images/<?php echo $lastP['imagen1']; ?>"
                             alt="First slide">
                         <div class="mask rgba-black-light"></div>
                         </div>
                         <div class="carousel-caption">
-                        <h3 class="h3-responsive">Entrada 1</h3>
-                        <a href="articulo-3im-3p.html">Leer más</a>
+                        <h3 class="h3-responsive"><?php echo $lastP['titulo']?></h3>
+                        <?php $type=$lastP['diseño'];
+                           if($type == 1){  ?>
+                        
+                        <a href="articulo-3im-3p.php?public=<?php echo $ulti;?>">Leer más</a>
+                        <?php }  
+                        elseif($type == 2 ) {   
+                          ?>
+                        <a href="articulo-slide.php?public=<?php echo $ulti;?>">Leer más</a>  
+                        <?php } else {  ?> 
+                          <a href="articulo-grid.php?public=<?php echo $ulti;?>">Leer más</a>  
+                        <?php } ?> 
                         </div>
                     </div>
                     <div class="carousel-item">
                         <!--Mask color-->
                         <div class="view">
-                        <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(6).jpg"
+                        <img class="d-block w-100" src="dist/images/<?php echo $lastP['imagen2']; ?>"
                             alt="Second slide">
                         <div class="mask rgba-black-strong"></div>
                         </div>
                         <div class="carousel-caption">
-                        <h3 class="h3-responsive">Entrada 2</h3>
+                        <h3 class="h3-responsive"><?php echo $lastP['titulo']?></h3>
                         <a href="#">Leer más</a>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <!--Mask color-->
                         <div class="view">
-                        <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(9).jpg"
+                        <img class="d-block w-100" src="dist/images/<?php echo $lastP['imagen3']; ?>"
                             alt="Third slide">
                         <div class="mask rgba-black-slight"></div>
                         </div>
                         <div class="carousel-caption">
-                        <h3 class="h3-responsive">Entrada 3</h3>
+                        <h3 class="h3-responsive"><?php echo $lastP['titulo']?></h3>
                         <a href="#">Leer más</a>
                         </div>
                     </div>

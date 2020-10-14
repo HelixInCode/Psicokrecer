@@ -1,3 +1,6 @@
+<?php
+include('conexion.php');
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -32,6 +35,13 @@
   <link rel="stylesheet" href="dist/css/blog.css">
 </head>
 <body>
+  <?php 
+  $selector = $_GET['public']; 
+
+
+  $articulo = mysqli_query($conexion, "SELECT * FROM publicaciones WHERE id='$selector'");
+  $posteo = mysqli_fetch_array($articulo);
+  ?>
   <header>
     <nav class="px-2 px-md-5">
 
@@ -131,30 +141,27 @@
             <h3>Artículo</h3>
         </div>
 
-        <h3>Titulo entrada</h3>
+        <h3><?php echo $posteo['titulo']; ?></h3>
 
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur cupiditate aperiam quisquam voluptatem tenetur perferendis? Nulla officia molestias veritatis voluptates ut? Nam enim reiciendis inventore eum a cupiditate beatae est?.
+        <?php echo $posteo['subtitulo']; ?>
         </p>
         
         <div class="contenedor-imagen" id="my-slide">
-          <img src="./dist/img/equipo.png" alt="">
-          <img src="./dist/img/empresas.png" alt="">
-          <img src="./dist/img/equipo.png" alt="">
+          <img src="dist/img/<?php echo $posteo['imagen1']; ?>" alt="">
+          <img src="dist/img/<?php echo $posteo['imagen2']; ?>" alt="">
+          <img src="dist/img/<?php echo $posteo['imagen3']; ?>" alt="">
         </div>
         <p id="first-p">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio error praesentium aliquid aperiam similique rerum laudantium delectus eum ad at vero explicabo ullam pariatur, provident fuga sint dolorem consequuntur vel?
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab itaque, tempora incidunt iusto maxime accusamus nam a ex tenetur, eligendi deserunt quasi ad debitis assumenda consectetur quisquam illum, nesciunt minus!
+        <?php echo $posteo['parrafo1']; ?>
         </p>
         <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque voluptatem amet consequuntur nobis nemo cupiditate qui reprehenderit laudantium, error nostrum voluptas obcaecati dolor iste sit dolorum ea natus molestiae nisi?
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam autem repellendus consectetur non fuga odio veritatis tempore officia assumenda. Maiores asperiores architecto dolorem explicabo omnis sint, modi est quod ad.
-        </p>
+        <?php echo $posteo['parrafo2']; ?>
+      </p>
 
         <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque voluptatem amet consequuntur nobis nemo cupiditate qui reprehenderit laudantium, error nostrum voluptas obcaecati dolor iste sit dolorum ea natus molestiae nisi?
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam autem repellendus consectetur non fuga odio veritatis tempore officia assumenda. Maiores asperiores architecto dolorem explicabo omnis sint, modi est quod ad.
-        </p>
+        <?php echo $posteo['parrafo3']; ?>      
+      </p>
 
 
         <div class="datos-clave">
