@@ -247,7 +247,7 @@
     margin-bottom: 30px;
     
 }
-#blog > .general-container > .antiguas > .por-categorias > .entradas-categorias{
+#blog > .general-container > .antiguas > .form > .por-categorias > .entradas-categorias{
     display: grid;
     grid-template-columns: 1fr;
     justify-content: center;
@@ -263,6 +263,12 @@
     color: #702886;
     padding: 10px;
 }
+#blog > .general-container > .antiguas > .form > .por-categorias > .entradas-categorias > .form-check > label{
+    font-family: 'Kaushan Script', cursive;
+    color: #702886;
+    
+}
+
 
 /*Entradas*/
 /*Articulo con 3im-3p*/

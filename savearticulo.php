@@ -53,6 +53,8 @@ include ('conexion.php');
         $fechaactual  = date("dHi");
         $nAleatorio  = rand(10, 99);
 
+        $fecha=date("d-m-Y");
+
         $ruta1= $nAleatorio.$fechaactual.$ruta1;
         $ruta2= $nAleatorio.$fechaactual.$ruta2;
         $ruta3= $nAleatorio.$fechaactual.$ruta3;
@@ -65,7 +67,7 @@ include ('conexion.php');
 
             if($_FILES['imagen1']['size']<= $limite_kb * 1024 && $_FILES['imagen2']['size']<= $limite_kb * 1024 && $_FILES['imagen3']['size']<= $limite_kb * 1024){
 
-      $guardar = mysqli_query($conexion, "INSERT INTO publicaciones (categoria, diseño, titulo, subtitulo, parrafo1, parrafo2, parrafo3, imagen1, imagen2, imagen3,adminis) VALUES ('$categoria','$diseño','$titulo','$subtitulo','$texto','$texto2','$texto3','$ruta1','$ruta2','$ruta3','$admin')") or die(mysqli_error($conexion));
+      $guardar = mysqli_query($conexion, "INSERT INTO publicaciones (categoria, diseño, titulo, subtitulo, parrafo1, parrafo2, parrafo3, imagen1, imagen2, imagen3,adminis, fecha) VALUES ('$categoria','$diseño','$titulo','$subtitulo','$texto','$texto2','$texto3','$ruta1','$ruta2','$ruta3','$admin', '$fecha')") or die(mysqli_error($conexion));
 
       
         if ($guardar){

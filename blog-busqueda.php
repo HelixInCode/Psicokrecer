@@ -44,15 +44,16 @@ $ulti=$ult['id'];
 $last=mysqli_query($conexion, "SELECT * FROM publicaciones WHERE id='$ulti'");
 $lastP=mysqli_fetch_array($last);
 
+if(isset($_POST['Buscar'])){
+  $categoria= $_POST['categoria'];
+  $buscar=mysqli_query($conexion, "SELECT * FROM publicaciones WHERE categoria LIKE '$categoria' ORDER BY id DESC");
+  $busqueda1= mysqli_fetch_array($buscar);
 
-$buscar=mysqli_query($conexion, "SELECT * FROM publicaciones WHERE id<'$ulti' ORDER BY id DESC");
-$busqueda1= mysqli_fetch_array($buscar);
+  $ultimoidbusqueda=$busqueda1['id'];
 
-$id2=$busqueda1['id'];
-
-$antiguos=mysqli_query($conexion, "SELECT * FROM publicaciones WHERE id<'$id2' ORDER BY id DESC");
-
-
+  $prev=mysqli_query($conexion, "SELECT * FROM publicaciones WHERE categoria LIKE '$categoria' AND id< '$ultimoidbusqueda' ORDER BY id DESC");
+  
+}
 
 
 
@@ -189,17 +190,7 @@ $antiguos=mysqli_query($conexion, "SELECT * FROM publicaciones WHERE id<'$id2' O
                         </div>
                         <div class="carousel-caption">
                         <h3 class="h3-responsive"><?php echo $lastP['titulo']?></h3>
-                        <?php $type=$lastP['diseño'];
-                           if($type == 1){  ?>
-                        
-                        <a href="articulo-3im-3p.php?public=<?php echo $ulti;?>">Leer más</a>
-                        <?php }  
-                        elseif($type == 2 ) {   
-                          ?>
-                        <a href="articulo-slide.php?public=<?php echo $ulti;?>">Leer más</a>  
-                        <?php } else {  ?> 
-                          <a href="articulo-grid.php?public=<?php echo $ulti;?>">Leer más</a>  
-                        <?php } ?> 
+                        <a href="#">Leer más</a>
                         </div>
                     </div>
                     <div class="carousel-item">
@@ -211,17 +202,7 @@ $antiguos=mysqli_query($conexion, "SELECT * FROM publicaciones WHERE id<'$id2' O
                         </div>
                         <div class="carousel-caption">
                         <h3 class="h3-responsive"><?php echo $lastP['titulo']?></h3>
-                        <?php $type=$lastP['diseño'];
-                           if($type == 1){  ?>
-                        
-                        <a href="articulo-3im-3p.php?public=<?php echo $ulti;?>">Leer más</a>
-                        <?php }  
-                        elseif($type == 2 ) {   
-                          ?>
-                        <a href="articulo-slide.php?public=<?php echo $ulti;?>">Leer más</a>  
-                        <?php } else {  ?> 
-                          <a href="articulo-grid.php?public=<?php echo $ulti;?>">Leer más</a>  
-                        <?php } ?> 
+                        <a href="#">Leer más</a>
                         </div>
                     </div>
                     </div>
@@ -244,7 +225,7 @@ $antiguos=mysqli_query($conexion, "SELECT * FROM publicaciones WHERE id<'$id2' O
                     aria-label="Search">
                     <a href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
                 </form>
-                <h3>Entradas</h3>
+                <h3>Entradas sobre <?php echo $categoria;?></h3>
                 <div class="ultima-entrada">
                     <div class="estructura">
                         <img src="./dist/images/<?php echo $busqueda1['imagen1']?>" alt="">
@@ -252,18 +233,7 @@ $antiguos=mysqli_query($conexion, "SELECT * FROM publicaciones WHERE id<'$id2' O
                             <h4><a href="articulo-3im-3p.html"><?php echo $busqueda1['titulo']?></a></h4>
                             <p class="fecha">01/09/3030</p>
                             <p><?php echo $busqueda1['subtitulo']?></p>
-                            <?php $type=$busqueda1['diseño'];
-                           if($type == 1){  ?>
-                        
-                        <a href="articulo-3im-3p.php?public=<?php echo $busqueda1['id'];?>">Leer artículo completo</a>
-                        <?php }  
-                        elseif($type == 2 ) {   
-                          ?>
-                        <a href="articulo-slide.php?public=<?php echo $busqueda1['id'];?>">Leer artículo completo</a>  
-                        <?php } else {  ?> 
-                          <a href="articulo-grid.php?public=<?php echo $busqueda1['id'];?>">Leer artículo completo</a>  
-                        <?php } ?> 
-                            
+                            <a href="articulo-3im-3p.html">Leer artículo completo</a>
                         </div>
                         
                     </div>
@@ -272,47 +242,26 @@ $antiguos=mysqli_query($conexion, "SELECT * FROM publicaciones WHERE id<'$id2' O
                     <div class="por-entradas">
                         <h5>Entradas anteriores</h5>
                         <div class="entradas-anteriores">
-                         <?php while($antigua=mysqli_fetch_array($antiguos)){ 
-                                 $type=$antigua['diseño'];
-                                 if($type == 1){  ?>
-                            <a class="item" href="articulo-3im-3p.php?public=<?php echo $antigua['id'];?>">
+                        <?php while ($previa=mysqli_fetch_array($prev)) {
+                          
+                         ?>    
+                        <a class="item">
                                 <div class="estructura">
-                                    <img src="./dist/images/<?php echo $antigua['imagen1'] ?>" alt="">
+                                    <img src="./dist/images/<?php echo $previa['imagen1']?>" alt="">
                                     <div>
-                                        <p><?php echo $antigua['titulo'] ?></p>
-                                        <p>01/09/1010</p>
+                                        <p><?php echo $previa['titulo']?></p>
+                                        <p><?php echo $previa['fecha']?></p>
                                     </div>
                                     
                                 </div>
                             </a>
-                          <?php } elseif($type == 2 ) { ?>  
-                            <a class="item" href="articulo-slide.php?public=<?php echo $antigua['id'];?>">
-                                <div class="estructura">
-                                    <img src="./dist/images/<?php echo $antigua['imagen1'] ?>" alt="">
-                                    <div>
-                                        <p><?php echo $antigua['titulo'] ?></p>
-                                        <p>01/09/1010</p>
-                                    </div>
-                                    
-                                </div>
-                            </a> 
-                          <?php } else { ?>  
-                            <a class="item" href="articulo-grid.php?public=<?php echo $antigua['id'];?>">
-                                <div class="estructura">
-                                    <img src="./dist/images/<?php echo $antigua['imagen1'] ?>" alt="">
-                                    <div>
-                                        <p><?php echo $antigua['titulo'] ?></p>
-                                        <p>01/09/1010</p>
-                                    </div>
-                                    
-                                </div>
-                            </a>  
-                          <?php } 
-                          
-                          }?>
+                        <?php } ?>   
+                            
+                            
+                            
                         </div>
                     </div>
-                  <form class="form" action="blog-busqueda.php" method="POST">
+                  <form class="form" action="" method="POST">
                     <div class="por-categorias">
                         <h5>Categorías</h5>
                         <div class="entradas-categorias">

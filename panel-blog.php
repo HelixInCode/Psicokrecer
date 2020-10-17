@@ -37,7 +37,7 @@ include ('conexion.php');
 </head>
 <body>
 <?php 
-$publi=mysqli_query($conexion, "SELECT * FROM publicaciones");
+$publi=mysqli_query($conexion, "SELECT * FROM publicaciones ORDER BY id DESC");
 
 
 
@@ -97,7 +97,7 @@ $publi=mysqli_query($conexion, "SELECT * FROM publicaciones");
                                     <div class="titulo">
                                     <?php $Public=$pub['id']; ?>
                                         <p><?php echo $pub['titulo']; ?></p>
-                                        <p>fecha de publicacion</p>
+                                        <p><?php echo $pub['fecha']; ?></p>
                                     </div>
                                     <div class="acciones">
                                     <?php 

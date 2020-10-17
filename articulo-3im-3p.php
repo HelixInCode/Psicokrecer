@@ -149,21 +149,21 @@ include('conexion.php');
       </p>
         
         <div class="img-container">
-          <img src="./dist/img/<?php echo $posteo['imagen1']; ?>" alt="">
+          <img src="dist/images/<?php echo $posteo['imagen1']; ?>" alt="">
         </div>
         <p>
         <?php echo $posteo['parrafo1']; ?>  
         </p>
 
         <div class="img-container">
-          <img src="./dist/img/<?php echo $posteo['imagen2']; ?>" alt="">
+          <img src="dist/images/<?php echo $posteo['imagen2']; ?>" alt="">
         </div>
         <p>
         <?php echo $posteo['parrafo2']; ?>    
         </p>
 
         <div class="img-container">
-          <img src="./dist/img/<?php echo $posteo['imagen3']; ?>" alt="">
+          <img src="dist/images/<?php echo $posteo['imagen3']; ?>" alt="">
         </div>
         <p>
         <?php echo $posteo['parrafo3']; ?>    
