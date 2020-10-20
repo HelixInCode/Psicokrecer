@@ -141,7 +141,7 @@
 #formulario > input:active{
     border: 1px solid rgba(104, 33, 126, 0.67843);
 }
-#formulario > a > i{
+#formulario > input > i{
     background-color: #68217e;
     padding: 8px;
     border-radius: 10px;
@@ -149,7 +149,7 @@
     -webkit-transition: 0.6s;
     transition: 0.6s;
 }
-#formulario > a > i:hover{
+#formulario > input > i:hover{
     -webkit-transform: rotateZ(20deg);
             transform: rotateZ(20deg);
     -webkit-transition: .6s;

@@ -220,11 +220,7 @@ if(isset($_POST['Buscar'])){
                 </div>
                 <!--/.Carousel Wrapper-->
                 <!-- Search form -->
-                <form class="pt-3" id="formulario">
-                    <input class="" type="text" placeholder="Buscar entrada..."
-                    aria-label="Search">
-                    <a href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
-                </form>
+                
                 <h3>Entradas sobre <?php echo $categoria;?></h3>
                 <div class="ultima-entrada">
                     <div class="estructura">

@@ -37,7 +37,20 @@ include ('conexion.php');
 <body>
 
 <?php
+if(isset($_POST['Buscar'])) { 
+  $buscado=mysqli_real_escape_string($conexion, $_POST['busqueda']);
 
+
+
+  $principal=mysqli_query($conexion, "SELECT * FROM publicaciones WHERE titulo LIKE '%".$buscado."%' OR subtitulo LIKE '%".$buscado."%' OR categoria LIKE '%".$buscado."%' ORDER BY id DESC");
+  $busqueda1=mysqli_fetch_array($principal);
+
+  $ultimoId=$busqueda1['id'];
+
+  $antiguos=mysqli_query($conexion, "SELECT * FROM publicaciones WHERE titulo LIKE '%".$buscado."%' OR subtitulo LIKE '%".$buscado."%' OR categoria LIKE '%".$buscado."%' AND id<'$ultimoId' ORDER BY id DESC");
+  
+
+}
 
 $ul=mysqli_query($conexion, "SELECT MAX(id) AS id FROM publicaciones");
 $ult=mysqli_fetch_array($ul);
@@ -47,12 +60,8 @@ $last=mysqli_query($conexion, "SELECT * FROM publicaciones WHERE id='$ulti'");
 $lastP=mysqli_fetch_array($last);
 
 
-$buscar=mysqli_query($conexion, "SELECT * FROM publicaciones WHERE id<'$ulti' ORDER BY id DESC");
-$busqueda1= mysqli_fetch_array($buscar);
 
-$id2=$busqueda1['id'];
 
-$antiguos=mysqli_query($conexion, "SELECT * FROM publicaciones WHERE id<'$id2' ORDER BY id DESC");
 
 
 
@@ -240,7 +249,7 @@ $antiguos=mysqli_query($conexion, "SELECT * FROM publicaciones WHERE id<'$id2' O
                 </div>
                 <!--/.Carousel Wrapper-->
                 <!-- Search form -->
-                <form action="buscar.php" method="POST" class="pt-3" id="formulario" >
+                <form action="" method="POST" class="pt-3" id="formulario" >
                     <input name="busqueda" type="text" placeholder="Buscar entrada..." >
                     <input type="submit" name="Buscar" value="Buscar" style="border: 0px;"><i class="fas fa-search" aria-hidden="true"></i>
                 </form>
@@ -312,202 +321,7 @@ $antiguos=mysqli_query($conexion, "SELECT * FROM publicaciones WHERE id<'$id2' O
                           }?>
                         </div>
                     </div>
-                  <form class="form" action="blog-busqueda.php" method="POST">
-                    <div class="por-categorias">
-                        <h5>Categorías</h5>
-                        <div class="entradas-categorias">
-                            
-                          <div class="form-check">
-                            <input class="form-check-input" type="radio" name="categoria" id="exampleRadios1" value="Familia">
-                            <label class="categorias" for="exampleRadios1">
-                              Familia
-                            </label>
-                          </div>
-                          <div class="form-check">
-                            <input class="form-check-input" type="radio" name="categoria" id="exampleRadios2" value="Mujeres">
-                            <label class="form-check-label" for="exampleRadios2">
-                              Mujeres
-                            </label>
-                          </div>
-                          <div class="form-check">
-                            <input class="form-check-input" type="radio" name="categoria" id="exampleRadios3" value="Parejas">
-                            <label class="form-check-label" for="exampleRadios3">
-                              Parejas
-                            </label>
-                          </div>
-                          <div class="form-check">
-                            <input class="form-check-input" type="radio" name="categoria" id="exampleRadios4" value="Infanto-Juvenil">
-                            <label class="form-check-label" for="exampleRadios4">
-                            Infanto-Juvenil
-                            </label>
-                          </div>
-                          <div class="form-check">
-                            <input class="form-check-input" type="radio" name="categoria" id="exampleRadios5" value="Empresas" >
-                            <label class="form-check-label" for="exampleRadios5">
-                            Empresas
-                            </label>
-                          </div>
-                          <div class="form-check">
-                            <input class="form-check-input" type="radio" name="categoria" id="exampleRadios6" value="Cursos" >
-                            <label class="form-check-label" for="exampleRadios6">
-                            Cursos
-                            </label>
-                          </div>
-                          <div class="form-check">
-                            <input class="form-check-input" type="radio" name="categoria" id="exampleRadios7" value="Talleres" >
-                            <label class="form-check-label" for="exampleRadios7">
-                            Talleres
-                            </label>
-                          </div>
-                          <div class="form-check">
-                            <input class="form-check-input" type="radio" name="categoria" id="exampleRadios8" value="Emprendimiento">
-                            <label class="form-check-label" for="exampleRadios8">
-                            Emprendimiento
-                            </label>
-                          </div>
-                          <div class="form-check">
-                            <input class="form-check-input" type="radio" name="categoria" id="exampleRadios8" value="Sexo" >
-                            <label class="form-check-label" for="exampleRadios8">
-                            Sexo
-                            </label>
-                          </div>
-                          <div class="form-check">
-                            <input class="form-check-input" type="radio" name="categoria" id="exampleRadios9" value="Test" >
-                            <label class="form-check-label" for="exampleRadios9">
-                            Test
-                            </label>
-                          </div>
-                          <div class="form-check">
-                            <input class="form-check-input" type="radio" name="categoria" id="exampleRadios10" value="Felicidad" >
-                            <label class="form-check-label" for="exampleRadios10">
-                            Felicidad
-                            </label>
-                          </div>
-                          <div class="form-check">
-                            <input class="form-check-input" type="radio" name="categoria" id="exampleRadios11" value="Salud Mental" >
-                            <label class="form-check-label" for="exampleRadios11">
-                            Salud Mental
-                            </label>
-                          </div>
-                          <div class="form-check">
-                            <input class="form-check-input" type="radio" name="categoria" id="exampleRadios12" value="Orientacion" >
-                            <label class="form-check-label" for="exampleRadios12">
-                            Orientacion
-                            </label>
-                          </div>
-                          <div class="form-check">
-                            <input class="form-check-input" type="radio" name="categoria" id="exampleRadios13" value="Consultas" >
-                            <label class="form-check-label" for="exampleRadios13">
-                            Consultas
-                            </label>
-                          </div>
-                          <div class="form-check">
-                            <input class="form-check-input" type="radio" name="categoria" id="exampleRadios14" value="Ayuda" >
-                            <label class="form-check-label" for="exampleRadios14">
-                            Ayuda
-                            </label>
-                          </div>
-                          <div class="form-check">
-                            <input class="form-check-input" type="radio" name="categoria" id="exampleRadios15" value="Apoyo" >
-                            <label class="form-check-label" for="exampleRadios15">
-                            Apoyo
-                            </label>
-                          </div>
-                          <div class="form-check">
-                            <input class="form-check-input" type="radio" name="categoria" id="exampleRadios16" value="Exito" >
-                            <label class="form-check-label" for="exampleRadios16">
-                            Exito
-                            </label>
-                          </div>
-                          <div class="form-check">
-                            <input class="form-check-input" type="radio" name="categoria" id="exampleRadios17" value="Acompañamiento" >
-                            <label class="form-check-label" for="exampleRadios17">
-                            Acompañamiento
-                            </label>
-                          </div>
-                          <div class="form-check">
-                            <input class="form-check-input" type="radio" value="Dinero" name="categoria" id="exampleRadios18"  >
-                            <label class="form-check-label" for="exampleRadios18">
-                            Dinero
-                            </label>
-                          </div>
-                          <div class="form-check">
-                            <input class="form-check-input" type="radio" value="Economia" name="categoria" id="exampleRadios19"  >
-                            <label class="form-check-label" for="exampleRadios19">
-                            Economia
-                            </label>
-                          </div>
-                          <div class="form-check">
-                            <input class="form-check-input" type="radio" value="Aprendizaje" name="categoria" id="exampleRadios20"  >
-                            <label class="form-check-label" for="exampleRadios20">
-                            Aprendizaje
-                            </label>
-                          </div>
-                          <div class="form-check">
-                            <input class="form-check-input" type="radio" value="Coaching" name="categoria" id="exampleRadios21"  >
-                            <label class="form-check-label" for="exampleRadios21">
-                            Coaching
-                            </label>
-                          </div>
-                          <div class="form-check">
-                            <input class="form-check-input" type="radio" value="Riesgos Psicosociales" name="categoria" id="exampleRadios22"  >
-                            <label class="form-check-label" for="exampleRadios22">
-                            Riesgos Psicosociales
-                            </label>
-                          </div>
-                          <div class="form-check">
-                            <input class="form-check-input" type="radio" value="Herramientas" name="categoria" id="exampleRadios23"  >
-                            <label class="form-check-label" for="exampleRadios23">
-                            Herramientas
-                            </label>
-                          </div>
-                          <div class="form-check">
-                            <input class="form-check-input" type="radio" value="Educacion" name="categoria" id="exampleRadios24"  >
-                            <label class="form-check-label" for="exampleRadios24">
-                            Educacion
-                            </label>
-                          </div>
-                          <div class="form-check">
-                            <input class="form-check-input" type="radio" value="Espiritualidad" name="categoria" id="exampleRadios25"  >
-                            <label class="form-check-label" for="exampleRadios25">
-                            Espiritualidad
-                            </label>
-                          </div>
-                          <div class="form-check">
-                            <input class="form-check-input" type="radio" value="Comunicacion" name="categoria" id="exampleRadios26"  >
-                            <label class="form-check-label" for="exampleRadios26">
-                            Comunicacion
-                            </label>
-                          </div>
-                          <div class="form-check">
-                            <input class="form-check-input" type="radio" value="Padres" name="categoria" id="exampleRadios27"  >
-                            <label class="form-check-label" for="exampleRadios27">
-                            Padres
-                            </label>
-                          </div>
-                          <div class="form-check">
-                            <input class="form-check-input" type="radio" value="Adultos Mayores" name="categoria" id="exampleRadios28"  >
-                            <label class="form-check-label" for="exampleRadios28">
-                            Adultos Mayores
-                            </label>
-                          </div>
-                          <div class="form-check">
-                            <input class="form-check-input" type="radio" value="Hombres" name="categoria" id="exampleRadios29"  >
-                            <label class="form-check-label" for="exampleRadios29">
-                            Hombres
-                            </label>
-                          </div>
-                          <div class="form-check">
-                            <input class="form-check-input" type="radio" value="Amor" name="categoria" id="exampleRadios30"  >
-                            <label class="form-check-label" for="exampleRadios30">
-                            Amor
-                            </label>
-                          </div>
-                          <input type="submit" style="background-color: #68217e; font-family: 'Julius Sans One', sans-serif;color: white;font-size: 20px; font-weight: 600; border-radius: 10px;" name="Buscar" value="Buscar">
-
-                        </div>
-                    </div>
-                  </form>
+                
                 </div>
                 
             </div>
