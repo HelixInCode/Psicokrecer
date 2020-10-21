@@ -111,6 +111,11 @@ nav > .brand-logo > span > img{
   margin-top: auto;
   margin-bottom: auto;
 }
+#user-respon{
+  @media screen and (min-width: 768px){
+    display: none;
+  }
+}
 #mySidenav > .enlaces > a:hover{
   background-color: #68217e;
 }
@@ -140,6 +145,25 @@ nav > .brand-logo > span > img{
     transition: 1s;
   }
 }
+#user-btn{
+  display: none;
+  background-color: rgb(142, 4, 184);
+  color: white;
+  position: fixed;
+  z-index: 1500000;
+  font-size: 15px;
+  bottom: 30px;
+  right: 30px;
+  border-radius: 150px;
+  padding: 10px;
+  text-align: center;
+  font-family:'Kaushan Script', cursive;
+  filter: drop-shadow(0 5px 5px #482a74);
+  @media screen and (min-width: 770px){
+    display: block;
+    transition: 1s;
+  }
+}
 #login-btn:hover{
   background-color: rgb(83, 8, 105);
   transform: scale(1.1);
@@ -151,7 +175,41 @@ nav > .brand-logo > span > img{
     display: none;
   }
 }
+#modal-user{
+  background-color: rgb(142, 4, 184);
+  color: white;
+  position: fixed;
+  z-index: 1500000;
+  font-size: 15px;
+  bottom: 120px;
+  
+  border-radius: 150px;
+  padding: 10px;
+  text-align: center;
+  font-family:'Kaushan Script', cursive;
+  transition: 1s;
+  filter: drop-shadow(0 5px 5px #482a74);
+  @media screen and (min-width: 770px){
+    display: block;
+  }
+}
+#modal-user > .contenedor-user{
+  display: grid;
+  grid-template-columns: minmax(100px, 150px);
+  gap: 5px;
+}
+#modal-user > .contenedor-user > a{
+  color: white;
+}
 
+.posicion-escondido{
+  right: -250px;
+  transition: 1s;
+}
+.posicion-mostrar{
+  right: 30px;
+  transition: 1s;
+}
 .menu-overlay{
   z-index: 13000;
   position: fixed;
