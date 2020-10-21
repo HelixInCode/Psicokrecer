@@ -576,6 +576,7 @@ if (isset($_SESSION['id_user'])) {
   <script type="text/javascript" src="src/js/tipeo.js"></script>
   <script type="text/javascript" src="src/js/hamburger.js"></script>
   <script type="text/javascript" src="src/js/mostrar-login.js"></script>
+  <script type="text/javascript" src="src/js/mostrarModalUsuario.js"></script>
 </body>
 
 </html>
