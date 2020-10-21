@@ -1,5 +1,10 @@
 <?php
+session_start();
 include ('conexion.php');
+if(isset($_SESSION['id_user'])){
+  
+  $idblog=$_SESSION['id_user'];
+}
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -135,16 +140,12 @@ $antiguos=mysqli_query($conexion, "SELECT * FROM publicaciones WHERE id<'$id2' O
               <input name="password" type="password" value="">
             </div>
   
-            <div class="input-container">
-              <input type="checkbox" name="remember" id="remember"/>
-              <label for="remenber">Recuerdame</label>
-            </div>
+           
   
-            <a class="enlace-accion" href="">No recuerdo mi contraseña</a>
-            <div class="login-container">
+       
   
               <button name="Enviar" class="btn">Iniciar Sesión</button>
-              <a class="enlace-accion" href="">¿No te has registrado todavía?</a>
+              <a class="enlace-accion" href="registro.php">¿No te has registrado todavía?</a>
   
             </div>
           </form>

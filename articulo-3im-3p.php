@@ -1,5 +1,9 @@
 <?php
 include('conexion.php');
+
+if(isset($_SESSION['id_user'])){
+  $usuario=$_SESSION['nombreUser'];
+}
 ?>
 
 <!DOCTYPE html>
@@ -80,7 +84,7 @@ include('conexion.php');
             <i class="fas fa-mail-bulk"></i>
             Contacto
           </a>
-          <a href="#" id="login-respon" class="my-boton">
+          <a href="" id="login-respon" class="my-boton">
             <i class="fas fa-sign-in-alt"></i>
             Inicia Sesión
           </a>
@@ -109,7 +113,7 @@ include('conexion.php');
           <h5>Ingresar</h5>
           <i id="close-login" class="closeModal fa fa-times"></i>
         </div>
-        <form class="main-container p-3" action="" method="POST">
+        <form class="main-container p-3" action="login.php" method="POST">
 
           <div class="input-container">
             <label for="email">Correo</label>
@@ -121,13 +125,7 @@ include('conexion.php');
             <input name="password" type="password" value="">
           </div>
 
-          <div class="input-container">
-            <input type="checkbox" name="remember" id="remember"/>
-            <label for="remenber">Recuerdame</label>
-          </div>
 
-          <a class="enlace-accion" href="">No recuerdo mi contraseña</a>
-          <div class="login-container">
 
             <button name="Enviar" class="btn">Iniciar Sesión</button>
             <a class="enlace-accion" href="">¿No te has registrado todavía?</a>
@@ -180,10 +178,19 @@ include('conexion.php');
         
         <div id="comentarios">
           <div class="contenedor-general">
+        <?php
+          if(isset($_SESSION['id_user'])){
+          ?>
             <div class="enlace" id="nuevo-comment">
-              <a href="#">¿Quieres agregar un comentario?</a>
+              <a href="#"><?php echo $usuario ?>¿Quieres agregar un comentario?</a>
               <i class="fas fa-angle-down" style="transition: 1s;"></i>
             </div>
+          <?php} else {  ?>
+            <div class="enlace" id="nuevo-comment">
+              <a href="#">Para dejar un comentario debes estar registrado</a>
+              <i class="fas fa-angle-down" style="transition: 1s;"></i>
+            </div>
+            <?php } ?>
             <div class="contenedor-nuevo-comentario oculto animated fadeInDown faster">
               <form class="nuevo-comentario" action="">
                 <div class="dato">

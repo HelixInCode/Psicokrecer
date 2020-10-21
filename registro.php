@@ -1,4 +1,6 @@
-<?php include('conexion.php');?>
+<?php
+include ('conexion.php');
+?>
 <!doctype html>
 <html lang="es">
 <head>
@@ -19,7 +21,7 @@
         {
             $nombre = mysqli_real_escape_string($conexion,$_POST['username']);
             $clave = mysqli_real_escape_string($conexion,$_POST['password']);
-            $email = mysqli_real_escape_string($conexion,$_POST['mail']);+
+            $email = mysqli_real_escape_string($conexion,$_POST['mail']);
             $imagen = addslashes(file_get_contents($_FILES['imagen']['tmp_name']));
             
 
@@ -78,6 +80,7 @@
 
                                 
                                 <input type="submit" name="Enviar" class="btn btn-info btn-md" value="Enviar">
+                                <a href="index.html" class="btn btn-info btn-md">Volver</a>
                             </div>
                             
                         </form>

@@ -1,5 +1,13 @@
 <?php
 include('conexion.php');
+session_start();
+
+if(isset($_SESSION['id_user'])){
+  $usuario=$_SESSION['user'];
+  $id=$_SESSION['id_user'];
+
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -42,6 +50,8 @@ include('conexion.php');
 
     $articulo = mysqli_query($conexion, "SELECT * FROM publicaciones WHERE id='$selector'");
     $posteo = mysqli_fetch_array($articulo);
+
+    $sel= mysqli_query($conexion, "SELECT * FROM comentarios")
 ?>
 
   <header>
@@ -109,25 +119,19 @@ include('conexion.php');
           <h5>Ingresar</h5>
           <i id="close-login" class="closeModal fa fa-times"></i>
         </div>
-        <form class="main-container p-3" action="" method="POST">
+        <form class="main-container p-3" action="login.php" method="POST">
 
           <div class="input-container">
             <label for="email">Correo</label>
-            <input name="email" type="email" value="">
+            <input name="username" type="email" >
           </div>
 
           <div class="input-container">
             <label for="password">Contraseña</label>
-            <input name="password" type="password" value="">
+            <input name="password" type="password" >
           </div>
 
-          <div class="input-container">
-            <input type="checkbox" name="remember" id="remember"/>
-            <label for="remenber">Recuerdame</label>
-          </div>
 
-          <a class="enlace-accion" href="">No recuerdo mi contraseña</a>
-          <div class="login-container">
 
             <button name="Enviar" class="btn">Iniciar Sesión</button>
             <a class="enlace-accion" href="">¿No te has registrado todavía?</a>
@@ -140,7 +144,7 @@ include('conexion.php');
       <div class="contenedor-principal">
         <div class="inicial-img">
             <img src="./dist/img/Psico-logo.png" alt="">
-            <h3>Artículo</h3>
+            <h3>Artículo <?php echo $usuario; ?></h3>
         </div>
 
         <h3><?php echo $posteo['titulo']; ?></h3>
@@ -198,10 +202,20 @@ include('conexion.php');
         
         <div id="comentarios">
           <div class="contenedor-general">
+       
+          <?php
+          if(isset($_SESSION['id_user'])){
+          ?>
             <div class="enlace" id="nuevo-comment">
-              <a href="#">¿Quieres agregar un comentario?</a>
+              <a href="#">¿Quieres agregar un comentario <?php echo $usuario ?>?</a>
               <i class="fas fa-angle-down" style="transition: 1s;"></i>
             </div>
+          <?php } else { ?>
+            <div class="enlace">
+              <a href="#">Para agregar un comentario debes estar registrado</a>
+              <i class="fas fa-angle-down" style="transition: 1s;"></i>
+            </div>
+          <?php } ?>
             <div class="contenedor-nuevo-comentario oculto animated fadeInDown faster">
               <form class="nuevo-comentario" action="">
                 <div class="dato">
@@ -218,6 +232,7 @@ include('conexion.php');
           </div>
           <h4>Comentarios</h4>
           <div class="lista-comentarios">
+            <?php while($comentario=mysqli_fetch_array($sel)){  ?>
             <div class="item">
               <div class="dato">
                 <img src="./dist/img/gaby.jpeg" alt="">
@@ -229,6 +244,7 @@ include('conexion.php');
               </div>
               
             </div>
+            <?php } ?>
             <!-- <div class="item">
               <div class="dato">
                 <img src="./dist/img/gaby.jpeg" alt="">
@@ -325,3 +341,5 @@ include('conexion.php');
   <script type="text/javascript" src="src/js/showHideNewComment.js"></script>
 </body>
 </html>
+
+
