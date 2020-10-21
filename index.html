@@ -67,16 +67,32 @@
             <i class="fas fa-mail-bulk"></i>
             Contacto
           </a>
-          <a href="#" id="login-respon" class="my-boton">
+          <!--Este es para cuando esté en modo telefono-->
+          <!--cuando no esté logueado-->
+          <a href="#" id="login-respon" class="my-boton d-none">
             <i class="fas fa-sign-in-alt"></i>
             Inicia Sesión
           </a>
+          <!--cuando esté logueado-->
+          <a href="#" id="user-respon" class="my-boton">
+            <i class="fas fa-sign-in-alt"></i>
+            Usuario
+          </a>
 
         </div>   
-        <a href="#" id="login-btn" class="my-boton">
+
+        <!--Este es para cuando esté en modo pantalla grande-->
+        <!--cuando no esté logueado-->
+        <a href="#" id="login-btn" class="my-boton d-none">
           <i class="fas fa-sign-in-alt"></i>
           <br>Inicia Sesión
-        </a>       
+        </a>
+        <!--cuando esté logueado-->
+        <a href="#" id="user-btn" class="my-boton btn-user">
+          <img id="img-user" style="width:60px; height: 60px; border-radius: 100%;"
+          src="./dist/img/adriana.png" alt="">
+        </a>
+              
       </div>
 
       <div class="menu-overlay hide">
@@ -139,6 +155,15 @@
   </header>
   
   <main>
+<!--Este es el modal de usuario-->
+    <section id="modal-user" class="posicion-escondido">
+      <div class="contenedor-user">
+        <p>Nombre</p>
+        <a href="">Configuración</a>
+        <a href="">Cerrar Sesión</a>
+      </div>
+
+    </section>
 
     <section id="modal-login" class="modal hide">
       <div class="login">
@@ -428,5 +453,6 @@
   <script type="text/javascript" src="src/js/hamburger.js"></script>
   <script type="text/javascript" src="src/js/hideShowModals.js"></script>
   <script type="text/javascript" src="src/js/mostrar-login.js"></script>
+  <script type="text/javascript" src="src/js/mostrarModalUsuario.js"></script>
 </body>
 </html>
