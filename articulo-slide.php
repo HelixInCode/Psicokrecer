@@ -217,14 +217,14 @@ if(isset($_SESSION['id_user'])){
             </div>
           <?php } ?>
             <div class="contenedor-nuevo-comentario oculto animated fadeInDown faster">
-              <form class="nuevo-comentario" action="">
+              <form class="nuevo-comentario" action="savecoment.php" method="POST">
                 <div class="dato">
                   <img src="./dist/img/adriana.png" alt="">
-                  <label>pepito perez</label>
+                  <label> <?php echo $usuario ?></label>
                 </div>
                 
-                <textarea type="text" placeholder="¿Que opinas...?" rows="2" required></textarea>
-                <button class="btn">Publicar</button>
+                <textarea type="text" Name="comentario" placeholder="¿Que opinas...?" rows="2" required></textarea>
+                <button type="submit" class="btn" name="Crear">Publicar</button>
               </form>
             </div>
             
@@ -236,10 +236,10 @@ if(isset($_SESSION['id_user'])){
             <div class="item">
               <div class="dato">
                 <img src="./dist/img/gaby.jpeg" alt="">
-                <p>Martina Martinez</p>
+                <p><?php echo $comentario['user']; ?></p>
               </div>
               <div class="escrito">
-                <p>Excelente articulo, me siento relacionada.</p>
+                <p><?php echo $comentario['comentario']; ?></p>
                 <a href=""><i class="fas fa-trash"></i></a>
               </div>
               
@@ -254,6 +254,17 @@ if(isset($_SESSION['id_user'])){
                 <p>Excelente articulo, me siento relacionada.</p>
               </div>
                -->
+            <!--<div class="item">
+              <div class="dato">
+                <img src="./dist/img/gaby.jpeg" alt="">
+                <p>Martina Martinez</p>
+              </div>
+              <div class="escrito">
+                <p>Excelente articulo, me siento relacionada.</p>
+                <a href=""><i class="fas fa-trash"></i></a>
+              </div>-->
+              
+            <!--</div>
             <div class="item">
               <div class="dato">
                 <img src="./dist/img/gaby.jpeg" alt="">
@@ -264,18 +275,7 @@ if(isset($_SESSION['id_user'])){
                 <a href=""><i class="fas fa-trash"></i></a>
               </div>
               
-            </div>
-            <div class="item">
-              <div class="dato">
-                <img src="./dist/img/gaby.jpeg" alt="">
-                <p>Martina Martinez</p>
-              </div>
-              <div class="escrito">
-                <p>Excelente articulo, me siento relacionada.</p>
-                <a href=""><i class="fas fa-trash"></i></a>
-              </div>
-              
-            </div>
+            </div>-->
 
           </div>
 
