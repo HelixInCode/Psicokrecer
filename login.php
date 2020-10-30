@@ -38,7 +38,7 @@ include ('conexion.php');
                 if($resultado==1) {
                     $_SESSION['id_user'] = $row['id_user']; // creamos la sesion "id_user" y le asignamos como valor el campo usuario_id
                     $_SESSION['user'] = $row['nombreUser']; // creamos la sesion "nombre" y le asignamos como valor el campo 
-                    
+                    header("Location:".$_SERVER['HTTP_REFERER']);
                 }else {
                 
  ?>
@@ -76,6 +76,11 @@ include ('conexion.php');
                             </div>
                             
                         </form>
+
+                        <div class="enlace">
+                            <a href="registro.php">Aun no te has registrado?</a>
+                            <i class="fas fa-angle-down" style="transition: 1s;"></i>
+                        </div>
                     </div>
                 </div>
             </div>

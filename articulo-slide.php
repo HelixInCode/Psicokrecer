@@ -45,6 +45,21 @@ if(isset($_SESSION['id_user'])){
 </head>
 <body>
 <?php
+  
+  if (isset($_POST['Crear'])) {
+    $admin = $_SESSION['user'];
+    $comentario = mysqli_real_escape_string($conexion,$_POST['comentario']);
+
+    $guardar = mysqli_query($conexion, "INSERT INTO comentarios (comentario, user) VALUES ('$comentario', '$admin')") or die(mysqli_error($conexion));
+
+    
+      if ($guardar){
+         
+             echo '<div class="alert alert-success" role="alert">Articulo creado correctamente</div>';
+           } else { echo "error al guardar los datos"; }
+         }
+       
+
     $selector = $_GET['public']; 
 
 
@@ -144,7 +159,7 @@ if(isset($_SESSION['id_user'])){
       <div class="contenedor-principal">
         <div class="inicial-img">
             <img src="./dist/img/Psico-logo.png" alt="">
-            <h3>Artículo <?php echo $usuario; ?></h3>
+            <h3>Artículo</h3>
         </div>
 
         <h3><?php echo $posteo['titulo']; ?></h3>
@@ -217,12 +232,12 @@ if(isset($_SESSION['id_user'])){
             </div>
           <?php } ?>
             <div class="contenedor-nuevo-comentario oculto animated fadeInDown faster">
-              <form class="nuevo-comentario" action="savecoment.php" method="POST">
+              <form class="nuevo-comentario" action="" method="POST">
                 <div class="dato">
                   <img src="./dist/img/adriana.png" alt="">
                   <label> <?php echo $usuario ?></label>
                 </div>
-                
+                <input type="hidden" name="usuario" value=" <?php echo $usuario ?>">
                 <textarea type="text" Name="comentario" placeholder="¿Que opinas...?" rows="2" required></textarea>
                 <button type="submit" class="btn" name="Crear">Publicar</button>
               </form>
