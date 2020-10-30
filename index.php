@@ -1,3 +1,11 @@
+<?php
+session_start();
+include('conexion.php');
+if (isset($_SESSION['id_user'])) {
+
+  $idblog = $_SESSION['id_user'];
+}
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -160,7 +168,7 @@
       <div class="contenedor-user">
         <p>Nombre</p>
         <a href="">Configuración</a>
-        <a href="">Cerrar Sesión</a>
+        <a href="close.php">Cerrar Sesión</a>
       </div>
 
     </section>

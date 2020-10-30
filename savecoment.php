@@ -31,10 +31,11 @@ include ('conexion.php');
 <body>
   <?php
   if (isset($_POST['Crear'])) {
-      $admin = $_SESSION['Nombre'];
+      $id= $_SESSION['id'];
+      $admin = $_SESSION['user'];
       $comentario = mysqli_real_escape_string($conexion,$_POST['comentario']);
 
-      $guardar = mysqli_query($conexion, "INSERT INTO comentarios (comentario) VALUES ('$comentario')") or die(mysqli_error($conexion));
+      $guardar = mysqli_query($conexion, "INSERT INTO comentarios (comentario, user, id_user) VALUES ('$comentario', '$admin', '$id')") or die(mysqli_error($conexion));
 
       
         if ($guardar){

@@ -142,7 +142,7 @@ if (isset($_SESSION['id_user'])) {
       <div class="contenedor-user">
         <p>Nombre</p>
         <a href="">Configuración</a>
-        <a href="">Cerrar Sesión</a>
+        <a href="close.php">Cerrar Sesión</a>
       </div>
 
     </section>
