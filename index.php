@@ -76,31 +76,39 @@ if (isset($_SESSION['id_user'])) {
             Contacto
           </a>
           <!--Este es para cuando esté en modo telefono-->
-          <!--cuando no esté logueado-->
-          <a href="#" id="login-respon" class="my-boton d-none">
-            <i class="fas fa-sign-in-alt"></i>
-            Inicia Sesión
-          </a>
+          <?php
+          if(isset($_SESSION['id_user'])){
+          ?>
           <!--cuando esté logueado-->
           <a href="#" id="user-respon" class="my-boton">
             <i class="fas fa-sign-in-alt"></i>
             Usuario
           </a>
-
+          <?php }else{  ?>
+           <!--cuando no esté logueado-->
+           <a href="#" id="login-respon" class="my-boton ">
+            <i class="fas fa-sign-in-alt"></i>
+            Inicia Sesión
+          </a>
+          <?php } ?>
         </div>   
 
         <!--Este es para cuando esté en modo pantalla grande-->
-        <!--cuando no esté logueado-->
-        <a href="#" id="login-btn" class="my-boton d-none">
-          <i class="fas fa-sign-in-alt"></i>
-          <br>Inicia Sesión
-        </a>
+        <?php
+          if(isset($_SESSION['id_user'])){
+          ?>
         <!--cuando esté logueado-->
         <a href="#" id="user-btn" class="my-boton btn-user">
           <img id="img-user" style="width:60px; height: 60px; border-radius: 100%;"
           src="./dist/img/adriana.png" alt="">
         </a>
-              
+        <?php }else{  ?>
+         <!--cuando no esté logueado-->
+        <a href="#" id="login-btn" class="my-boton ">
+          <i class="fas fa-sign-in-alt"></i>
+          <br>Inicia Sesión
+        </a> 
+        <?php } ?>    
       </div>
 
       <div class="menu-overlay hide">

@@ -59,19 +59,19 @@ include ('conexion.php');
                             <h3 class="text-center text-info">Registro</h3>
                             <div class="form-group">
                                 <label for="username" class="text-info">Nombre:</label><br>
-                                <input type="text" name="username" id="username" class="form-control" placeholder="Este nombre será público">
+                                <input type="text" name="username" id="username" class="form-control" placeholder="Este nombre será público" require>
                             </div>
                             <div class="form-group">
                                 <label for="mail" class="text-info">Email:</label><br>
-                                <input type="mail" name="mail" id="mail" class="form-control">
+                                <input type="mail" name="mail" id="mail" class="form-control" require>
                             </div>
                             <div class="form-group">
                                 <label for="password" class="text-info">Contraseña:</label><br>
-                                <input type="password" name="password" id="password" class="form-control">
+                                <input type="password" name="password" id="password" class="form-control" require>
                             </div>
 
                             <div class="form-group">
-                            <input name="imagen" type="file" accept="image/*">
+                            <input name="imagen" type="file" accept="image/*" require>
                             </div>
                             
                             <div class="form-group">
