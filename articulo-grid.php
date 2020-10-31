@@ -3,12 +3,13 @@ include('conexion.php');
 ?>
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>Psicokrecer</title>
-  
+
   <!-- Icono de la pestaña -->
   <link rel="icon" href="dist/img/Psico-logo.png">
   <!-- Font Awesome -->
@@ -34,9 +35,10 @@ include('conexion.php');
   <link rel="stylesheet" href="dist/css/styles.css">
   <link rel="stylesheet" href="dist/css/blog.css">
 </head>
+
 <body>
-  <?php 
-  $selector = $_GET['public']; 
+  <?php
+  $selector = $_GET['public'];
 
 
   $articulo = mysqli_query($conexion, "SELECT * FROM publicaciones WHERE id='$selector'");
@@ -53,7 +55,7 @@ include('conexion.php');
 
       <div id="mySidenav" class="sidenav">
         <div class="enlaces hide">
-          
+
           <a href="index.html">
             <i class="fas fa-home"></i>
             Inicio
@@ -78,16 +80,29 @@ include('conexion.php');
             <i class="fas fa-mail-bulk"></i>
             Contacto
           </a>
-          <a href="#" id="login-respon" class="my-boton">
+          <!--Este es para cuando esté en modo telefono-->
+          <!--cuando no esté logueado-->
+          <a href="#" id="login-respon" class="my-boton d-none">
             <i class="fas fa-sign-in-alt"></i>
             Inicia Sesión
           </a>
+          <!--cuando esté logueado-->
+          <a href="#" id="user-respon" class="my-boton">
+            <i class="fas fa-sign-in-alt"></i>
+            Usuario
+          </a>
 
-        </div> 
-        <a href="#" id="login-btn" class="my-boton">
+        </div>
+        <!--Este es para cuando esté en modo pantalla grande-->
+        <!--cuando no esté logueado-->
+        <a href="#" id="login-btn" class="my-boton d-none">
           <i class="fas fa-sign-in-alt"></i>
           <br>Inicia Sesión
-        </a>          
+        </a>
+        <!--cuando esté logueado-->
+        <a href="#" id="user-btn" class="my-boton btn-user">
+          <img id="img-user" style="width:60px; height: 60px; border-radius: 100%;" src="./dist/img/adriana.png" alt="">
+        </a>
       </div>
 
       <div class="menu-overlay hide">
@@ -99,8 +114,17 @@ include('conexion.php');
 
     </nav>
   </header>
-    
+
   <main>
+    <!--Este es el modal de usuario-->
+    <section id="modal-user" class="posicion-escondido">
+      <div class="contenedor-user">
+        <p>Nombre</p>
+        <a href="">Configuración</a>
+        <a href="">Cerrar Sesión</a>
+      </div>
+
+    </section>
     <section id="modal-login" class="modal hide">
       <div class="login">
         <div class="title-container p-3">
@@ -120,7 +144,7 @@ include('conexion.php');
           </div>
 
           <div class="input-container">
-            <input type="checkbox" name="remember" id="remember"/>
+            <input type="checkbox" name="remember" id="remember" />
             <label for="remenber">Recuerdame</label>
           </div>
 
@@ -137,41 +161,41 @@ include('conexion.php');
     <section id="articulo">
       <div class="contenedor-principal">
         <div class="inicial-img">
-            <img src="./dist/img/Psico-logo.png" alt="">
-            <h3>Artículo</h3>
+          <img src="./dist/img/Psico-logo.png" alt="">
+          <h3>Artículo</h3>
         </div>
 
         <h3><?php echo $posteo['titulo']; ?></h3>
 
         <p>
-        <?php echo $posteo['subtitulo']; ?>
+          <?php echo $posteo['subtitulo']; ?>
         </p>
-        
+
         <div class="contenedor-imagen" id="my-slide">
           <img src="dist/img/<?php echo $posteo['imagen1']; ?>" alt="">
           <img src="dist/img/<?php echo $posteo['imagen2']; ?>" alt="">
           <img src="dist/img/<?php echo $posteo['imagen3']; ?>" alt="">
         </div>
         <p id="first-p">
-        <?php echo $posteo['parrafo1']; ?>
+          <?php echo $posteo['parrafo1']; ?>
         </p>
         <p>
-        <?php echo $posteo['parrafo2']; ?>
-      </p>
+          <?php echo $posteo['parrafo2']; ?>
+        </p>
 
         <p>
-        <?php echo $posteo['parrafo3']; ?>      
-      </p>
+          <?php echo $posteo['parrafo3']; ?>
+        </p>
 
 
         <div class="datos-clave">
-            <p>01/03/2020</p>
-            <p>Categoría</p>
+          <p>01/03/2020</p>
+          <p>Categoría</p>
         </div>
         <div class="regreso">
-            <a href="blog.html">Volver a lista de artículos</a>
+          <a href="blog.html">Volver a lista de artículos</a>
         </div>
-        
+
         <div id="comentarios">
           <div class="contenedor-general">
             <div class="enlace" id="nuevo-comment">
@@ -184,12 +208,12 @@ include('conexion.php');
                   <img src="./dist/img/adriana.png" alt="">
                   <label>pepito perez</label>
                 </div>
-                
+
                 <textarea type="text" placeholder="¿Que opinas...?" rows="2" required></textarea>
                 <button class="btn">Publicar</button>
               </form>
             </div>
-            
+
 
           </div>
           <h4>Comentarios</h4>
@@ -203,7 +227,7 @@ include('conexion.php');
                 <p>Excelente articulo, me siento relacionada.</p>
                 <a href=""><i class="fas fa-trash"></i></a>
               </div>
-              
+
             </div>
             <div class="item">
               <div class="dato">
@@ -214,7 +238,7 @@ include('conexion.php');
                 <p>Excelente articulo, me siento relacionada.</p>
                 <a href=""><i class="fas fa-trash"></i></a>
               </div>
-              
+
             </div>
             <div class="item">
               <div class="dato">
@@ -225,7 +249,7 @@ include('conexion.php');
                 <p>Excelente articulo, me siento relacionada.</p>
                 <a href=""><i class="fas fa-trash"></i></a>
               </div>
-              
+
             </div>
             <!-- <div class="item">
               <div class="dato">
@@ -299,5 +323,7 @@ include('conexion.php');
   <script type="text/javascript" src="src/js/hamburger.js"></script>
   <script type="text/javascript" src="src/js/mostrar-login.js"></script>
   <script type="text/javascript" src="src/js/showHideNewComment.js"></script>
+  <script type="text/javascript" src="src/js/mostrarModalUsuario.js"></script>
 </body>
+
 </html>
