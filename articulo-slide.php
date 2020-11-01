@@ -2,9 +2,17 @@
 include('conexion.php');
 session_start();
 
-if (isset($_SESSION['id_user'])) {
-  $usuario = $_SESSION['user'];
-  $id = $_SESSION['id_user'];
+if(isset($_SESSION['id_user'])){
+  $usuario=$_SESSION['user'];
+  $id=$_SESSION['id_user'];
+  $ids=$id;
+  $nombre=$usuario;
+}
+if(isset($_SESSION['id'])){
+  $ad=$_SESSION['nombre'];
+  $adId=$_SESSION['id'];
+  $ids=$adId;
+  $nombre=$ad;
 }
 
 ?>
@@ -45,16 +53,16 @@ if (isset($_SESSION['id_user'])) {
 </head>
 
 <body>
-  <?php
-  $selector = $_GET['public'];
-  ?>
-  <?php
+<?php
+  $selector = $_GET['public']; 
 
   if (isset($_POST['Crear'])) {
-    $admin = $_SESSION['user'];
-    $comentario = mysqli_real_escape_string($conexion, $_POST['comentario']);
+    $id = $ids;
+    $admin = $nombre;
+    $comentario = mysqli_real_escape_string($conexion,$_POST['comentario']);
+    $publicacion= $selector;
 
-    $guardar = mysqli_query($conexion, "INSERT INTO comentarios (comentario, user) VALUES ('$comentario', '$admin')") or die(mysqli_error($conexion));
+    $guardar = mysqli_query($conexion, "INSERT INTO comentarios (comentario, user, id_public, id_user) VALUES ('$comentario', '$admin', '$publicacion', '$ids')") or die(mysqli_error($conexion));
 
 
     if ($guardar) {
@@ -246,31 +254,44 @@ if (isset($_SESSION['id_user'])) {
 
         <div id="comentarios">
           <div class="contenedor-general">
-
+       
+          <?php
+          if(isset($_SESSION['id_user'])){
+            $consul=mysqli_query($conexion, "SELECT * FROM userblog WHERE id_user = '$id'");
+            $cons=mysqli_fetch_array($consul);
+            $nombre=$usuario;
+            $img=$cons['imagen'];
+           
+          ?>
+            <div class="enlace" id="nuevo-comment">
+              <a href="#">¿Quieres agregar un comentario <?php echo $usuario ?>?</a>
+              <i class="fas fa-angle-down" style="transition: 1s;"></i>
+            </div>
             <?php
-            if (isset($_SESSION['id_user'])) {
-            ?>
-              <div class="enlace" id="nuevo-comment">
-                <a href="#">¿Quieres agregar un comentario <?php echo $usuario ?>?</a>
-                <i class="fas fa-angle-down" style="transition: 1s;"></i>
-              </div>
-            <?php } else { ?>
-              <div class="enlace">
-                <a href="#">Para agregar un comentario debes estar registrado</a>
-                <i class="fas fa-angle-down" style="transition: 1s;"></i>
-              </div>
-            <?php } ?>
+          } elseif(isset($_SESSION['id'])){
+            $consul=mysqli_query($conexion, "SELECT * FROM administrador WHERE id = '$adId'");
+            $cons=mysqli_fetch_array($consul);
+            $nombre=$ad;
+            $img=$cons['foto'];
+            
+          ?>
+            <div class="enlace" id="nuevo-comment">
+              <a href="#">¿Quieres agregar un comentario <?php echo $ad ?>?</a>
+              <i class="fas fa-angle-down" style="transition: 1s;"></i>
+            </div>
+          <?php } else { ?>
+            <div class="enlace">
+              <a href="#">Para agregar un comentario debes estar registrado</a>
+              <i class="fas fa-angle-down" style="transition: 1s;"></i>
+            </div>
+          <?php } ?>
             <div class="contenedor-nuevo-comentario oculto animated fadeInDown faster">
               <form class="nuevo-comentario" action="" method="POST">
                 <div class="dato">
-                  <img src="./dist/img/adriana.png" alt="">
-                  <label> <?php echo $usuario ?></label>
+                  <img src="data:image/jpg;base64,<?php echo base64_encode($img);?>" alt="">
+                  <label> <?php echo $nombre ?></label>
                 </div>
-
-
-
-                <input type="hidden" name="usuario" value=" <?php echo $usuario ?>">
-
+                <input type="hidden" name="publicacion" value="<?php echo $selector; ?>" >
                 <textarea type="text" Name="comentario" placeholder="¿Que opinas...?" rows="2" required></textarea>
                 <button type="submit" class="btn" name="Crear">Publicar</button>
               </form>
@@ -280,17 +301,19 @@ if (isset($_SESSION['id_user'])) {
           </div>
           <h4>Comentarios</h4>
           <div class="lista-comentarios">
-            <?php while ($comentario = mysqli_fetch_array($sel)) {  ?>
-              <div class="item">
-                <div class="dato">
-                  <img src="./dist/img/gaby.jpeg" alt="">
-                  <p><?php echo $comentario['user']; ?></p>
-                </div>
-                <div class="escrito">
-                  <p><?php echo $comentario['comentario']; ?></p>
-                  <a href=""><i class="fas fa-trash"></i></a>
-                </div>
-
+            <?php while($comentario=mysqli_fetch_array($sel)){  
+                    $id=$comentario['id_user'];
+                    $inf=mysqli_query($conexion, "SELECT imagen FROM userblog WHERE id_user ='$id' ");
+                    $info=mysqli_fetch_array($inf);
+                ?>
+            <div class="item">
+              <div class="dato">
+                <img src="data:image/jpg;base64,<?php echo base64_encode($consuldates['imagen']);?>" alt="">
+                <p><?php echo $comentario['user']; ?></p>
+              </div>
+              <div class="escrito">
+                <p><?php echo $comentario['comentario']; ?></p>
+                <a href=""><i class="fas fa-trash"></i></a>
               </div>
             <?php } ?>
             <!-- <div class="item">

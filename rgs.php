@@ -20,6 +20,7 @@
             $nombre = mysqli_real_escape_string($conexion,$_POST['username']);
             $clave = mysqli_real_escape_string($conexion,$_POST['password']);
             $email = mysqli_real_escape_string($conexion,$_POST['mail']);
+            $imagen = addslashes(file_get_contents($_FILES['imagen']['tmp_name']))
 
             $sql = mysqli_query($conexion, "SELECT email FROM administrador WHERE email='".$email."'");
             if (mysqli_num_rows($sql)>0) 
@@ -28,7 +29,7 @@
             <?php }
             
             else {$clave = crypt($clave, "pass");
-                $reg = mysqli_query($conexion, "INSERT INTO administrador (nombre, email, clave) VALUES ('$nombre','$email','$clave')") or die(mysqli_error($conexion));
+                $reg = mysqli_query($conexion, "INSERT INTO administrador (nombre, email, clave, foto) VALUES ('$nombre','$email','$clave','$imagen')") or die(mysqli_error($conexion));
                 if ($reg) {
                     ?>
                     <div>Usuario creado correctamente</div>
@@ -50,21 +51,23 @@
             <div id="login-row" class="row justify-content-center align-items-center">
                 <div id="login-column" class="col-md-6">
                     <div id="login-box" class="col-md-12">
-                        <form id="login-form" class="form" action="" method="POST">
+                        <form id="login-form" class="form" action="" method="POST" enctype="multipart/form-data">
                             <h3 class="text-center text-info">Registro</h3>
                             <div class="form-group">
                                 <label for="username" class="text-info">Usuario:</label><br>
-                                <input type="text" name="username" id="username" class="form-control">
+                                <input type="text" name="username" id="username" class="form-control" require>
                             </div>
                             <div class="form-group">
                                 <label for="mail" class="text-info">Mail:</label><br>
-                                <input type="mail" name="mail" id="mail" class="form-control">
+                                <input type="mail" name="mail" id="mail" class="form-control" require>
                             </div>
                             <div class="form-group">
                                 <label for="password" class="text-info">Contraseña:</label><br>
-                                <input type="text" name="password" id="password" class="form-control">
+                                <input type="text" name="password" id="password" class="form-control" require>
                             </div>
-                            
+                            <div class="form-group">
+                            <input name="imagen" type="file" accept="image/*" require>
+                            </div>
                             <div class="form-group">
 
                         
