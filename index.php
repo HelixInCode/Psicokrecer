@@ -8,12 +8,13 @@ if (isset($_SESSION['id_user'])) {
 ?>
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>Psicokrecer</title>
-  
+
   <!-- Icono de la pestaña -->
   <link rel="icon" href="dist/img/Psico-logo.png">
   <!-- Font Awesome -->
@@ -38,6 +39,7 @@ if (isset($_SESSION['id_user'])) {
   <!-- Your custom styles (optional) -->
   <link rel="stylesheet" href="dist/css/styles.css">
 </head>
+
 <body>
   <header>
     <nav class="px-2 px-md-5">
@@ -50,7 +52,7 @@ if (isset($_SESSION['id_user'])) {
 
       <div id="mySidenav" class="sidenav">
         <div class="enlaces hide">
-          
+
           <a href="index.html">
             <i class="fas fa-home"></i>
             Inicio
@@ -87,7 +89,7 @@ if (isset($_SESSION['id_user'])) {
             Usuario
           </a>
 
-        </div>   
+        </div>
 
         <!--Este es para cuando esté en modo pantalla grande-->
         <!--cuando no esté logueado-->
@@ -97,10 +99,9 @@ if (isset($_SESSION['id_user'])) {
         </a>
         <!--cuando esté logueado-->
         <a href="#" id="user-btn" class="my-boton btn-user">
-          <img id="img-user" style="width:60px; height: 60px; border-radius: 100%;"
-          src="./dist/img/adriana.png" alt="">
+          <img id="img-user" style="width:60px; height: 60px; border-radius: 100%;" src="./dist/img/adriana.png" alt="">
         </a>
-              
+
       </div>
 
       <div class="menu-overlay hide">
@@ -161,9 +162,9 @@ if (isset($_SESSION['id_user'])) {
 
     </section>
   </header>
-  
+
   <main>
-<!--Este es el modal de usuario-->
+    <!--Este es el modal de usuario-->
     <section id="modal-user" class="posicion-escondido">
       <div class="contenedor-user">
         <p>Nombre</p>
@@ -191,14 +192,14 @@ if (isset($_SESSION['id_user'])) {
             <input name="password" type="password" value="">
           </div>
 
-          
 
 
-            <button name="Enviar" class="btn">Iniciar Sesión</button>
-            <a class="enlace-accion" href="registro.php">¿No te has registrado todavía?</a>
 
-          </div>
-        </form>
+          <button name="Enviar" class="btn">Iniciar Sesión</button>
+          <a class="enlace-accion" href="registro.php">¿No te has registrado todavía?</a>
+
+      </div>
+      </form>
       </div>
     </section>
 
@@ -301,91 +302,108 @@ if (isset($_SESSION['id_user'])) {
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <div id="item-equipo">
-                    <div class="img-container">
-                      <img src="./dist/img/eli-foto.jpeg" alt="">
-                    </div>
-    
-                    <div class="info">
-                      <p>"El amor es un catalizador de heridas, permitiendonos sellar con nuestro espacio de trabajo
-                        personal cada una de estas, y esto lo logramos mediante la acción."
-                      </p>
-                      <p>Elizabeth Brito</p>
-                    </div>
-    
-                    <div class="mensaje-info">
-                      <h4>Elizabeth Brito</h4>
-                      <p>Psicóloga Clínica</p>
-                    </div>
+                  <div class="img-container">
+                    <img src="./dist/img/eli-foto.jpeg" alt="">
+                  </div>
+
+                  <div class="info">
+                    <p>"El amor es un catalizador de heridas, permitiendonos sellar con nuestro espacio de trabajo
+                      personal cada una de estas, y esto lo logramos mediante la acción."
+                    </p>
+                    <p>Elizabeth Brito</p>
+                  </div>
+
+                  <div class="mensaje-info">
+                    <h4>Elizabeth Brito</h4>
+                    <p>Psicóloga Clínica</p>
+                  </div>
                 </div>
               </div>
               <div class="carousel-item">
                 <div id="item-equipo">
-                    <div class="img-container">
-                      <img src="./dist/img/adriana.png" alt="">
-                    </div>
-  
-                    <div class="info">
-                      <p>"La actitud y la pasión, con la que enfrentamos los miedos y las adversidades, son los recursos que
-                        apuntan a despedir nuestra zona de confort, logrando así superar los obtáculos."</p>
-                        <p>Adriana Gálea</p>
-                      </div>
+                  <div class="img-container">
+                    <img src="./dist/img/adriana.png" alt="">
+                  </div>
 
-                    <div class="mensaje-info">
-                      <h4>Adriana Gálea</h4>
-                      <p>Psicóloga Clínica</p>
-                    </div>
+                  <div class="info">
+                    <p>"La actitud y la pasión, con la que enfrentamos los miedos y las adversidades, son los recursos que
+                      apuntan a despedir nuestra zona de confort, logrando así superar los obtáculos."</p>
+                    <p>Adriana Gálea</p>
+                  </div>
+
+                  <div class="mensaje-info">
+                    <h4>Adriana Gálea</h4>
+                    <p>Psicóloga Clínica</p>
+                  </div>
                 </div>
               </div>
               <div class="carousel-item">
                 <div id="item-equipo">
-                    <div class="img-container">
-                      <img src="./dist/img/marihan.png" alt="">
-                    </div>
-  
-                    <div class="info">
-                      <p>"No tengas miedo de los cambios lentos, solo  ten miedo  de permanecer inmovil."</p>
-                      <p>Proverbio Chino</p>
-                    </div>
+                  <div class="img-container">
+                    <img src="./dist/img/marihan.png" alt="">
+                  </div>
 
-                    <div class="mensaje-info">
-                      <h4>Marihan Quintero</h4>
-                      <p>Psicóloga Clínica</p>
-                    </div>
+                  <div class="info">
+                    <p>"No tengas miedo de los cambios lentos, solo ten miedo de permanecer inmovil."</p>
+                    <p>Proverbio Chino</p>
+                  </div>
+
+                  <div class="mensaje-info">
+                    <h4>Marihan Quintero</h4>
+                    <p>Psicóloga Clínica</p>
+                  </div>
                 </div>
               </div>
               <div class="carousel-item">
                 <div id="item-equipo">
-                    <div class="img-container">
-                      <img src="./dist/img/carmen-elena.png" alt="">
-                    </div>
-  
-                    <div class="info">
-                      <p>"Lo que te hace único te hace exitoso."</p>
-                      <p>William Arruda</p>
-                    </div>
+                  <div class="img-container">
+                    <img src="./dist/img/carmen-elena.png" alt="">
+                  </div>
 
-                    <div class="mensaje-info">
-                      <h4>Carmen García</h4>
-                      <p>Psicóloga Clínica</p>
-                    </div>
+                  <div class="info">
+                    <p>"Lo que te hace único te hace exitoso."</p>
+                    <p>William Arruda</p>
+                  </div>
+
+                  <div class="mensaje-info">
+                    <h4>Carmen García</h4>
+                    <p>Psicóloga Clínica</p>
+                  </div>
                 </div>
               </div>
               <div class="carousel-item">
                 <div id="item-equipo">
-                    <div class="img-container">
-                      <img src="./dist/img/gaby.jpeg" alt="">
-                    </div>
-  
-                    <div class="info">
-                      <p>"Lo que no se define, no se puede medir. Lo que no se mide, no se puede mejorar. Lo que no se mejora, se degrada siempre."</p>
-                      <p>William Thomson Kelvin</p>
-        
-                    </div>
+                  <div class="img-container">
+                    <img src="./dist/img/gaby.jpeg" alt="">
+                  </div>
 
-                    <div class="mensaje-info">
-                      <h4>Gabriela Brito</h4>
-                      <p>Técnica Superior en Aduanas</p>
-                    </div>
+                  <div class="info">
+                    <p>"Lo que no se define, no se puede medir. Lo que no se mide, no se puede mejorar. Lo que no se mejora, se degrada siempre."</p>
+                    <p>William Thomson Kelvin</p>
+
+                  </div>
+
+                  <div class="mensaje-info">
+                    <h4>Gabriela Brito</h4>
+                    <p>Técnica Superior en Aduanas</p>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div id="item-equipo">
+                  <div class="img-container">
+                    <img src="./dist/img/genesis.png" alt="">
+                  </div>
+
+                  <div class="info">
+                    <p> "¡Es posible si lo intentas!" es mi frase inspiradora, y deseo que lo sea para quien acude a mí.</p>
+
+                  </div>
+
+                  <div class="mensaje-info">
+                    <h4>Genesis Batardo</h4>
+                    <p>Psicóloga Clínica</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -402,11 +420,11 @@ if (isset($_SESSION['id_user'])) {
         </div>
 
       </div>
-      
+
     </section>
-    
-    
-    
+
+
+
   </main>
   <footer>
     <div class="contenedor-general">
@@ -463,4 +481,5 @@ if (isset($_SESSION['id_user'])) {
   <script type="text/javascript" src="src/js/mostrar-login.js"></script>
   <script type="text/javascript" src="src/js/mostrarModalUsuario.js"></script>
 </body>
+
 </html>
