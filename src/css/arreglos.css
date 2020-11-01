@@ -1,4 +1,24 @@
-
+.modificar{
+    transition: 0.6s;
+    transform: rotateY(180deg);
+}
+.jugador{
+    transition: 0.3s;
+}
+.jugador > img{
+    margin: auto;
+}
+.jugador:active{
+    transform: scale(1.1);
+    transition: 0.2;
+}
+.myDescription{
+    display: none;
+}
+.desaparecer{
+    display: block;
+    transition: 0.2s;
+}
 @media screen and (min-width: 870px){
     #equipo >.contenedor-general > .jugador:nth-child(4) {
         grid-column: 1/3;

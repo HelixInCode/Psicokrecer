@@ -396,7 +396,7 @@ if (isset($_SESSION['id_user'])) {
                   </div>
 
                   <div class="mensaje-info">
-                    <h4>Genesis Batardo</h4>
+                    <h4>Genesis Bastardo</h4>
                     <p>Psicóloga Clínica</p>
                   </div>
                 </div>
