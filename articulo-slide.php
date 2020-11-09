@@ -307,8 +307,8 @@ if(isset($_SESSION['id'])){
               </div>
               <?php } else{ 
                   while($comentario=mysqli_fetch_array($sel)){  
-                    $id=$comentario['id_user'];
-                    $inf=mysqli_query($conexion, "SELECT imagen FROM userblog WHERE id_user ='$id' ");
+                    $idCom=$comentario['id_user'];
+                    $inf=mysqli_query($conexion, "SELECT imagen FROM userblog WHERE id_user ='$idCom' ");
                     $info=mysqli_fetch_array($inf);
                 ?>
             <div class="item">
@@ -318,7 +318,9 @@ if(isset($_SESSION['id'])){
               </div>
               <div class="escrito">
                 <p><?php echo $comentario['comentario']; ?></p>
+                <?php if($id=$idCom){?>
                 <a href=""><i class="fas fa-trash"></i></a>
+                <?php } ?>
               </div>
             
             
