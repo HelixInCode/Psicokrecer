@@ -47,7 +47,7 @@ include('conexion.php');
   <header>
     <nav class="px-2 px-md-5">
 
-      <a href="index.html" class="brand-logo">
+      <a href="index.php" class="brand-logo">
         <span>
           <img src="dist/img/psicokrecer-logo-blanco-sin-fondo.png" alt="">
         </span>
@@ -56,7 +56,7 @@ include('conexion.php');
       <div id="mySidenav" class="sidenav">
         <div class="enlaces hide">
 
-          <a href="index.html">
+          <a href="index.php">
             <i class="fas fa-home"></i>
             Inicio
           </a>
@@ -66,12 +66,12 @@ include('conexion.php');
             Quienes Somos
           </a>
 
-          <a href="index.html#servicios">
+          <a href="index.php#servicios">
             <i class="far fa-handshake"></i>
             Servicios
           </a>
 
-          <a href="blog.html">
+          <a href="blog.php">
             <i class="fas fa-blog"></i>
             Blog
           </a>

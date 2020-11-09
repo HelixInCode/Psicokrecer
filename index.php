@@ -53,7 +53,7 @@ if (isset($_SESSION['id_user'])) {
       <div id="mySidenav" class="sidenav">
         <div class="enlaces hide">
 
-          <a href="index.html">
+          <a href="index.php">
             <i class="fas fa-home"></i>
             Inicio
           </a>
@@ -63,7 +63,7 @@ if (isset($_SESSION['id_user'])) {
             Quienes Somos
           </a>
 
-          <a href="index.html#servicios">
+          <a href="index.php#servicios">
             <i class="far fa-handshake"></i>
             Servicios
           </a>
