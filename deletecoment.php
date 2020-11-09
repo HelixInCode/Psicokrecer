@@ -6,7 +6,7 @@ include ('conexion.php');
 
     if(isset($_POST['Enviar'])) { 
        $publicacion=$_GET['publicacion'];  
-       $borrarcoment = mysql_real_escape_string($conexion, $_POST['comentario']);
+       
        $borrar = mysqli_query($conexion, "DELETE FROM comentarios WHERE idComentario = '$publicacion'") or die(mysqli_error($conexion));
         if ($borrar){
            header("location: blog.php");

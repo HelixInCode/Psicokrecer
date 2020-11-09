@@ -172,9 +172,9 @@ include('conexion.php');
         </p>
 
         <div class="contenedor-imagen" id="my-slide">
-          <img src="dist/img/<?php echo $posteo['imagen1']; ?>" alt="">
-          <img src="dist/img/<?php echo $posteo['imagen2']; ?>" alt="">
-          <img src="dist/img/<?php echo $posteo['imagen3']; ?>" alt="">
+          <img src="dist/images/<?php echo $posteo['imagen1']; ?>" alt="">
+          <img src="dist/images/<?php echo $posteo['imagen2']; ?>" alt="">
+          <img src="dist/images/<?php echo $posteo['imagen3']; ?>" alt="">
         </div>
         <p id="first-p">
           <?php echo $posteo['parrafo1']; ?>

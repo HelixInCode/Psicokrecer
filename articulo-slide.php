@@ -196,9 +196,7 @@ if(isset($_SESSION['id'])){
         <div class="inicial-img">
 
           <img src="./dist/img/Psico-logo.png" alt="">
-          <h3>Artículo <?php echo $usuario; ?></h3>
-          <img src="./dist/img/Psico-logo.png" alt="">
-          <h3>Artículo</h3>
+          <h3>Artículo </h3>
 
         </div>
 
@@ -281,8 +279,8 @@ if(isset($_SESSION['id'])){
             </div>
           <?php } else { ?>
             <div class="enlace">
-              <a href="#">Para agregar un comentario debes estar registrado</a>
-              <i class="fas fa-angle-down" style="transition: 1s;"></i>
+              <a href="" >Para agregar un comentario debes estar registrado</a>
+              
             </div>
           <?php } ?>
             <div class="contenedor-nuevo-comentario oculto animated fadeInDown faster">
@@ -301,7 +299,14 @@ if(isset($_SESSION['id'])){
           </div>
           <h4>Comentarios</h4>
           <div class="lista-comentarios">
-            <?php while($comentario=mysqli_fetch_array($sel)){  
+            <?php if(empty($sel)){  
+
+              ?>
+              <div class="enlace">
+                <a href="">No hay comentarios</a>
+              </div>
+              <?php } else{ 
+                  while($comentario=mysqli_fetch_array($sel)){  
                     $id=$comentario['id_user'];
                     $inf=mysqli_query($conexion, "SELECT imagen FROM userblog WHERE id_user ='$id' ");
                     $info=mysqli_fetch_array($inf);
@@ -315,7 +320,11 @@ if(isset($_SESSION['id'])){
                 <p><?php echo $comentario['comentario']; ?></p>
                 <a href=""><i class="fas fa-trash"></i></a>
               </div>
-            <?php } ?>
+            
+            
+             <?php
+               }  
+                  } ?>
             <!-- <div class="item">
               <div class="dato">
                 <img src="./dist/img/gaby.jpeg" alt="">
