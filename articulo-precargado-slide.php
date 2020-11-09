@@ -55,7 +55,7 @@ $posteo=mysqli_fetch_array($precarga2);
 
   <header>
     <nav class="navbar navbar-dark">
-      <a class="navbar-brand" href="panel-blog.html" style="font-family:'Kaushan Script', cursive; color: #f1f1f1;">
+      <a class="navbar-brand" href="panel-blog.php" style="font-family:'Kaushan Script', cursive; color: #f1f1f1;">
       <img src="./dist/img/psicokrecer-logo-oscuro-sin-fondo.png" height="30" class="d-inline-block align-top"
           alt="mdb logo"> Administrador
       </a>

@@ -58,7 +58,7 @@ if (isset($_SESSION['id'])) {
 
     <header>
       <nav class="navbar navbar-dark">
-        <a class="navbar-brand" href="panel-blog.html" style="font-family:'Kaushan Script', cursive; color: #f1f1f1;">
+        <a class="navbar-brand" href="panel-blog.php" style="font-family:'Kaushan Script', cursive; color: #f1f1f1;">
           <img src="./dist/img/psicokrecer-logo-oscuro-sin-fondo.png" height="30" class="d-inline-block align-top" alt="mdb logo"> Administrador
         </a>
         <div>
@@ -156,11 +156,11 @@ if (isset($_SESSION['id'])) {
           </div>
           <div class="contenedor-info">
             <div class="links">
-              <a href="#">Inicio</a>
-              <a href="#">Quienes Somos</a>
-              <a href="#">Servicios</a>
-              <a href="#">Blog</a>
-              <a href="#">Contacto</a>
+              <a href="index.php">Inicio</a>
+              <a href="nosotros.html">Quienes Somos</a>
+              <a href="index.php#servicios">Servicios</a>
+              <a href="blog.php">Blog</a>
+              <a href="contacto.html">Contacto</a>
             </div>
             <div class="separador">
 
