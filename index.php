@@ -177,7 +177,7 @@ if (isset($_SESSION['id_user'])) {
     <section id="modal-user" class="posicion-escondido">
       <div class="contenedor-user">
         <p>Nombre</p>
-        <a href="">Configuración</a>
+        <a href="panel-user.php">Configuración</a>
         <a href="close.php">Cerrar Sesión</a>
       </div>
 

@@ -1,3 +1,12 @@
+<?php
+session_start();
+include ('conexion.php');
+    if(isset($_SESSION['id_user'])){
+        $usuario=$_SESSION['user'];
+        $id=$_SESSION['id_user'];
+        
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -32,6 +41,14 @@
   <link rel="stylesheet" href="dist/css/panel-user.css">
 </head>
 <body>
+<?php
+$datos=mysqli_query($conexion, "SELECT * FROM userblog WHERE id_user='$id'");
+$D=mysqli_fetch_array($datos);
+
+
+
+
+?>
     <header>
         <nav class="navbar navbar-dark">
             <a class="navbar-brand" href="#" style="font-family:'Kaushan Script', cursive; color: #f1f1f1;">
@@ -41,7 +58,7 @@
             <div>
                 <ul id="menu-user" class="navbar-nav">
                     <li class="nav-item">
-                        <a href="" class="nav-link">Hola! User</a>
+                        <a href="" class="nav-link">Hola! <?php echo $usuario; ?></a>
                     </li>
                     <li class="nav-item">
                         <a href="" class="nav-link">Volver a Inicio</a>
@@ -55,27 +72,25 @@
         </nav>
     </header>
     <main>
+    
         <section id="panel-usuario">
             <h3 class="text-center">Panel de Usuario</h3>
             <div class="contenedor-usuario">
                 <div class="contenedor-info">
                     <div class="item">
-                        <p>Nombre Completo</p>
-                        <p>Fulanito de Tal</p>
+                        <p>Nombre</p>
+                        <p><?php echo $D['nombreUser']; ?></p>
                     </div>
-                    <div class="item">
-                        <p>Contraseña</p>
-                        <p>Fulanito@gmail.com</p>
-                    </div>
+                   
                     <div class="item">
                         <p>Correo Electrónico</p>
-                        <p>Fulanito@gmail.com</p>
+                        <p><?php echo $D['email']; ?></p>
                     </div>
                     
 
                 </div>
                 <div class="contenedor-img">
-                    <img src="./dist/img/carmen-elena.png" alt="">
+                    <img src="data:image/jpg;base64,<?php echo base64_encode($D['imagen']);?>" alt="">
                     <a href="">Cambiar Foto</a>
                 </div>
 
@@ -111,3 +126,8 @@
       <script type="text/javascript" src="src/js/mostrar-diseno.js"></script>
     </body>
 </html>
+<?php
+    }  else {
+        header ("Location: login.php");
+    }
+?>

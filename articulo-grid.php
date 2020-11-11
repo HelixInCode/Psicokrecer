@@ -120,7 +120,7 @@ include('conexion.php');
     <section id="modal-user" class="posicion-escondido">
       <div class="contenedor-user">
         <p>Nombre</p>
-        <a href="">Configuración</a>
+        <a href="panel-user.php">Configuración</a>
         <a href="">Cerrar Sesión</a>
       </div>
 

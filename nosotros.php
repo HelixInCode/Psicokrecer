@@ -70,29 +70,39 @@
             Contacto
           </a>
           <!--Este es para cuando esté en modo telefono-->
-          <!--cuando no esté logueado-->
-          <a href="#" id="login-respon" class="my-boton d-none">
-            <i class="fas fa-sign-in-alt"></i>
-            Inicia Sesión
-          </a>
+          <?php
+          if(isset($_SESSION['id_user'])){
+          ?>
           <!--cuando esté logueado-->
           <a href="#" id="user-respon" class="my-boton">
             <i class="fas fa-sign-in-alt"></i>
             Usuario
           </a>
+          <?php }else{  ?>
+          <!--cuando no esté logueado-->
+          <a href="#" id="login-respon" class="my-boton ">
+            <i class="fas fa-sign-in-alt"></i>
+            Inicia Sesión
+          </a>
 
-        </div> 
+          <?php } ?>  
+        </div>
+
         <!--Este es para cuando esté en modo pantalla grande-->
+        <?php
+          if(isset($_SESSION['id_user'])){
+          ?>
+        <!--cuando esté logueado-->
+        <a href="#" id="user-btn" class="my-boton btn-user">
+          <img id="img-user" style="width:60px; height: 60px; border-radius: 100%;" src="./dist/img/adriana.png" alt="">
+        </a>
+        <?php }else{  ?>
         <!--cuando no esté logueado-->
-        <a href="#" id="login-btn" class="my-boton d-none">
+        <a href="#" id="login-btn" class="my-boton">
           <i class="fas fa-sign-in-alt"></i>
           <br>Inicia Sesión
         </a>
-        <!--cuando esté logueado-->
-        <a href="#" id="user-btn" class="my-boton btn-user">
-          <img id="img-user" style="width:60px; height: 60px; border-radius: 100%;"
-          src="./dist/img/adriana.png" alt="">
-        </a>         
+        <?php } ?>
       </div>
 
       <div class="menu-overlay hide">
@@ -121,31 +131,26 @@
           <h5>Ingresar</h5>
           <i id="close-login" class="closeModal fa fa-times"></i>
         </div>
-        <form class="main-container p-3" action="" method="POST">
+        <form class="main-container p-3" action="login.php" method="POST">
 
-          <div class="input-container">
-            <label for="email">Correo</label>
-            <input name="email" type="email" value="">
-          </div>
+<div class="input-container">
+  <label for="email">Correo</label>
+  <input name="username" type="email" value="">
+</div>
 
-          <div class="input-container">
-            <label for="password">Contraseña</label>
-            <input name="password" type="password" value="">
-          </div>
+<div class="input-container">
+  <label for="password">Contraseña</label>
+  <input name="password" type="password" value="">
+</div>
 
-          <div class="input-container">
-            <input type="checkbox" name="remember" id="remember"/>
-            <label for="remenber">Recuerdame</label>
-          </div>
 
-          <a class="enlace-accion" href="">No recuerdo mi contraseña</a>
-          <div class="login-container">
 
-            <button name="Enviar" class="btn">Iniciar Sesión</button>
-            <a class="enlace-accion" href="">¿No te has registrado todavía?</a>
 
-          </div>
-        </form>
+<button name="Enviar" class="btn">Iniciar Sesión</button>
+<a class="enlace-accion" href="registro.php">¿No te has registrado todavía?</a>
+
+</div>
+</form>
       </div>
     </section>
       <section id="modal-message-sent" class="modal hide">
