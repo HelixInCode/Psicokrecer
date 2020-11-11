@@ -281,7 +281,7 @@ if (isset($_SESSION['id_user'])) {
           <div class="estructura">
             <img src="./dist/images/<?php echo $busqueda1['imagen1'] ?>" alt="">
             <div class="titulo">
-              <h4><a href="articulo-3im-3p.html"><?php echo $busqueda1['titulo'] ?></a></h4>
+              <h4><a href="articulo-3im-3p.php?public="><?php echo $busqueda1['titulo'] ?></a></h4>
               <p class="fecha">01/09/3030</p>
               <p><?php echo $busqueda1['subtitulo'] ?></p>
               <?php $type = $busqueda1['diseño'];
@@ -556,7 +556,7 @@ if (isset($_SESSION['id_user'])) {
             <a href="index.php">Inicio</a>
             <a href="nosotros.html">Quienes Somos</a>
             <a href="index.php#servicios">Servicios</a>
-            <a href="blog.php">Blog</a>
+            <a href="#">Blog</a>
             <a href="contacto.html">Contacto</a>
             <a href="terminos.html">Términos y Privacidad</a>
           </div>
@@ -566,8 +566,8 @@ if (isset($_SESSION['id_user'])) {
           <div class="redes">
             <p>Visita nuestro <a href="#">Blog</a> y síguenos en nuestras redes sociales.</p>
             <div class="redes-icons">
-              <a href="#"><img src="./dist/img/instagram-logo.png" alt=""></a>
-              <a href="#"><img src="./dist/img/whatsapp.png" alt=""></a>
+              <a href="https://instagram.com/psicokrecer?igshid=eog2rfo8jsak"><img src="./dist/img/instagram-logo.png" alt=""></a>
+              <a href="https://wa.me/56948972401"><img src="./dist/img/whatsapp.png" alt=""></a>
             </div>
           </div>
         </div>

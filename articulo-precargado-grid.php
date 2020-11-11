@@ -127,20 +127,20 @@ $posteo=mysqli_fetch_array($precarga2);
         </div>
         <div class="contenedor-info">
           <div class="links">
-            <a href="#">Inicio</a>
-            <a href="#">Quienes Somos</a>
-            <a href="#">Servicios</a>
-            <a href="#">Blog</a>
-            <a href="#">Contacto</a>
+            <a href="index.php">Inicio</a>
+            <a href="nosotros.html">Quienes Somos</a>
+            <a href="index.php#servicios">Servicios</a>
+            <a href="blog.php">Blog</a>
+            <a href="contacto.html">Contacto</a>
           </div>
           <div class="separador">
 
           </div>
           <div class="redes">
-            <p>Visita nuestro <a href="#">Blog</a> y síguenos en nuestras redes sociales.</p>
+            <p>Visita nuestro <a href="blog.php">Blog</a> y síguenos en nuestras redes sociales.</p>
             <div class="redes-icons">
-              <a href="#"><img src="./dist/img/instagram-logo.png" alt=""></a>
-              <a href="#"><img src="./dist/img/whatsapp.png" alt=""></a>
+              <a href="https://instagram.com/psicokrecer?igshid=eog2rfo8jsak"><img src="./dist/img/instagram-logo.png" alt=""></a>
+              <a href="https://wa.me/56948972401"><img src="./dist/img/whatsapp.png" alt=""></a>
             </div>
           </div>
         </div>
