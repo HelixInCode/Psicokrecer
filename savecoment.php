@@ -40,6 +40,7 @@ include ('conexion.php');
       
         if ($guardar){
            header("location: articulo-slide.php");
+           echo "<script language='javascript'>window.location='blog.php'</script>";
                echo '<div class="alert alert-success" role="alert">Articulo creado correctamente</div>';
              } else { echo "error al guardar los datos"; }
            }

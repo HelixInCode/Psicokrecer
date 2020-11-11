@@ -39,6 +39,7 @@ include ('conexion.php');
                     $_SESSION['id'] = $row['id']; // creamos la sesion "usuario_id" y le asignamos como valor el campo usuario_id
                     $_SESSION['nombre'] = $row['nombre']; // creamos la sesion "usuario_nombre" y le asignamos como valor el campo 
                     header("Location: panel-blog.php");
+                    echo "<script language='javascript'>window.location='panel-blog.php'</script>";
                 }else {
                 
  ?>

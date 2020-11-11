@@ -19,6 +19,7 @@
                     $_SESSION['id_user'] = $row['id_user']; // creamos la sesion "id_user" y le asignamos como valor el campo usuario_id
                     $_SESSION['nombreUser'] = $row['nombreUser']; // creamos la sesion "nombre" y le asignamos como valor el campo 
                     header("Location: index.html");
+                    echo "<script language='javascript'>window.location='index.php'</script>";
                 }else {
                 
  ?>
