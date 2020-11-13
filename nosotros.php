@@ -91,10 +91,13 @@
         <!--Este es para cuando esté en modo pantalla grande-->
         <?php
           if(isset($_SESSION['id_user'])){
+            $dd=$_SESSION['id_user'];
+            $dato=mysqli_query($conexion, "SELECT * FROM userblog WHERE id_user = '$dd'");
+            $D=mysqli_fetch_array($dato);
           ?>
         <!--cuando esté logueado-->
         <a href="#" id="user-btn" class="my-boton btn-user">
-          <img id="img-user" style="width:60px; height: 60px; border-radius: 100%;" src="./dist/img/adriana.png" alt="">
+          <img id="img-user" style="width:60px; height: 60px; border-radius: 100%;" src="data:image/jpg;base64,<?php echo base64_encode($D['imagen']);?>" alt="">
         </a>
         <?php }else{  ?>
         <!--cuando no esté logueado-->
@@ -104,7 +107,7 @@
         </a>
         <?php } ?>
       </div>
-
+      
       <div class="menu-overlay hide">
       </div>
 
