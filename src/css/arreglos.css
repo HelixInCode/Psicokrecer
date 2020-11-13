@@ -19,6 +19,21 @@
     display: block;
     transition: 0.2s;
 }
+.container{
+    background-color:  #68217ecb;
+    border-radius: 20px;
+    padding: 15px;
+}
+body{
+    background-image: url(../../dist/img/manos-sembrar.png);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+}
 @media screen and (min-width: 870px){
     #equipo >.contenedor-general > .jugador:nth-child(4) {
         grid-column: 1/3;
