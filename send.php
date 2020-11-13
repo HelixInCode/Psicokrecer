@@ -16,6 +16,10 @@ $asunto = 'Mensaje enviado desde la página Psicokrecer';
 
 mail($para, $asunto, utf8_decode($mensaje), $header);
 
+echo "Mensaje enviado correctamente";
 header("Location: contacto.html");
+echo "<script language='javascript'>window.location='contacto.html'</script>";
+exit();
+
 ?>
 

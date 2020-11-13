@@ -162,9 +162,9 @@
             <!-- <h5>Mensaje Enviado</h5> -->
             <i id="close-sent" class="fa fa-times"></i>
           </div>
-          <form id="enviamelo" class="main-container message p-3 pb-4">
+          <form id="enviamelo" class="main-container message p-3 pb-4" action="send.php">
             <p class="text-center">Para enviarte el regalo digital, necesitamos que llenes el siguiente dato: </p>
-            <input type="text" placeholder="Dirección de email"/>
+            <input type="text" name="email" placeholder="Dirección de email"/>
             <button id="bt-enviar-regalo" class="btn" type="submit">Envíamelo</button>
             <p class="text-center">Gracias por Apoyarnos</p>
             <i id="carita" class="far fa-smile-beam"></i>
