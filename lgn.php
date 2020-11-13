@@ -1,81 +1,86 @@
 <?php
 session_start();
-include ('conexion.php');
+include('conexion.php');
 ?>
 <!doctype html>
 <html lang="es">
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Psicokrecer</title>
-    <!-- Cake + Cake icon -->
-    <link rel="icon" href="img/backgrounds/cake+cake-icon.png" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet"> 
+
+    <!-- Icono de la pestaña -->
+    <link rel="icon" href="dist/img/Psico-logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="css/lgn.css">
-  </head>
-  <body>
+    <link rel="stylesheet" href="./src/css/arreglos.css">
+</head>
 
-  <?php
+<body>
 
-    if(isset($_POST['Enviar'])) { // comprobamos que se hayan enviado los datos del formulario
+    <?php
 
-        if(isset($_POST['username'])&& !empty($_POST['username']) && 
-        isset($_POST['password']) && !empty($_POST['password'])){ 
-            $usuario= mysqli_real_escape_string($conexion,$_POST['username']);
-            $clave = mysqli_real_escape_string($conexion,$_POST['password']);
-            $clave = crypt($clave,"pass");
+    if (isset($_POST['Enviar'])) { // comprobamos que se hayan enviado los datos del formulario
+
+        if (
+            isset($_POST['username']) && !empty($_POST['username']) &&
+            isset($_POST['password']) && !empty($_POST['password'])
+        ) {
+            $usuario = mysqli_real_escape_string($conexion, $_POST['username']);
+            $clave = mysqli_real_escape_string($conexion, $_POST['password']);
+            $clave = crypt($clave, "pass");
 
             // comprobamos que los datos ingresados en el formulario coincidan con los de la BD
-            $sql = mysqli_query($conexion,"SELECT * FROM administrador WHERE email='$usuario' AND clave='$clave'") or die(mysqli_error($conexion));
-            $resultado=mysqli_num_rows($sql);//cuento el número de coincidencias
+            $sql = mysqli_query($conexion, "SELECT * FROM administrador WHERE email='$usuario' AND clave='$clave'") or die(mysqli_error($conexion));
+            $resultado = mysqli_num_rows($sql); //cuento el número de coincidencias
             $row = mysqli_fetch_array($sql);
             //echo "todavia no entro en el if";
-                
 
-                if($resultado==1) {
-                    $_SESSION['id'] = $row['id']; // creamos la sesion "usuario_id" y le asignamos como valor el campo usuario_id
-                    $_SESSION['nombre'] = $row['nombre']; // creamos la sesion "usuario_nombre" y le asignamos como valor el campo 
-                    header("Location: panel-blog.php");
-                    echo "<script language='javascript'>window.location='panel-blog.php'</script>";
-                }else {
-                
- ?>
-                <div class="alerta-error">Usuario o contraseña incorrectos</div>                    
+
+            if ($resultado == 1) {
+                $_SESSION['id'] = $row['id']; // creamos la sesion "usuario_id" y le asignamos como valor el campo usuario_id
+                $_SESSION['nombre'] = $row['nombre']; // creamos la sesion "usuario_nombre" y le asignamos como valor el campo 
+                header("Location: panel-blog.php");
+                echo "<script language='javascript'>window.location='panel-blog.php'</script>";
+            } else {
+
+    ?>
+                <div class="alerta-error">Usuario o contraseña incorrectos</div>
                 </h1>
-                <?php
-                }
-            
-        }else{
-          echo "Falta completar campos";
+    <?php
+            }
+        } else {
+            echo "Falta completar campos";
         }
     }
 
-?>
-    
-  <div id="login">
-        <h3 class="text-center letra pt-5">Psicokrecer</h3>
+    ?>
+
+    <div id="login">
+        <h3 class="text-center letra pt-5 text-info">Psicokrecer</h3>
         <div class="container">
             <div id="login-row" class="row justify-content-center align-items-center">
                 <div id="login-column" class="col-md-6">
                     <div id="login-box" class="col-md-12">
                         <form id="login-form" class="form" action="" method="post">
-                            <h3 class="text-center text-info">Login</h3>
+                            <h3 class="text-center text-white">Login</h3>
                             <div class="form-group">
-                                <label for="username" class="text-info">Usuario:</label><br>
+                                <label for="username" class="text-white">Usuario:</label><br>
                                 <input type="email" name="username" id="username" class="form-control">
                             </div>
                             <div class="form-group">
-                                <label for="password" class="text-info">Contraseña:</label><br>
+                                <label for="password" class="text-white">Contraseña:</label><br>
                                 <input type="password" name="password" id="password" class="form-control">
                             </div>
                             <div class="form-group">
-                                
-                                <input type="submit" name="Enviar" class="btn btn-info btn-md" value="Enviar">
+
+                                <input type="submit" name="Enviar" class="btn btn-light btn-md" value="Enviar">
                             </div>
-                            
+
                         </form>
                     </div>
                 </div>
@@ -90,4 +95,5 @@ include ('conexion.php');
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
 </body>
+
 </html>
