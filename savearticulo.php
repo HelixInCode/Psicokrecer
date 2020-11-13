@@ -76,7 +76,8 @@ include ('conexion.php');
            $move3= move_uploaded_file($_FILES['imagen3']['tmp_name'], "dist/images/".$ruta3);
            header("location: panel-blog.php");
            echo "<script language='javascript'>window.location='panel-blog.php'</script>";
-               echo '<div class="alert alert-success" role="alert">Articulo creado correctamente</div>';
+           exit();
+           echo '<div class="alert alert-success" role="alert">Articulo creado correctamente</div>';
              } else { echo "error al guardar los datos"; }
           } else { echo "El tamaño de las imagenes son demaciado grande"; }
         } 

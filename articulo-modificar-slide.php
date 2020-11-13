@@ -218,5 +218,7 @@ if (isset($_SESSION['id'])) {
 <?php
 } else {
   header("Location: lgn.php");
+  echo "<script language='javascript'>window.location='lgn.php'</script>";
+           exit();
 }
 ?>

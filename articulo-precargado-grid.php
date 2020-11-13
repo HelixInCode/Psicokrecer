@@ -175,5 +175,7 @@ $posteo=mysqli_fetch_array($precarga2);
 <?php
     }  else {
         header ("Location: lgn.php");
+        echo "<script language='javascript'>window.location='lgn.php'</script>";
+           exit();
     }
 ?>

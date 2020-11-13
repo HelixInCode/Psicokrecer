@@ -16,6 +16,8 @@ include ('conexion.php');
     
             if($upd){
                 header("Location: panel-blog.php");
+                echo "<script language='javascript'>window.location='panel-blog.php'</script>";
+                exit();
             }else {
                 echo "Error al intentar modificar";
             }
@@ -25,5 +27,7 @@ include ('conexion.php');
 
     } else {
         header ("Location: lgn.php");
+        echo "<script language='javascript'>window.location='lgn.php'</script>";
+           exit();
     }
 ?>

@@ -7,6 +7,8 @@ include ('conexion.php');
     $borrar = mysqli_query($conexion, "DELETE FROM publicaciones WHERE id = '$selector'") or die(mysqli_error($conexion));
      if ($borrar){
          header("location: panel-blog.php");
+         echo "<script language='javascript'>window.location='panel-blog.php'</script>";
+         exit();
          echo '<div class="alert alert-success" role="alert">Publicacion eliminada correctamente</div>';
        }
        else{
@@ -16,5 +18,7 @@ include ('conexion.php');
 <?php
     } else {
         header ("Location: lgn.php");
+        echo "<script language='javascript'>window.location='lgn.php'</script>";
+           exit();
     }
 ?>

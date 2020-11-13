@@ -45,6 +45,7 @@ include('conexion.php');
                 $_SESSION['user'] = $row['nombreUser']; // creamos la sesion "nombre" y le asignamos como valor el campo 
                 header("Location:" . $_SERVER['HTTP_REFERER']);
                 echo "<script language='javascript'>window.location='index.php'</script>";
+                exit();
             } else {
 
     ?>

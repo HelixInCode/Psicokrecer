@@ -80,7 +80,7 @@ include('conexion.php');
 
 
                                 <input type="submit" name="Enviar" class="btn btn-light btn-md" value="Enviar">
-                                <a href="index.html" class="btn btn-info btn-md">Volver</a>
+                                <a href="index.php" class="btn btn-info btn-md">Volver</a>
                             </div>
 
                         </form>
