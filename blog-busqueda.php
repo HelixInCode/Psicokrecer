@@ -75,7 +75,7 @@ if(isset($_POST['Buscar'])){
               Inicio
             </a>
   
-            <a href="nosotros.html">
+            <a href="nosotros.php">
               <i class="fas fa-users"></i>
               Quienes Somos
             </a>

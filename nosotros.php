@@ -50,7 +50,7 @@
             Inicio
           </a>
 
-          <a href="nosotros.html">
+          <a href="#">
             <i class="fas fa-users"></i>
             Quienes Somos
           </a>

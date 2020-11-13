@@ -89,7 +89,7 @@ $lastP=mysqli_fetch_array($last);
               Inicio
             </a>
   
-            <a href="nosotros.html">
+            <a href="nosotros.php">
               <i class="fas fa-users"></i>
               Quienes Somos
             </a>

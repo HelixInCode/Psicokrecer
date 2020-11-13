@@ -82,7 +82,7 @@ if (isset($_SESSION['id_user'])) {
             Inicio
           </a>
 
-          <a href="nosotros.html">
+          <a href="nosotros.php">
             <i class="fas fa-users"></i>
             Quienes Somos
           </a>
