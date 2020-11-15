@@ -29,6 +29,7 @@
   <!-- Your custom styles (optional) -->
   <link rel="stylesheet" href="dist/css/styles.css">
   <link rel="stylesheet" href="dist/css/contacto.css">
+  <script src="https://www.google.com/recaptcha/api.js?render=6LfmUuMZAAAAAEU-CBtyonEqHyr4vv1UuUGyMxmn"></script>
 </head>
 <body>
   <header>
@@ -317,5 +318,20 @@
   <script type="text/javascript" src="src/js/mostrar-login.js"></script>
   <script type="text/javascript" src="src/js/mostrarModalUsuario.js"></script>
   <!-- <script> document.getElementById('modal-message-sent').classList.toggle('hide')</script> -->
+  <script src="https://www.google.com/recaptcha/api.js?render=6LfmUuMZAAAAAEU-CBtyonEqHyr4vv1UuUGyMxmn"></script>
+  <script>
+    document.querySelector('#form').addEventListener('submit', (e) =>{
+    e.preventDefault();
+    console.log('lanzando recaptcha');
+    
+    grecaptcha.ready(function() {
+        grecaptcha.execute('6LfmUuMZAAAAAEU-CBtyonEqHyr4vv1UuUGyMxmn', {action: 'registro'}).then(function(token) {
+            $('#contact-form').prepend('<input type="hidden" name="token" value="' + token + '">');
+            $('#contact-form').prepend('<input type="hidden" name="action" value="registro">');
+            $('#contact-form').unbind('submit').submit();
+        });
+    });
+  });
+  </script>
 </body>
 </html>
