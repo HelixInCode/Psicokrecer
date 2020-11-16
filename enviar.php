@@ -22,7 +22,7 @@ $mensaje .= "Enviado el " . date('d/m/Y', time());
 $para = 'helixincode@gmail.com';
 $asunto = 'Mensaje enviado desde la página Psicokrecer';
 
-define("RECAPTCHA_V3_SECRET_KEY", '6LfmUuMZAAAAALmyVzs1coD12sRZyX1JtYfluGd_');
+define("RECAPTCHA_V3_SECRET_KEY", '');
 
 $token = $_POST['token'];
 $action = $_POST['action'];
