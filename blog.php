@@ -208,7 +208,7 @@ if (isset($_SESSION['id_user'])) {
               </div>
               <div class="carousel-caption">
                 <h3 class="h3-responsive"><?php echo $lastP['titulo'] ?></h3>
-                <?php $type = $lastP['diseño'];
+                <?php $type = $lastP['diseno'];
                 if ($type == 1) {  ?>
 
                   <a href="articulo-3im-3p.php?public=<?php echo $ulti; ?>">Leer más</a>
@@ -228,7 +228,7 @@ if (isset($_SESSION['id_user'])) {
               </div>
               <div class="carousel-caption">
                 <h3 class="h3-responsive"><?php echo $lastP['titulo'] ?></h3>
-                <?php $type = $lastP['diseño'];
+                <?php $type = $lastP['diseno'];
                 if ($type == 1) {  ?>
 
                   <a href="articulo-3im-3p.php?public=<?php echo $ulti; ?>">Leer más</a>
@@ -248,7 +248,7 @@ if (isset($_SESSION['id_user'])) {
               </div>
               <div class="carousel-caption">
                 <h3 class="h3-responsive"><?php echo $lastP['titulo'] ?></h3>
-                <?php $type = $lastP['diseño'];
+                <?php $type = $lastP['diseno'];
                 if ($type == 1) {  ?>
 
                   <a href="articulo-3im-3p.php?public=<?php echo $ulti; ?>">Leer más</a>
@@ -287,7 +287,7 @@ if (isset($_SESSION['id_user'])) {
               <h4><a href="articulo-3im-3p.php?public="><?php echo $busqueda1['titulo'] ?></a></h4>
               <p class="fecha">01/09/3030</p>
               <p><?php echo $busqueda1['subtitulo'] ?></p>
-              <?php $type = $busqueda1['diseño'];
+              <?php $type = $busqueda1['diseno'];
               if ($type == 1) {  ?>
 
                 <a href="articulo-3im-3p.php?public=<?php echo $busqueda1['id']; ?>">Leer artículo completo</a>
@@ -307,7 +307,7 @@ if (isset($_SESSION['id_user'])) {
             <h5>Entradas anteriores</h5>
             <div class="entradas-anteriores" id="datos">
               <?php while ($antigua = mysqli_fetch_array($antiguos)) {
-                $type = $antigua['diseño'];
+                $type = $antigua['diseno'];
                 if ($type == 1) {  ?>
                   <a class="item" href="articulo-3im-3p.php?public=<?php echo $antigua['id']; ?>">
                     <div class="estructura">

@@ -63,7 +63,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="password" class="text-info">Contraseña:</label><br>
-                                <input type="text" name="password" id="password" class="form-control" require>
+                                <input type="password" name="password" id="password" class="form-control" require>
                             </div>
                             <div class="form-group">
                             <input name="imagen" type="file" accept="image/*" require>

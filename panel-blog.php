@@ -101,7 +101,7 @@ $publi=mysqli_query($conexion, "SELECT * FROM publicaciones ORDER BY id DESC");
                                     </div>
                                     <div class="acciones">
                                     <?php 
-                                    $type=$pub['diseño'];
+                                    $type=$pub['diseno'];
                                     if($type == 1){  ?>
                                         <a class="btn" href='<?php echo "articulo-modificar-3im-3p.php?public=$Public"; ?>'>Modificar</a>
                                     <?php }
@@ -151,7 +151,7 @@ $publi=mysqli_query($conexion, "SELECT * FROM publicaciones ORDER BY id DESC");
                                 <div class="formularios-item d-none">
                                     <form id="formulario-3im-3p" class="md-form" action="savearticulo.php" method="POST" enctype="multipart/form-data">
                                         <div class="identificacion">
-                                            <input type="hidden" name="diseño" value="1">
+                                            <input type="hidden" name="diseno" value="1">
                                             <input type="text" name="titulo" placeholder="Título del artículo">
                                             <select name="categoria" id="categoria">
                                                 <option value="">Categoría del Artículo</option>
