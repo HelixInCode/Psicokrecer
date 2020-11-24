@@ -130,8 +130,47 @@ $publi=mysqli_query($conexion, "SELECT * FROM publicaciones ORDER BY id DESC");
                                 </div>
                             </div>
                         </div>
-                        <div class="seccion-item non-active">
-                            Holaaa
+    <div class="seccion-item non-active">
+
+
+    <section id="lista">
+    <div class="lista">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+            <th scope="col">#</th>
+            <th scope="col">Comentario</th>
+            <th scope="col">Usuario</th>
+            <th scope="col">Publicacion</th>
+            <th scope="col">Borrar</th>
+            </tr>
+        </thead>
+        <tbody>
+  <?php 
+    $buscarofertas=mysqli_query($conexion,"SELECT * FROM oferta ")or die(mysqli_error($conexion));
+    
+
+    while($ofertas=mysqli_fetch_array($buscarofertas)){
+      $id = $ofertas['idoferta']; 
+
+  ?>
+  
+    <tr>
+      <th scope="row"><?php echo $ofertas['idComentario'];  ?></th>
+      <td><?php echo $ofertas['comentario'];  ?></td>
+      <td><?php echo $ofertas['id_user'];  ?></td>
+      <td><?php echo $ofertas['precio'];  ?></td>
+      <td><a href='<?php echo "detalle.php?idoferta=$id" ?>'> <button class="btn btn-info"><i class="fas fa-pen"></i></button></a></td>
+      <td><a href='<?php echo "borrar.php?idoferta=$id" ?>'><button class="btn btn-danger"><i class="fas fa-trash"></i></button></a></td>
+    </tr>
+
+    <?php  } ?>
+  </tbody>
+</table>
+    </div>
+  </section>
+
+
 
                         </div>
                         <div class="seccion-item non-active">

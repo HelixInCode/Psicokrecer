@@ -1,4 +1,7 @@
-<?php include('conexion.php');?>
+<?php 
+include('conexion.php');
+
+?>
 <!doctype html>
 <html lang="es">
 <head>
@@ -20,7 +23,7 @@
             $nombre = mysqli_real_escape_string($conexion,$_POST['username']);
             $clave = mysqli_real_escape_string($conexion,$_POST['password']);
             $email = mysqli_real_escape_string($conexion,$_POST['mail']);
-            $imagen = addslashes(file_get_contents($_FILES['imagen']['tmp_name']))
+            $imagen = addslashes(file_get_contents($_FILES['imagen']['tmp_name']));
 
             $sql = mysqli_query($conexion, "SELECT email FROM administrador WHERE email='".$email."'");
             if (mysqli_num_rows($sql)>0) 
