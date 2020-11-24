@@ -147,11 +147,13 @@ $publi=mysqli_query($conexion, "SELECT * FROM publicaciones ORDER BY id DESC");
         </thead>
         <tbody>
   <?php 
-    $buscarofertas=mysqli_query($conexion,"SELECT * FROM oferta ")or die(mysqli_error($conexion));
+    $buscarcom=mysqli_query($conexion,"SELECT * FROM comentarios ")or die(mysqli_error($conexion));
     
-
-    while($ofertas=mysqli_fetch_array($buscarofertas)){
-      $id = $ofertas['idoferta']; 
+    while($comentario=mysqli_fetch_array($buscarcom)){
+      $idpublic = $comentario['publicacion'];
+      $id= $comentario['idComentario']; 
+      $buscapublic=mysqli_query($conexion,"SELECT * FROM publicaciones WHERE id = '$idpublic' ");
+      $public=mysqli_fetch_array($buscapublic);
 
   ?>
   
@@ -159,7 +161,7 @@ $publi=mysqli_query($conexion, "SELECT * FROM publicaciones ORDER BY id DESC");
       <th scope="row"><?php echo $ofertas['idComentario'];  ?></th>
       <td><?php echo $ofertas['comentario'];  ?></td>
       <td><?php echo $ofertas['id_user'];  ?></td>
-      <td><?php echo $ofertas['precio'];  ?></td>
+      <td><?php echo $buscapublic['titulo'];  ?></td>
       <td><a href='<?php echo "detalle.php?idoferta=$id" ?>'> <button class="btn btn-info"><i class="fas fa-pen"></i></button></a></td>
       <td><a href='<?php echo "borrar.php?idoferta=$id" ?>'><button class="btn btn-danger"><i class="fas fa-trash"></i></button></a></td>
     </tr>

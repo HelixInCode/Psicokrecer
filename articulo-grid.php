@@ -2,8 +2,8 @@
 session_start();
 include('conexion.php');
 if (isset($_SESSION['id_user'])) {
-
-  $idblog = $_SESSION['id_user'];
+  $usuario=$_SESSION['user'];
+  $id=$_SESSION['id_user'];
 }
 ?>
 <!DOCTYPE html>
@@ -48,6 +48,8 @@ if (isset($_SESSION['id_user'])) {
 
   $articulo = mysqli_query($conexion, "SELECT * FROM publicaciones WHERE id='$selector'");
   $posteo = mysqli_fetch_array($articulo);
+  
+  $sel = mysqli_query($conexion, "SELECT * FROM comentarios");
   ?>
   <header>
     <nav class="px-2 px-md-5">
@@ -138,9 +140,9 @@ if (isset($_SESSION['id_user'])) {
     <!--Este es el modal de usuario-->
     <section id="modal-user" class="posicion-escondido">
       <div class="contenedor-user">
-        <p>Nombre</p>
+        <p><?php echo $usuario ?></p>
         <a href="panel-user.php">Configuración</a>
-        <a href="">Cerrar Sesión</a>
+        <a href="close.php">Cerrar Sesión</a>
       </div>
 
     </section>
@@ -217,19 +219,45 @@ if (isset($_SESSION['id_user'])) {
 
         <div id="comentarios">
           <div class="contenedor-general">
+          <?php
+          if(isset($_SESSION['id_user'])){
+            $consul=mysqli_query($conexion, "SELECT * FROM userblog WHERE id_user = '$id'");
+            $cons=mysqli_fetch_array($consul);
+            $nombre=$usuario;
+            $img=$cons['imagen'];
+           
+          ?>
             <div class="enlace" id="nuevo-comment">
-              <a href="#">¿Quieres agregar un comentario?</a>
+              <a href="#">¿Quieres agregar un comentario <?php echo $usuario ?>?</a>
               <i class="fas fa-angle-down" style="transition: 1s;"></i>
             </div>
+            <?php
+          } elseif(isset($_SESSION['id'])){
+            $consul=mysqli_query($conexion, "SELECT * FROM administrador WHERE id = '$adId'");
+            $cons=mysqli_fetch_array($consul);
+            $nombre=$ad;
+            $img=$cons['foto'];
+            
+          ?>
+            <div class="enlace" id="nuevo-comment">
+              <a href="#">¿Quieres agregar un comentario <?php echo $ad ?>?</a>
+              <i class="fas fa-angle-down" style="transition: 1s;"></i>
+            </div>
+          <?php } else { ?>
+            <div class="enlace">
+              <a href="" >Para agregar un comentario debes estar registrado</a>
+              
+            </div>
+          <?php } ?>
             <div class="contenedor-nuevo-comentario oculto animated fadeInDown faster">
-              <form class="nuevo-comentario" action="">
+              <form class="nuevo-comentario" action="savecoment.php" method="POST">
                 <div class="dato">
-                  <img src="./dist/img/adriana.png" alt="">
-                  <label>pepito perez</label>
+                  <img src="data:image/jpg;base64,<?php echo base64_encode($img);?>" alt="">
+                  <label> <?php echo $nombre ?></label>
                 </div>
-
-                <textarea type="text" placeholder="¿Que opinas...?" rows="2" required></textarea>
-                <button class="btn">Publicar</button>
+                <input type="hidden" name="publicacion" value="<?php echo $selector; ?>" >
+                <textarea type="text" Name="comentario" placeholder="¿Que opinas...?" rows="2" required></textarea>
+                <button type="submit" class="btn" name="Crear">Publicar</button>
               </form>
             </div>
 
@@ -237,40 +265,35 @@ if (isset($_SESSION['id_user'])) {
           </div>
           <h4>Comentarios</h4>
           <div class="lista-comentarios">
+            <?php if(empty($sel)){  
+
+              ?>
+              <div class="enlace">
+                <a href="">No hay comentarios</a>
+              </div>
+              <?php } else{ 
+                  while($comentario=mysqli_fetch_array($sel)){  
+                    $idCom=$comentario['id_user'];
+                    $idPub=$comentario['idComentario'];
+                    $inf=mysqli_query($conexion, "SELECT imagen FROM userblog WHERE id_user ='$idCom' ");
+                    $info=mysqli_fetch_array($inf);
+                ?>
             <div class="item">
               <div class="dato">
-                <img src="./dist/img/gaby.jpeg" alt="">
-                <p>Martina Martinez</p>
+                <img src="data:image/jpg;base64,<?php echo base64_encode($info['imagen']);?>" alt="">
+                <p><?php echo $comentario['user']; ?></p>
               </div>
               <div class="escrito">
-                <p>Excelente articulo, me siento relacionada.</p>
-                <a href=""><i class="fas fa-trash"></i></a>
+                <p><?php echo $comentario['comentario']; ?></p>
+                <?php if($id=$idCom){?>
+                <a href="deletecoment.php?com=<?php echo $idPub; ?>"><i class="fas fa-trash"></i></a>
+                <?php } ?>
               </div>
-
             </div>
-            <div class="item">
-              <div class="dato">
-                <img src="./dist/img/gaby.jpeg" alt="">
-                <p>Martina Martinez</p>
-              </div>
-              <div class="escrito">
-                <p>Excelente articulo, me siento relacionada.</p>
-                <a href=""><i class="fas fa-trash"></i></a>
-              </div>
-
-            </div>
-            <div class="item">
-              <div class="dato">
-                <img src="./dist/img/gaby.jpeg" alt="">
-                <p>Martina Martinez</p>
-              </div>
-              <div class="escrito">
-                <p>Excelente articulo, me siento relacionada.</p>
-                <a href=""><i class="fas fa-trash"></i></a>
-              </div>
-
-            </div>
-            <!-- <div class="item">
+            
+             <?php
+               }  
+                  } ?>  <!-- <div class="item">
               <div class="dato">
                 <img src="./dist/img/gaby.jpeg" alt="">
                 <p>Martina Martinez</p>

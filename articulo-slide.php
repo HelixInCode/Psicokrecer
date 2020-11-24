@@ -8,12 +8,7 @@ if(isset($_SESSION['id_user'])){
   $ids=$id;
   $nombre=$usuario;
 }
-if(isset($_SESSION['id'])){
-  $ad=$_SESSION['nombre'];
-  $adId=$_SESSION['id'];
-  $ids=$adId;
-  $nombre=$ad;
-}
+
 
 ?>
 
@@ -80,7 +75,7 @@ if(isset($_SESSION['id'])){
   $articulo = mysqli_query($conexion, "SELECT * FROM publicaciones WHERE id='$selector'");
   $posteo = mysqli_fetch_array($articulo);
 
-  $sel = mysqli_query($conexion, "SELECT * FROM comentarios")
+  $sel = mysqli_query($conexion, "SELECT * FROM comentarios");
   ?>
 
   <header>
@@ -174,7 +169,7 @@ if(isset($_SESSION['id'])){
       <div class="contenedor-user">
         <p>Nombre</p>
         <a href="panel-user.php">Configuración</a>
-        <a href="">Cerrar Sesión</a>
+        <a href="close.php">Cerrar Sesión</a>
       </div>
 
     </section>
@@ -298,7 +293,7 @@ if(isset($_SESSION['id'])){
             </div>
           <?php } ?>
             <div class="contenedor-nuevo-comentario oculto animated fadeInDown faster">
-              <form class="nuevo-comentario" action="" method="POST">
+              <form class="nuevo-comentario" action="savecoment.php" method="POST">
                 <div class="dato">
                   <img src="data:image/jpg;base64,<?php echo base64_encode($img);?>" alt="">
                   <label> <?php echo $nombre ?></label>
@@ -322,21 +317,22 @@ if(isset($_SESSION['id'])){
               <?php } else{ 
                   while($comentario=mysqli_fetch_array($sel)){  
                     $idCom=$comentario['id_user'];
+                    $idPub=$comentario['idComentario'];
                     $inf=mysqli_query($conexion, "SELECT imagen FROM userblog WHERE id_user ='$idCom' ");
                     $info=mysqli_fetch_array($inf);
                 ?>
             <div class="item">
               <div class="dato">
-                <img src="data:image/jpg;base64,<?php echo base64_encode($consuldates['imagen']);?>" alt="">
+                <img src="data:image/jpg;base64,<?php echo base64_encode($info['imagen']);?>" alt="">
                 <p><?php echo $comentario['user']; ?></p>
               </div>
               <div class="escrito">
                 <p><?php echo $comentario['comentario']; ?></p>
                 <?php if($id=$idCom){?>
-                <a href=""><i class="fas fa-trash"></i></a>
+                <a href="deletecoment.php?com=<?php echo $idPub; ?>"><i class="fas fa-trash"></i></a>
                 <?php } ?>
               </div>
-            
+            </div>
             
              <?php
                }  

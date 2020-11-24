@@ -1,11 +1,11 @@
 <?php
 session_start();
 include ('conexion.php');
-    if(isset($_SESSION['id'])){
+    if(isset($_SESSION['id_user'])){
    
 
-    if(isset($_POST['Enviar'])) { 
-       $publicacion=$_GET['publicacion'];  
+   
+       $publicacion=$_GET['com'];  
        
        $borrar = mysqli_query($conexion, "DELETE FROM comentarios WHERE idComentario = '$publicacion'") or die(mysqli_error($conexion));
         if ($borrar){
@@ -17,7 +17,7 @@ include ('conexion.php');
         else{
            echo "Error al borrar comentario";
          }
-      }
+      
 ?>
 <?php
     } else {

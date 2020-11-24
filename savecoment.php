@@ -1,7 +1,7 @@
 <?php
 session_start();
 include ('conexion.php');
-    if(isset($_SESSION['id'])){
+    if(isset($_SESSION['id_user'])){
 
 
 ?>
@@ -31,15 +31,16 @@ include ('conexion.php');
 <body>
   <?php
   if (isset($_POST['Crear'])) {
-      $id= $_SESSION['id'];
+      $idUser= $_SESSION['id_user'];
       $admin = $_SESSION['user'];
+      $publicacion= mysqli_real_escape_string($conexion,$_POST['publicacion']);
       $comentario = mysqli_real_escape_string($conexion,$_POST['comentario']);
 
-      $guardar = mysqli_query($conexion, "INSERT INTO comentarios (comentario, user, id_user) VALUES ('$comentario', '$admin', '$id')") or die(mysqli_error($conexion));
+      $guardar = mysqli_query($conexion, "INSERT INTO comentarios (comentario, user, id_user, publicacion) VALUES ('$comentario', '$admin', '$idUser', '$publicacion')")or die(mysqli_error($conexion));
 
       
         if ($guardar){
-           header("location: articulo-slide.php");
+           header("location: blog.php");
            echo "<script language='javascript'>window.location='blog.php'</script>";
            exit();
            echo '<div class="alert alert-success" role="alert">Articulo creado correctamente</div>';
@@ -66,6 +67,6 @@ include ('conexion.php');
 </html>
 <?php
     }  else {
-        header ("Location: articulo-slide.php");
+        header ("Location: index.php");
     }
 ?>
