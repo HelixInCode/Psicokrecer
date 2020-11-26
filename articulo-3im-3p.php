@@ -287,7 +287,8 @@ if (isset($_SESSION['id_user'])) {
               </div>
               <div class="escrito">
                 <p><?php echo $comentario['comentario']; ?></p>
-                <?php if($id=$idCom){?>
+            
+                <?php if($id==$idCom){?>
                 <a href="deletecoment.php?com=<?php echo $idPub; ?>"><i class="fas fa-trash"></i></a>
                 <?php } ?>
               </div>
