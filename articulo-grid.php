@@ -214,7 +214,7 @@ if (isset($_SESSION['id_user'])) {
           <p>Categoría</p>
         </div>
         <div class="regreso">
-          <a href="blog.html">Volver a lista de artículos</a>
+          <a href="blog.php">Volver a lista de artículos</a>
         </div>
 
         <div id="comentarios">

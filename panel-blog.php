@@ -55,7 +55,7 @@ $publi=mysqli_query($conexion, "SELECT * FROM publicaciones ORDER BY id DESC");
                         <a href="" class="nav-link">Hola! Admin</a>
                     </li>
                     <li class="nav-item">
-                        <a href="close.php" class="nav-link">Cerrar sesión</a>
+                        <a href="closeAdmin.php" class="nav-link">Cerrar sesión</a>
                     </li>
                 </ul>
 
