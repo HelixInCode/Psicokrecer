@@ -210,8 +210,8 @@ if (isset($_SESSION['id_user'])) {
 
 
         <div class="datos-clave">
-          <p>01/03/2020</p>
-          <p>Categoría</p>
+          <p><?php echo $posteo['fecha']; ?></p>
+          <p><?php echo $posteo['categoria']; ?></p>
         </div>
         <div class="regreso">
           <a href="blog.php">Volver a lista de artículos</a>

@@ -130,51 +130,50 @@ $publi=mysqli_query($conexion, "SELECT * FROM publicaciones ORDER BY id DESC");
                                 </div>
                             </div>
                         </div>
+                        <?php 
+                $buscarcom=mysqli_query($conexion,"SELECT * FROM comentarios ");
+
+                     ?>
+            
+
     <div class="seccion-item non-active">
 
+            <table class="table table-striped">
+                    <thead>
+                        <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Comentario</th>
+                        <th scope="col">Usuario</th>
+                        <th scope="col">Publicacion</th>
+                        <th scope="col">Borrar</th>
+                        </tr>
+                    </thead>
+            
+            <tbody>
+            <?php while($comentario=mysqli_fetch_array($buscarcom)){
+                $idpublic = $comentario['publicacion'];
+                $idC= $comentario['idComentario']; 
+                $buscapublic=mysqli_query($conexion,"SELECT * FROM publicaciones WHERE id = '$idpublic' ");
+                $public=mysqli_fetch_array($buscapublic);
+            ?>
+                <tr>
+                <th scope="row"><?php echo $idC; ?></th>
+                <td><?php echo $comentario['comentario']; ?></td>
+                <td><?php echo $comentario['user']; ?></td>
+                <td><?php echo $public['titulo']; ?></td>
+                <td><a href='<?php echo "deletecomentA.php?com=$idC" ?>'><button class="btn btn-danger"><i class="fas fa-trash"></i></button></a></td>
+                </tr>
 
-    <section id="lista">
-    <div class="lista">
-    <table class="table table-striped">
-        <thead>
-            <tr>
-            <th scope="col">#</th>
-            <th scope="col">Comentario</th>
-            <th scope="col">Usuario</th>
-            <th scope="col">Publicacion</th>
-            <th scope="col">Borrar</th>
-            </tr>
-        </thead>
-        <tbody>
-  <?php 
-    $buscarcom=mysqli_query($conexion,"SELECT * FROM comentarios ")or die(mysqli_error($conexion));
-    
-    while($comentario=mysqli_fetch_array($buscarcom)){
-      $idpublic = $comentario['publicacion'];
-      $id= $comentario['idComentario']; 
-      $buscapublic=mysqli_query($conexion,"SELECT * FROM publicaciones WHERE id = '$idpublic' ");
-      $public=mysqli_fetch_array($buscapublic);
+            <?php }?>
+            </tbody>
+            </table>
 
-  ?>
-  
-    <tr>
-      <th scope="row"><?php echo $ofertas['idComentario'];  ?></th>
-      <td><?php echo $ofertas['comentario'];  ?></td>
-      <td><?php echo $ofertas['id_user'];  ?></td>
-      <td><?php echo $buscapublic['titulo'];  ?></td>
-      <td><a href='<?php echo "detalle.php?idoferta=$id" ?>'> <button class="btn btn-info"><i class="fas fa-pen"></i></button></a></td>
-      <td><a href='<?php echo "borrar.php?idoferta=$id" ?>'><button class="btn btn-danger"><i class="fas fa-trash"></i></button></a></td>
-    </tr>
 
-    <?php  } ?>
-  </tbody>
-</table>
+
+
+
     </div>
-  </section>
 
-
-
-                        </div>
                         <div class="seccion-item non-active">
                             <h4>Nuevo Artículo</h4>
                             <div class="seccion-nuevo-articulo">
